@@ -63,6 +63,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerable GenerateBomb()
     {
-        return new WaitForSeconds();
+        yield break;
     }
 }

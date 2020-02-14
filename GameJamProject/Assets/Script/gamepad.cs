@@ -76,26 +76,39 @@ public class gamepad : MonoBehaviour
         //L Stick
         float lsh = Input.GetAxis("L_Stick_H");
         float lsv = Input.GetAxis("L_Stick_V");
-        if (lsh==1&&lsv==1)
-        {
-            //Debug.Log("L stick:" + lsh + "," + lsv);
-            transform.Translate(1*Time.deltaTime, 0, 0);
-        }
-        if (lsh == -1&&lsv==-1)
-        {
-           //Debug.Log("L stick:" + lsh + "," + lsv);
-            transform.Translate(-1 * Time.deltaTime, 0, 0);
-        }
-        if (lsh >0.4&&lsv>0.4&&lsh != 1&&lsv!=1)
-        {
-            //Debug.Log("L stick:" + lsh + "," + lsv);
-            transform.Translate(1 * Time.deltaTime, 1*Time.deltaTime, 0);
-        }
-        if (lsh > -0.4 && lsv > -0.4 && lsh != -1 && lsv != -1)
-        {
-            //Debug.Log("L stick:" + lsh + "," + lsv);
-            transform.Translate(-1 * Time.deltaTime, -1 * Time.deltaTime, 0);
-        }
+
+        if (lsh <= 0.1f && lsh >= -0.1f)
+            lsh = 0;
+        if (lsv <= 0.1f && lsv >= -0.1f)
+            lsv = 0;
+
+        Vector3 test = transform.position;
+
+        test += new Vector3(lsh, lsv, 0)*Time.deltaTime;
+        
+        
+        transform.position = test;
+
+        //if (lsh==1&&lsv==1)
+        //{
+        //    //Debug.Log("L stick:" + lsh + "," + lsv);
+        //    transform.Translate(1*Time.deltaTime, 0, 0);
+        //}
+        //if (lsh == -1&&lsv==-1)
+        //{
+        //   //Debug.Log("L stick:" + lsh + "," + lsv);
+        //    transform.Translate(-1 * Time.deltaTime, 0, 0);
+        //}
+        //if (lsh >0.4&&lsv>0.4&&lsh != 1&&lsv!=1)
+        //{
+        //    //Debug.Log("L stick:" + lsh + "," + lsv);
+        //    transform.Translate(1 * Time.deltaTime, 1*Time.deltaTime, 0);
+        //}
+        //if (lsh > -0.4 && lsv > -0.4 && lsh != -1 && lsv != -1)
+        //{
+        //    //Debug.Log("L stick:" + lsh + "," + lsv);
+        //    transform.Translate(-1 * Time.deltaTime, -1 * Time.deltaTime, 0);
+        //}
         //R stick
         float rsh = Input.GetAxis("R_Stick_H");
         float rsv = Input.GetAxis("R_Stick_V");
