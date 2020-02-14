@@ -21,6 +21,6 @@ public class Bomb_bullet : MonoBehaviour
         var angle = transform.eulerAngles;
         var anglez = angle.z * (Mathf.PI / 180.0f);
         Vector3 dir = new Vector3(Mathf.Cos(anglez), Mathf.Sin(anglez), 0.0f);
-        transform.position += new Vector3(transform.position.x ,transform.position.y, transform.position.z);
+        transform.position += dir * speed * elapsedtime;
     }
 }

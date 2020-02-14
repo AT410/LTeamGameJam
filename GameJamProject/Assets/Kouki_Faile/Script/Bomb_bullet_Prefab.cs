@@ -11,7 +11,7 @@ public class Bomb_bullet_Prefab : MonoBehaviour
     {
         elapsedtime = Time.deltaTime;
         Quaternion RandomRot = Random.rotation;
-        GameObject bullets = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
+        GameObject bullets = Instantiate(bullet, transform.position, RandomRot) as GameObject;
 
     }
     // Start is called before the first frame update
