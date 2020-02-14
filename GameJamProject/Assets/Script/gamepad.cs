@@ -5,6 +5,7 @@ using UnityEngine;
 public class gamepad : MonoBehaviour
 {
     public GameObject Cube;
+    [SerializeField] private float PlayerSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,19 +14,8 @@ public class gamepad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var speed = 2*Time.deltaTime;
-        var PosX = this.gameObject.transform.position.x;
-        var PosY = this.gameObject.transform.position.y;
-        var PosZ = this.gameObject.transform.position.z;
-        Vector3 pos = this.gameObject.transform.position;
 
         Transform myTransform = this.transform;
-        //Vector3 localAngle = myTransform.localEulerAngles;
-        //float local_angle_x = localAngle.x;
-        //float local_angle_y = localAngle.y;
-        //float local_angle_z = localAngle.z;
-
-
 
         if (Input.GetKeyDown("joystick button 0"))
         {
@@ -83,26 +73,28 @@ public class gamepad : MonoBehaviour
             lsv = 0;
 
         Vector3 test = transform.position;
+        this.transform.rotation =  Quaternion.AngleAxis(Mathf.Atan(lsh/lsv), new Vector3(0,0,1));
 
-        test += new Vector3(lsh, lsv, 0)*Time.deltaTime;
-        
-        
+        test += new Vector3(lsv, -lsh, 0) *PlayerSpeed* Time.deltaTime;
+
         transform.position = test;
 
-        //if (lsh==1&&lsv==1)
+        //this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan(lsh / lsv), Vector3.up) * this.transform.Q(lsv, -lsh, 0);
+
+        //if (lsh == 1 && lsv == 1)
         //{
         //    //Debug.Log("L stick:" + lsh + "," + lsv);
-        //    transform.Translate(1*Time.deltaTime, 0, 0);
+        //    transform.Translate(1 * Time.deltaTime, 0, 0);
         //}
-        //if (lsh == -1&&lsv==-1)
+        //if (lsh == -1 && lsv == -1)
         //{
-        //   //Debug.Log("L stick:" + lsh + "," + lsv);
+        //    //Debug.Log("L stick:" + lsh + "," + lsv);
         //    transform.Translate(-1 * Time.deltaTime, 0, 0);
         //}
-        //if (lsh >0.4&&lsv>0.4&&lsh != 1&&lsv!=1)
+        //if (lsh > 0.4 && lsv > 0.4 && lsh != 1 && lsv != 1)
         //{
         //    //Debug.Log("L stick:" + lsh + "," + lsv);
-        //    transform.Translate(1 * Time.deltaTime, 1*Time.deltaTime, 0);
+        //    transform.Translate(1 * Time.deltaTime, 1 * Time.deltaTime, 0);
         //}
         //if (lsh > -0.4 && lsv > -0.4 && lsh != -1 && lsv != -1)
         //{
@@ -117,5 +109,5 @@ public class gamepad : MonoBehaviour
             Debug.Log("R stick:" + rsh + "," + rsv);
 
         }
-     }
+    }
 }
