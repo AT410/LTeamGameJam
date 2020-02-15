@@ -11,9 +11,6 @@ public class SceneChange : MonoBehaviour
 {
     private Scene CurrntScene;
 
-    [SerializeField]
-    private string ChangeSceneName;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +26,11 @@ public class SceneChange : MonoBehaviour
         if (CurrntScene.name == "ResultScene")
         {
             //タイトルへ遷移
+            if (Input.GetKeyDown("joystick button 7"))
+            {
+                SceneManager.LoadScene(0);
+            }
+            return;
         }
     }
 }
