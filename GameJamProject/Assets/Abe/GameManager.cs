@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     private float TotalTime = 0;
     [SerializeField, Tooltip("TimeUI")]
     private Text TimeUI;
+    [SerializeField, Tooltip("開始UI")]
+    private List<Sprite> StartUIList,NumberList;
+    [SerializeField, Tooltip("開始UI")]
+    private Image StartUI;
     [SerializeField, Tooltip("Player1HP")]
     [Range(0.0f,1.0f)]
     private float HP1,HP2,HP3,HP4;
@@ -98,10 +102,11 @@ public class GameManager : MonoBehaviour
         {
             GameStartFlag = true;
             TimeUI.enabled = true;
-
+            StartUI.enabled = false;
         }
         CountTime -= Time.deltaTime;
-
+        int Key = (int)CountTime;
+        StartUI.sprite = StartUIList[Key];
     }
 
     /// <summary>
