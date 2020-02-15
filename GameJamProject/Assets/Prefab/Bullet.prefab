@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 8080922332706047821}
   - component: {fileID: 8080922332706047820}
   - component: {fileID: 8080922332706047823}
-  - component: {fileID: 8080922332706047822}
-  m_Layer: 0
+  - component: {fileID: 6827628700244591303}
+  m_Layer: 9
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &8080922332706047822
+--- !u!61 &6827628700244591303
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,5 +140,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0

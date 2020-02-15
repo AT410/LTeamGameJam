@@ -22,14 +22,14 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    // ENEMYと接触したときの関数
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Playerに弾が接触したら弾は消滅する
-        if (collision.gameObject.tag == "player")
-        {
-            Destroy(gameObject);
-        }
-    }
-
+    // Playerと接触したときの関数
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    // Playerに弾が接触したら弾は消滅する
+    //    if (collision.gameObject.tag == "player")
+    //    {
+    //        Destroy(gameObject);
+    //        Debug.Log("敵と接触した！");
+    //    }
+    //}
 }
