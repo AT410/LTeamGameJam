@@ -34,18 +34,29 @@ public class bulletGEne : MonoBehaviour
         p1.y = this.player.transform.position.y;
         transform.position = p1;
 
-        this.delta += Time.deltaTime;
-        if (this.delta > span)
-        {
-            this.delta = 0;
-            // 弾丸の複製
-            GameObject Bullets = Instantiate(Bullet) as GameObject;
-            Bullets.transform.position = p2; //FireBallをbossの座標に位置する（くち）
-            Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        
 
-            rb2d = Bullets.GetComponent<Rigidbody2D>();
-            // 弾オブジェクトの移動関数
-            BulletMove();
+        float hori = Input.GetAxis("R_Stick_H");
+        float vert = Input.GetAxis("R_Stick_V");
+        if (hori != 0 || vert != 0)
+        {
+            this.delta += Time.deltaTime;
+            if (this.delta > span)
+            {
+                this.delta = 0;
+                // 弾丸の複製
+                GameObject Bullets = Instantiate(Bullet) as GameObject;
+                Bullets.transform.position = p2; //FireBallをbossの座標に位置する（くち）
+                Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
+                rb2d = Bullets.GetComponent<Rigidbody2D>();
+                // 弾オブジェクトの移動関数
+                BulletMove();
+            }
+        }
+        else
+        {
+            delta = 0;
         }
     }
     // 弾オブジェクトの移動関数

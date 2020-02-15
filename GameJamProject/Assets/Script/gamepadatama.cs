@@ -65,10 +65,17 @@ public class gamepadatama : MonoBehaviour
         //R stick
         float rsh = Input.GetAxis("R_Stick_H");
         float rsv = Input.GetAxis("R_Stick_V");
-            Debug.Log("Gamepadatama Rstick:" + rsh+ "," + rsv);
-            Vector3 test2 = transform.position;
-            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsh, rsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
-            test2 += new Vector3(rsh, rsv, 0) * PlayerSpeed * Time.deltaTime;
+        Debug.Log("Gamepadatama Rstick:" + rsh + "," + rsv);
+        Vector3 test2 = transform.position;
+        if (rsh != 0 || rsh != 0)
+        {
+            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsh, rsv) * -Mathf.Rad2Deg, new Vector3(0, 0, 1));
+        }
+        else
+        {
+            
+        }
+        test2 += new Vector3(rsh, rsv, 0) * PlayerSpeed * Time.deltaTime;
 
         transform.position = test2;
     }

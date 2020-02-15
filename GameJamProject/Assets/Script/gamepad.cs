@@ -74,7 +74,7 @@ public class gamepad : MonoBehaviour
                 lsv = 0;
 
             Vector3 test = transform.position;
-            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(lsh, lsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
+            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(lsh, -lsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
             test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
 
             transform.position = test;
