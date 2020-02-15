@@ -13,33 +13,37 @@ public class bulletGEne : MonoBehaviour
     private float span;
     // bullet prefab
     public GameObject Bullet;
-    GameObject player;
     float delta = 0;
+
+    GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
-        this.player = GameObject.Find("player");
+        this.player = GameObject.Find("Player"); //追加
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 p1 = transform.position;
-        Vector2 p2 = this.player.transform.position;
+        Vector2 p1 = transform.position;  //Bulletの中心座標
+        Vector2 p2 = this.player.transform.position; //playerの中心座標
 
-        p1.x = this.transform.position.x;
-        p1.y = this.transform.position.y;
+        //Bulletの座標をくちにする
+        p1.x = this.player.transform.position.x;
+        p1.y = this.player.transform.position.y;
         transform.position = p1;
 
         this.delta += Time.deltaTime;
         if (this.delta > span)
         {
+            this.delta = 0;
             // 弾丸の複製
             GameObject Bullets = Instantiate(Bullet) as GameObject;
-            Bullets.transform.position = p2;
+            Bullets.transform.position = p2; //FireBallをbossの座標に位置する（くち）
             Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
             rb2d = Bullets.GetComponent<Rigidbody2D>();
-            this.delta = 0;
             // 弾オブジェクトの移動関数
             BulletMove();
         }
@@ -55,14 +59,13 @@ public class bulletGEne : MonoBehaviour
         // Rigidbody2D に移動量を加算する
         rb2d.velocity += BulletMovement * bulletSpeed;
     }
-    // ENEMYと接触したときの関数
+    //Playerと接触したときの関数
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Playerに弾が接触したら弾は消滅する
         if (collision.gameObject.tag == "player")
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
-
 }
