@@ -52,11 +52,14 @@ public class GameManager : MonoBehaviour
 
     public GameObject Object;
 
-    private bool StartFlag =true;
+    public float CountTime = 5.0f;
+
+    public bool GameStartFlag =false;
 
     // Start is called before the first frame update
     void Start()
     {
+        TimeUI.enabled = false;
         BombPool = new List<GameObject>();
         SetPlayerObject();
         StartCoroutine("GenerateBomb");
@@ -65,11 +68,40 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameStartFlag)
+        {
+            GameStart();
+            return;
+        }
+
+        //開始カウントダウン
         //制限時間がなくなったらリザルト画面へ
         if (TotalTime <= 0.0f)
             SceneManager.LoadScene("ResultScene");
         TotalTime -= Time.deltaTime;
         UpdateUI();
+
+        if (HP1 <= 0.0f || HP2 <= 0.0f)
+        {
+            int Num = HP1 >= HP2 ? 1 : 2;
+            PlayerPrefs.SetInt("Win", Num);
+            SceneManager.LoadScene("ResultScene");
+        }
+
+    }
+
+    //
+    void GameStart()
+    {
+        //五秒間表示
+        if(CountTime < 0.0f)
+        {
+            GameStartFlag = true;
+            TimeUI.enabled = true;
+
+        }
+        CountTime -= Time.deltaTime;
+
     }
 
     /// <summary>
@@ -82,7 +114,9 @@ public class GameManager : MonoBehaviour
             Vector3 OutPosition = new Vector3();
             OutPosition.x = Random.Range(WidthRange.x, WidthRange.y);
             OutPosition.y = Random.Range(HeightRange.x, HeightRange.y);
-            GameObject.Instantiate(test,OutPosition,Quaternion.identity);
+            var Obj = GameObject.Instantiate(test,OutPosition,Quaternion.identity);
+            Obj.GetComponent<SpriteRenderer>().color = Color.white;
+            HealthObjects.Add(Obj);
         }
     }
 
@@ -95,7 +129,7 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     private IEnumerator GenerateBomb()
     {
-        while(StartFlag)
+        while(true)
         {
             Vector3 OutPosition = new Vector3();
             OutPosition.x = Random.Range(WidthRange.x, WidthRange.y);
@@ -113,7 +147,7 @@ public class GameManager : MonoBehaviour
     {
         int mini = (int)(TotalTime / 60.0f);
         int second = (int)(TotalTime % 60.0f);
-        TimeUI.text = mini.ToString() +":"+ second.ToString();
+        TimeUI.text = mini.ToString() +":"+ second.ToString("00");
     }
 
     public void DelHealth(int PlayerNum)
@@ -124,11 +158,13 @@ public class GameManager : MonoBehaviour
         {
             case 1:
                 //体力を減らす
-                result = Color.Lerp(Color.white, Color.blue, HP1);
+                HP1 -= 0.1f;
+                result = Color.Lerp(Color.blue, Color.white, HP1);
                 HealthObjects[0].GetComponent<SpriteRenderer>().color = result;
                 break;
             case 2:
-                result = Color.Lerp(Color.white, Color.red, HP2);
+                HP2 -= 0.1f;
+                result = Color.Lerp(Color.red, Color.white, HP2);
                 HealthObjects[1].GetComponent<SpriteRenderer>().color = result;
                 break;
             case 3:
