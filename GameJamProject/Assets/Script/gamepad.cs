@@ -82,8 +82,12 @@ public class gamepad : MonoBehaviour
 
         }
         //R stick
-        float rsh = Input.GetAxis("R_Stick_H");
-        float rsv = Input.GetAxis("R_Stick_V");
-
+        //float rsh = Input.GetAxis("R_Stick_H");
+        //float rsv = Input.GetAxis("R_Stick_V");
+        //if ((rsh != 0) || (rsv != 0))
+        //{
+            //Debug.Log("RAD:"+(Mathf.Atan2(rsv,rsh)*Mathf.Rad2Deg).ToString());
+           // this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsv, rsh) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
+        //}
     }
 }
