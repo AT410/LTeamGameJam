@@ -14,6 +14,9 @@ public class bulletGEne : MonoBehaviour
     // bullet prefab
     public GameObject Bullet;
     float delta = 0;
+    //add
+    public AudioSource soundSE01;
+    public AudioSource soundSE02;
 
     GameObject player;
 
@@ -21,6 +24,10 @@ public class bulletGEne : MonoBehaviour
     void Start()
     {
         this.player = GameObject.Find("Player"); //追加
+        //add
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        soundSE01 = audioSources[0];//被弾
+        soundSE02 = audioSources[1];//発射音
     }
 
     // Update is called once per frame
@@ -34,7 +41,7 @@ public class bulletGEne : MonoBehaviour
         p1.y = this.player.transform.position.y;
         transform.position = p1;
 
-        
+
 
         float hori = Input.GetAxis("R_Stick_H");
         float vert = Input.GetAxis("R_Stick_V");
@@ -46,6 +53,7 @@ public class bulletGEne : MonoBehaviour
                 this.delta = 0;
                 // 弾丸の複製
                 GameObject Bullets = Instantiate(Bullet) as GameObject;
+                soundSE01.PlayOneShot(soundSE02.clip);
                 Bullets.transform.position = p2; //FireBallをbossの座標に位置する（くち）
                 Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
@@ -58,6 +66,8 @@ public class bulletGEne : MonoBehaviour
         {
             delta = 0;
         }
+        //add
+        //test();
     }
     // 弾オブジェクトの移動関数
     void BulletMove()
@@ -77,6 +87,20 @@ public class bulletGEne : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Destroy(collision.gameObject);
+            //add
+            soundSE01.PlayOneShot(soundSE01.clip);
         }
     }
+    //add
+    //void test()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.W))
+    //    {
+    //        soundSE01.PlayOneShot(soundSE01.clip);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        soundSE01.PlayOneShot(soundSE02.clip);
+    //    }
+    //}
 }
