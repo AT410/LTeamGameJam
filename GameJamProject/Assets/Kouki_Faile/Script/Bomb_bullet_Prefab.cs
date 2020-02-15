@@ -6,22 +6,30 @@ public class Bomb_bullet_Prefab : MonoBehaviour
 {
     public GameObject bullet;
     public float speed;
+    public int BombHP;
+    public int bulletCount;
     float elapsedtime;
     float max = 360.0f;
     float min = 0.0f;
     bool Explosion;
-    public int bulletCount;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            Debug.Log("Collision");
-
-        if(collision.gameObject.tag == "Playerbullet" || collision.gameObject.tag == "bomb")
+        if(collision.gameObject.tag == "Playerbullet")
         {
             Explosion = true;
         }
+        else if(collision.gameObject.tag == "bullet")
+        {
+            BombHP -= 1;
+        }
+        
     }
     void BulletPrefab()
     {
+        if(BombHP <= 0)
+        {
+            Explosion = true;
+        }
         if (Explosion == true)
         {
             elapsedtime = Time.deltaTime;

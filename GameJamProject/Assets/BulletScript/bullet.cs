@@ -7,10 +7,10 @@ public class bullet : MonoBehaviour
     // 弾オブジェクト（Inspectorでオブジェクトを指定）
     [SerializeField] // Inspectorで操作できるように属性を追加します
     private GameObject Bullet;
+
+    public GameObject ParentObj;
+
     float delta;
-
-    public GameObject effectPrefab;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,37 +19,54 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.GetIncetance().GameStartFlag)
+            return;
+
         delta += Time.deltaTime;
-        if (delta >= 2)
+        if (delta >= 1)
         {
             Destroy(gameObject);
         }
     }
+
     // Playerと接触したときの関数
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    // Playerに弾が接触したら弾は消滅する
-    //    if (collision.gameObject.tag == "player")
-    //    {
-    //        Destroy(gameObject);
-    //        Debug.Log("敵と接触した！");
-    //    }
-    //}
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.tag == "Enemy")
+        // Playerに弾が接触したら弾は消滅する
+        if (collision.gameObject.tag == "player")
         {
-
+            if (collision.gameObject == ParentObj)
+                return;
             Destroy(gameObject);
+            int num = collision.gameObject.GetComponent<gamepad>().InputKeyNumber;
+            GameManager.GetIncetance().DelHealth(num);
+            Debug.Log("敵と接触した！");
+        }
 
-            foreach (ContactPoint2D contactPoint2D in other.contacts)
-            {
-                GameObject effect = (GameObject)Instantiate(effectPrefab, (Vector3)contactPoint2D.point, Quaternion.identity);
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+            Debug.Log("壁と接触した！");
+        }
 
-                // 衝突位置を確認してみる。
-                print((Vector3)contactPoint2D.point);
-                Destroy(effect, 1.5f);
-            }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Playerに弾が接触したら弾は消滅する
+        if (collision.gameObject.tag == "player")
+        {
+            if (collision.gameObject == ParentObj)
+                return;
+            Destroy(gameObject);
+            GameManager.GetIncetance().DelHealth(1);
+            Debug.Log("敵と接触した！");
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+            Debug.Log("壁と接触した！");
         }
     }
 }

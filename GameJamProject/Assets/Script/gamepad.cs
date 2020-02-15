@@ -78,7 +78,7 @@ public class gamepad : MonoBehaviour
             test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
 
             transform.position = test;
-            Debug.Log("Gamepad.L stick:" + lsh + "," + lsv);
+            Debug.Log("L stick:" + lsh + "," + lsv);
 
         }
         //R stick
