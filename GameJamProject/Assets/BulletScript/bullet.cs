@@ -8,6 +8,9 @@ public class bullet : MonoBehaviour
     [SerializeField] // Inspectorで操作できるように属性を追加します
     private GameObject Bullet;
     float delta;
+
+    public GameObject effectPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,7 @@ public class bullet : MonoBehaviour
     void Update()
     {
         delta += Time.deltaTime;
-        if (delta >= 1)
+        if (delta >= 2)
         {
             Destroy(gameObject);
         }
@@ -32,4 +35,21 @@ public class bullet : MonoBehaviour
     //        Debug.Log("敵と接触した！");
     //    }
     //}
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+
+            Destroy(gameObject);
+
+            foreach (ContactPoint2D contactPoint2D in other.contacts)
+            {
+                GameObject effect = (GameObject)Instantiate(effectPrefab, (Vector3)contactPoint2D.point, Quaternion.identity);
+
+                // 衝突位置を確認してみる。
+                print((Vector3)contactPoint2D.point);
+                Destroy(effect, 1.5f);
+            }
+        }
+    }
 }
