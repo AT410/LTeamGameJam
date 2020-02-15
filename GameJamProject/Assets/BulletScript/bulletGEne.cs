@@ -24,15 +24,8 @@ public class bulletGEne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
-        this.player = GameObject.Find("Player"); //追加
         //add
         AudioSource[] audioSources = GetComponents<AudioSource>();
-        soundSE01 = audioSources[0];//被弾
-        soundSE02 = audioSources[1];//発射音
-=======
-
->>>>>>> 5e266e8dcf8ca836f73cdb0fd862bd086fcc568f
     }
 
     // Update is called once per frame
@@ -55,10 +48,10 @@ public class bulletGEne : MonoBehaviour
         Vector2 p1 = transform.position;  //Bulletの中心座標
         Vector2 p2 = this.player.transform.position; //playerの中心座標
 
-        //Bulletの座標をくちにする
+        Bulletの座標をくちにする
         p1.x = this.player.transform.position.x;
         p1.y = this.player.transform.position.y;
-        //transform.position = p1;
+        transform.position = p1;
 
 
 
@@ -70,7 +63,7 @@ public class bulletGEne : MonoBehaviour
             if (this.delta > span)
             {
                 this.delta = 0;
-                // 弾丸の複製
+                 弾丸の複製
                 GameObject Bullets = Instantiate(Bullet) as GameObject;
                 soundSE01.PlayOneShot(soundSE02.clip);
                 Bullets.transform.position = p2; //FireBallをbossの座標に位置する（くち）
@@ -78,7 +71,7 @@ public class bulletGEne : MonoBehaviour
                 Bullets.GetComponent<bullet>().ParentObj = this.gameObject;
 
                 rb2d = Bullets.GetComponent<Rigidbody2D>();
-                // 弾オブジェクトの移動関数
+                 弾オブジェクトの移動関数
                 BulletMove();
             }
         }
@@ -86,12 +79,9 @@ public class bulletGEne : MonoBehaviour
         {
             delta = 0;
         }
-<<<<<<< HEAD
-        //add
-        //test();
-=======
+        add
+        test();
         */
->>>>>>> 5e266e8dcf8ca836f73cdb0fd862bd086fcc568f
     }
     // 弾オブジェクトの移動関数
     void BulletMove()
@@ -117,6 +107,7 @@ public class bulletGEne : MonoBehaviour
                 this.delta = 0;
                 // 弾丸の複製
                 GameObject Bullets = Instantiate(Bullet) as GameObject;
+                soundSE01.PlayOneShot(soundSE02.clip);
                 Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
                 Bullets.GetComponent<bullet>().ParentObj = this.gameObject;
 
@@ -149,11 +140,13 @@ public class bulletGEne : MonoBehaviour
                 Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
                 Bullets.GetComponent<bullet>().ParentObj = this.gameObject;
 
+
                 rb2d = Bullets.GetComponent<Rigidbody2D>();
                 // 弾オブジェクトの移動関数
                 Vector2 BulletMovement = new Vector2(hori, vert).normalized;
                 // Rigidbody2D に移動量を加算する
                 rb2d.velocity += BulletMovement * bulletSpeed;
+                soundSE01.PlayOneShot(soundSE02.clip);
             }
         }
         else
@@ -169,13 +162,9 @@ public class bulletGEne : MonoBehaviour
         // Playerに弾が接触したら弾は消滅する
         if (collision.gameObject.tag == "player")
         {
-<<<<<<< HEAD
             Destroy(collision.gameObject);
             //add
             soundSE01.PlayOneShot(soundSE01.clip);
-=======
-            //Destroy(collision.gameObject);
->>>>>>> 5e266e8dcf8ca836f73cdb0fd862bd086fcc568f
         }
     }
     //add
