@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gamepad : MonoBehaviour
+public class gamepadatama : MonoBehaviour
 {
-    public GameObject Cube;
     [SerializeField] private float PlayerSpeed;
-    private Rigidbody rbd;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,32 +60,16 @@ public class gamepad : MonoBehaviour
         float vert = Input.GetAxis("Vertical");
         if ((hori != 0) || (vert != 0))
         {
-        }   
-        //L Stick
-        float lsh = Input.GetAxis("L_Stick_H");
-        float lsv = Input.GetAxis("L_Stick_V");
-        {
-
-            if (lsh <= 0.1f && lsh >= -0.1f)
-                lsh = 0;
-            if (lsv <= 0.1f && lsv >= -0.1f)
-                lsv = 0;
-
-            Vector3 test = transform.position;
-            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(lsh, lsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
-            test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
-
-            transform.position = test;
-            Debug.Log("L stick:" + lsh + "," + lsv);
-
         }
+
         //R stick
-        //float rsh = Input.GetAxis("R_Stick_H");
-        //float rsv = Input.GetAxis("R_Stick_V");
-        //if ((rsh != 0) || (rsv != 0))
-        //{
-            //Debug.Log("RAD:"+(Mathf.Atan2(rsv,rsh)*Mathf.Rad2Deg).ToString());
-           // this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsv, rsh) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
-        //}
+        float rsh = Input.GetAxis("R_Stick_H");
+        float rsv = Input.GetAxis("R_Stick_V");
+            Debug.Log("Gamepadatama Rstick:" + rsh+ "," + rsv);
+            Vector3 test2 = transform.position;
+            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsh, rsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
+            test2 += new Vector3(rsh, rsv, 0) * PlayerSpeed * Time.deltaTime;
+
+        transform.position = test2;
     }
 }
