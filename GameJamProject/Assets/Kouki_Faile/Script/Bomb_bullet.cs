@@ -20,12 +20,23 @@ public class Bomb_bullet : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            int num = collision.gameObject.GetComponent<gamepad>().InputKeyNumber;
+            GameManager.GetIncetance().DelHealth(num);
+            Destroy(gameObject);
+        }
+
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Vector2 refrectVec = Vector2.Reflect(this.lastvelocity, collision.contacts[0].normal);
         rb.velocity = refrectVec;
 
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "player")
         {
             Destroy(gameObject);
         }
@@ -42,6 +53,7 @@ public class Bomb_bullet : MonoBehaviour
         Destroy(gameObject, destroytime);
 
     }
+
     // Update is called once per frame
     void Update()
     {
