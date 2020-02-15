@@ -12,7 +12,6 @@ public class Bomb_bullet_Prefab : MonoBehaviour
     float max = 360.0f;
     float min = 0.0f;
     bool Explosion;
-    public int bulletCount;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
