@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //制限時間がなくなったらリザルト画面へ
         if (TotalTime <= 0.0f)
             SceneManager.LoadScene("ResultScene");
         TotalTime -= Time.deltaTime;

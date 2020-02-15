@@ -73,9 +73,8 @@ public class gamepad : MonoBehaviour
             lsv = 0;
 
         Vector3 test = transform.position;
-        this.transform.rotation =  Quaternion.AngleAxis(Mathf.Atan(lsh/lsv), new Vector3(0,0,1));
 
-        test += new Vector3(lsv, -lsh, 0) *PlayerSpeed* Time.deltaTime;
+        test += new Vector3(lsh, lsv, 0) *PlayerSpeed* Time.deltaTime;
 
         transform.position = test;
 
@@ -106,7 +105,8 @@ public class gamepad : MonoBehaviour
         float rsv = Input.GetAxis("R_Stick_V");
         if ((rsh != 0) || (rsv != 0))
         {
-            Debug.Log("R stick:" + rsh + "," + rsv);
+            Debug.Log("RAD:"+(Mathf.Atan2(rsv,rsh)*Mathf.Rad2Deg).ToString());
+            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsv, rsh) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
 
         }
     }
