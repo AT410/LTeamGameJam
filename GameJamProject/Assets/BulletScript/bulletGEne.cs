@@ -13,21 +13,31 @@ public class bulletGEne : MonoBehaviour
     private float span;
     // bullet prefab
     public GameObject Bullet;
+    GameObject player;
     float delta = 0;
     // Start is called before the first frame update
     void Start()
     {
-
+        this.player = GameObject.Find("player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector2 p1 = transform.position;
+        Vector2 p2 = this.player.transform.position;
+
+        p1.x = this.transform.position.x;
+        p1.y = this.transform.position.y;
+        transform.position = p1;
+
         this.delta += Time.deltaTime;
         if (this.delta > span)
         {
             // 弾丸の複製
             GameObject Bullets = Instantiate(Bullet) as GameObject;
+            Bullets.transform.position = p2;
+            Bullets.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             rb2d = Bullets.GetComponent<Rigidbody2D>();
             this.delta = 0;
             // 弾オブジェクトの移動関数
@@ -37,8 +47,8 @@ public class bulletGEne : MonoBehaviour
     // 弾オブジェクトの移動関数
     void BulletMove()
     {
-        float hori = Input.GetAxis("Horizontal");
-        float vert = Input.GetAxis("Vertical");
+        float hori = Input.GetAxis("R_Stick_H");
+        float vert = Input.GetAxis("R_Stick_V");
 
         // 弾オブジェクトの移動量ベクトルを作成（数値情報）
         Vector2 BulletMovement = new Vector2(hori, vert).normalized;
