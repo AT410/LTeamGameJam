@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 /// <summary>
 ///　ゲームマネージャークラス
 ///　<info>
@@ -10,7 +11,6 @@ using UnityEngine.UI;
 ///　
 /// </info>
 /// </summary>
-
 public class GameManager : MonoBehaviour
 {
     static private GameManager Incetance;
@@ -41,8 +41,17 @@ public class GameManager : MonoBehaviour
     private float TotalTime = 0;
     [SerializeField, Tooltip("TimeUI")]
     private Text TimeUI;
-    public List<GameObject> Objects;
-    
+    [SerializeField, Tooltip("Player1HP")]
+    [Range(0.0f,1.0f)]
+    private float HP1,HP2,HP3,HP4;
+
+    [SerializeField]
+    private List<GameObject> HealthObjects;
+    [SerializeField]
+    private List<GameObject> PlayerObjects;
+
+    public GameObject Object;
+
     private bool StartFlag =true;
 
     // Start is called before the first frame update
@@ -68,7 +77,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void SetPlayerObject()
     {
-        foreach(var test in Objects)
+        foreach(var test in PlayerObjects)
         {
             Vector3 OutPosition = new Vector3();
             OutPosition.x = Random.Range(WidthRange.x, WidthRange.y);
@@ -105,5 +114,27 @@ public class GameManager : MonoBehaviour
         int mini = (int)(TotalTime / 60.0f);
         int second = (int)(TotalTime % 60.0f);
         TimeUI.text = mini.ToString() +":"+ second.ToString();
+    }
+
+    public void DelHealth(int PlayerNum)
+    {
+        Color result = Color.white;
+
+        switch (PlayerNum)
+        {
+            case 1:
+                //体力を減らす
+                result = Color.Lerp(Color.white, Color.blue, HP1);
+                HealthObjects[0].GetComponent<SpriteRenderer>().color = result;
+                break;
+            case 2:
+                result = Color.Lerp(Color.white, Color.red, HP2);
+                HealthObjects[1].GetComponent<SpriteRenderer>().color = result;
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
     }
 }
