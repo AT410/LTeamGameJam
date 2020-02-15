@@ -26,9 +26,20 @@ public class SceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CurrntScene.name == "MainGameStage")
+        if(CurrntScene.name == "mainGameStage")
+        {
+            SceneManager.LoadScene(0);
             return;
-
+        }
+        if (CurrntScene.name == "TitleScene")
+        {
+            if(Input.GetKeyDown("joystick button 1"))
+            {
+                SceneManager.LoadScene("MainGameStage");
+                soundSE01.PlayOneShot(soundSE01.clip);
+            }
+            return;
+        }
         if (CurrntScene.name == "ResultScene")
         {
             //タイトルへ遷移
