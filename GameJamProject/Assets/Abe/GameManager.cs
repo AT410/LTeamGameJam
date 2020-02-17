@@ -81,7 +81,10 @@ public class GameManager : MonoBehaviour
         //開始カウントダウン
         //制限時間がなくなったらリザルト画面へ
         if (TotalTime <= 0.0f)
+        {
+            PlayerPrefs.SetInt("Win", 0);
             SceneManager.LoadScene("ResultScene");
+        }
         TotalTime -= Time.deltaTime;
         UpdateUI();
 

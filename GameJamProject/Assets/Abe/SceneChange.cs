@@ -32,5 +32,15 @@ public class SceneChange : MonoBehaviour
             }
             return;
         }
+
+        if (CurrntScene.name == "TitleScene")
+        {
+            //タイトルへ遷移
+            if (Input.GetKeyDown("joystick button 7"))
+            {
+                SceneManager.LoadScene(1);
+            }
+            return;
+        }
     }
 }
