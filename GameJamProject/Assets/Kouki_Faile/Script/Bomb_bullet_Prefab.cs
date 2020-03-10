@@ -12,9 +12,20 @@ public class Bomb_bullet_Prefab : MonoBehaviour
     float max = 360.0f;
     float min = 0.0f;
     bool Explosion;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bullet" || collision.gameObject.tag == "bomb")
+        {
+            Explosion = true;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Playerbullet")
+        Debug.Log("Collision");
+
+        if(collision.gameObject.tag == "bullet" || collision.gameObject.tag == "bomb")
         {
             Explosion = true;
         }
@@ -36,8 +47,9 @@ public class Bomb_bullet_Prefab : MonoBehaviour
             float RandomZ = Random.Range(min, max);
             GameObject bullets = Instantiate(bullet, transform.position, Quaternion.Euler(0.0f, 0.0f, RandomZ)) as GameObject;
             bulletCount -= 1;
+        }
     }
-}
+
     // Start is called before the first frame update
     void Start()
     {
