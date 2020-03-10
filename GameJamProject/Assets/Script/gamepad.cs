@@ -6,10 +6,6 @@ public class gamepad : MonoBehaviour
 {
     public GameObject Cube;
     [SerializeField] private float PlayerSpeed;
-
-    
-    public int InputKeyNumber;
-
     private Rigidbody rbd;
     // Start is called before the first frame update
     void Start()
@@ -19,83 +15,72 @@ public class gamepad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.GetIncetance().GameStartFlag)
-            return;
-        switch (InputKeyNumber)
+
+        Transform myTransform = this.transform;
+
+        if (Input.GetKeyDown("joystick button 0"))
         {
-            case 1:
-                Player1Move();
-                break;
-            case 2:
-                Player2Move();
-                break;
+            Debug.Log("button0");
         }
+        if (Input.GetKeyDown("joystick button 1"))
+        {
+            Debug.Log("button1");
+        }
+        if (Input.GetKeyDown("joystick button 2"))
+        {
+            Debug.Log("button2");
+        }
+        if (Input.GetKeyDown("joystick button 3"))
+        {
+            Debug.Log("button3");
+        }
+        if (Input.GetKeyDown("joystick button 4"))
+        {
+            Debug.Log("button4");
+        }
+        if (Input.GetKeyDown("joystick button 5"))
+        {
+            Debug.Log("button5");
+        }
+        if (Input.GetKeyDown("joystick button 6"))
+        {
+            Debug.Log("button6");
+        }
+        if (Input.GetKeyDown("joystick button 7"))
+        {
+            Debug.Log("button7");
+        }
+        if (Input.GetKeyDown("joystick button 8"))
+        {
+            Debug.Log("button8");
+        }
+        if (Input.GetKeyDown("joystick button 9"))
+        {
+            Debug.Log("button9");
+        }
+        float hori = Input.GetAxis("Horizontal");
+        float vert = Input.GetAxis("Vertical");
+        if ((hori != 0) || (vert != 0))
+        {
+        }   
+        //L Stick
+        float lsh = Input.GetAxis("L_Stick_H");
+        float lsv = Input.GetAxis("L_Stick_V");
+        {
 
-        //Transform myTransform = this.transform;
+            if (lsh <= 0.1f && lsh >= -0.1f)
+                lsh = 0;
+            if (lsv <= 0.1f && lsv >= -0.1f)
+                lsv = 0;
 
-        //if (Input.GetKeyDown("joystick button 0"))
-        //{
-        //    Debug.Log("button0");
-        //}
-        //if (Input.GetKeyDown("joystick button 1"))
-        //{
-        //    Debug.Log("button1");
-        //}
-        //if (Input.GetKeyDown("joystick button 2"))
-        //{
-        //    Debug.Log("button2");
-        //}
-        //if (Input.GetKeyDown("joystick button 3"))
-        //{
-        //    Debug.Log("button3");
-        //}
-        //if (Input.GetKeyDown("joystick button 4"))
-        //{
-        //    Debug.Log("button4");
-        //}
-        //if (Input.GetKeyDown("joystick button 5"))
-        //{
-        //    Debug.Log("button5");
-        //}
-        //if (Input.GetKeyDown("joystick button 6"))
-        //{
-        //    Debug.Log("button6");
-        //}
-        //if (Input.GetKeyDown("joystick button 7"))
-        //{
-        //    Debug.Log("button7");
-        //}
-        //if (Input.GetKeyDown("joystick button 8"))
-        //{
-        //    Debug.Log("button8");
-        //}
-        //if (Input.GetKeyDown("joystick button 9"))
-        //{
-        //    Debug.Log("button9");
-        //}
-        //float hori = Input.GetAxis("Horizontal");
-        //float vert = Input.GetAxis("Vertical");
-        //if ((hori != 0) || (vert != 0))
-        //{
-        //}   
-        ////L Stick
-        //float lsh = Input.GetAxis("L_Stick_H");
-        //float lsv = Input.GetAxis("L_Stick_V");
-        //{
+            Vector3 test = transform.position;
+            this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(lsh, -lsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
+            test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
 
-        //    if (lsh <= 0.1f && lsh >= -0.1f)
-        //        lsh = 0;
-        //    if (lsv <= 0.1f && lsv >= -0.1f)
-        //        lsv = 0;
+            transform.position = test;
+            Debug.Log("L stick:" + lsh + "," + lsv);
 
-        //    Vector3 test = transform.position;
-        //    //this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(lsh, -lsv) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
-        //    test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
-
-        //    transform.position = test;
-        //    Debug.Log("L stick:" + lsh + "," + lsv);
-
-        //}
+        }
         //R stick
         //float rsh = Input.GetAxis("R_Stick_H");
         //float rsv = Input.GetAxis("R_Stick_V");
@@ -105,30 +90,4 @@ public class gamepad : MonoBehaviour
            // this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(rsv, rsh) * Mathf.Rad2Deg, new Vector3(0, 0, 1));
         //}
     }
-
-    void Player1Move()
-    {
-        float lsh = Input.GetAxis("GamePad1_LX");
-        float lsv = Input.GetAxis("GamePad1_LY");
-
-        if (lsh != 0 || lsv != 0)
-        {
-            Vector3 test = transform.position;
-            test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
-            transform.position = test;
-        }
-    }
-
-    void Player2Move()
-    {
-        float lsh = Input.GetAxis("GamePad2_LX");
-        float lsv = Input.GetAxis("GamePad2_LY");
-        if (lsh != 0 || lsv != 0)
-        {
-            Vector3 test = transform.position;
-            test += new Vector3(lsh, lsv, 0) * PlayerSpeed * Time.deltaTime;
-            transform.position = test;
-        }
-    }
-
 }
