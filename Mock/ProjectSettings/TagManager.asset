@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Button
+  - storn
+  - stage
   layers:
   - Default
   - TransparentFX

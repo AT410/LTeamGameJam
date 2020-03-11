@@ -5,29 +5,35 @@ using UnityEngine;
 public class Netu : MonoBehaviour
 {
     float StayTime;
+    public int MAXTIME;
     public GameObject storn;
+    bool fall= false;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-    }
-    void TriggerEnter(Collision collision)
-    {
-        StayTime += Time.deltaTime;
         float PosY = storn.gameObject.transform.position.y;
-        if (collision.gameObject.tag =="Player")
+        if (PosY > -3.33&&fall==true)
         {
-            if (StayTime>4)
-            {
-                PosY = 5.0f;
-                storn.gameObject.transform.position = new Vector3(storn.gameObject.transform.position.x, PosY, storn.gameObject.transform.position.z);
-            }
+            PosY -= 1.0f * Time.deltaTime;
+            storn.gameObject.transform.position = new Vector3(storn.gameObject.transform.position.x, PosY, storn.gameObject.transform.position.z);
         }
-        Debug.Log(StayTime);
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            StayTime += Time.deltaTime;
+            if (StayTime > MAXTIME)
+            {
+                fall = true;
+            }
+            Debug.Log(StayTime);
+        }
     }
 }

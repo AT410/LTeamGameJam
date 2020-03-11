@@ -23,10 +23,46 @@ public class Playermove : MonoBehaviour
         float PosY = this.gameObject.transform.position.y;
         float PosZ = this.gameObject.transform.position.z;
         OkuyukiMAX = Okuyuki * Okuyukisuu;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        float lsh = Input.GetAxis("L_Stick_H");
+        if(lsh !=0)
         {
-            PosX -= PlayerSpeed*Time.deltaTime;
+            if(lsh<0)
+            {
+                PosX -= PlayerSpeed * Time.deltaTime;
+            }
         }
+        if (lsh != 0)
+        {
+            if (lsh > 0)
+            {
+                PosX += PlayerSpeed * Time.deltaTime;
+            }
+        }
+        float lsv = Input.GetAxis("L_Stick_V");
+        if (lsv != 0)
+        {
+            if (lsv < 0)
+            {
+                if (PosZ > OkuyukiMIN)
+                {
+                    PosZ -= Okuyuki*Time.deltaTime;
+                }
+            }
+        }
+        if (lsv != 0)
+        {
+            if (lsv > 0)
+            {
+                if (PosZ < OkuyukiMAX)
+                {
+                    PosZ += Okuyuki*Time.deltaTime;
+                }
+            }
+        }
+        //if (Input.GetKey(KeyCode.LeftArrow))
+        //{
+        //    PosX -= PlayerSpeed*Time.deltaTime;
+        //}
         if (Input.GetKey(KeyCode.RightArrow))
         {
             PosX += PlayerSpeed*Time.deltaTime;
@@ -35,20 +71,20 @@ public class Playermove : MonoBehaviour
         {
             PosY += PlayerJamp * Time.deltaTime;
         }
-        if(Input.GetKeyDown(KeyCode.Z))
-        {
-            if (PosZ < OkuyukiMAX)
-            {
-                PosZ += Okuyuki;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            if (PosZ > OkuyukiMIN)
-            {
-                PosZ -= Okuyuki;
-            }
-        }
+        //if(Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    if (PosZ < OkuyukiMAX)
+        //    {
+        //        PosZ += Okuyuki;
+        //    }
+        //}
+        //if (Input.GetKeyDown(KeyCode.X))
+        //{
+        //    if (PosZ > OkuyukiMIN)
+        //    {
+        //        PosZ -= Okuyuki;
+        //    }
+        //}
         this.gameObject.transform.position = new Vector3(PosX,PosY,PosZ);
     }
 }
