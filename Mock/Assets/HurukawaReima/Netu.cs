@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Netu : MonoBehaviour
 {
-    float StayTime;
+    public float StayTime;
     public int MAXTIME;
     public GameObject storn;
     bool fall= false;
@@ -33,7 +33,6 @@ public class Netu : MonoBehaviour
             {
                 fall = true;
             }
-            Debug.Log(StayTime);
         }
     }
 }

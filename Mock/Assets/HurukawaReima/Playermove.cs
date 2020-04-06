@@ -67,9 +67,9 @@ public class Playermove : MonoBehaviour
         {
             PosX += PlayerSpeed*Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey("joystick button 1"))
         {
-            PosY += PlayerJamp * Time.deltaTime;
+            PosY += PlayerJamp*Time.deltaTime;
         }
         //if(Input.GetKeyDown(KeyCode.Z))
         //{

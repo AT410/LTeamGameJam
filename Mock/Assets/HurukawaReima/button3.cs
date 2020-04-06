@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class button3 : MonoBehaviour
 {
-    public GameObject storn;
+    bool button3active = false;
+    public GameObject Ice2Prehub;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,14 +15,17 @@ public class button3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(button3active==true)
+        {
+            Instantiate(Ice2Prehub);
+            button3active = false;
+        }
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.transform.tag == "storn")
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("button2押された");
-            storn.gameObject.SetActive(false);
+            button3active = !button3active;
         }
     }
 }

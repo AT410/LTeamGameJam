@@ -7,6 +7,7 @@ public class push : MonoBehaviour
     bool Buttonactive = false;
     public GameObject fire;
     public GameObject DeletStage;
+    bool Onpush = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,17 +17,34 @@ public class push : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (Onpush == true)
         {
-            fire.SetActive(!fire.activeSelf);
-            Debug.Log("Fire:"+fire.activeSelf);
-
-            DeletStage.SetActive(!DeletStage.activeSelf);
-            Debug.Log("DeletStage:"+DeletStage.activeSelf);
+            if (Input.GetKey("joystick button 2"))
+                {
+                fire.SetActive(!fire.activeSelf);
+                }
         }
+    }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        fire.SetActive(!fire.activeSelf);
+    //        Debug.Log("Fire:"+fire.activeSelf);
+
+    //        DeletStage.SetActive(!DeletStage.activeSelf);
+    //        Debug.Log("DeletStage:"+DeletStage.activeSelf);
+    //    }
+    //}
+     void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag =="Player")
+        {
+            Onpush = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        Onpush = false;
     }
 }
