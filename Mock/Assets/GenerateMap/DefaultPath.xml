@@ -1,34 +1,29 @@
 <?xml version="1.0"?>
 <root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Area AreaNumber="0">
-    <StageData StageNumber="0">
-      <Objects Type="Test" Pos="2.56,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-    </StageData>
     <StageData StageNumber="1">
-      <Objects Type="Test" Pos="2.56,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
+      <Objects Type="Test" Pos="-1,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-2,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-1,1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-1,-1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
     </StageData>
     <StageData StageNumber="2">
-      <Objects Type="Test" Pos="2.56,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
+      <Objects Type="Test" Pos="-1,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-1,-1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-2,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-1,1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
     </StageData>
-    <StageData StageNumber="3">
-      <Objects Type="Test" Pos="2.56,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-    </StageData>
-  </Area>
-  <Area AreaNumber="1">
-    <StageData StageNumber="3">
-      <Objects Type="Test" Pos="2.56,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
-      <Objects Type="Test" Pos="-3.27,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="sss" TexKey="ffff" />
+    <StageData StageNumber="0">
+      <Objects Type="Test" Pos="-1,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-1,-1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-2,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="1,1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="0,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="1,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-3,0,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
+      <Objects Type="Test" Pos="-3,1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" />
     </StageData>
   </Area>
 </root>
