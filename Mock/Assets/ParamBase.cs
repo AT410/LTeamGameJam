@@ -5,8 +5,8 @@ using UnityEngine;
 public class ParamBase : MonoBehaviour
 {
     public string Type;
-    public string MeshKey;
-    public string TexKey;
+    public string MeshKey="DEFAULT_CUBE";
+    public string TexKey="TEST_TX";
 
     // Start is called before the first frame update
     void Start()
