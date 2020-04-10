@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Omori
+  - Button
+  - storn
+  - stage
+  - StageEditor
+  - Editor
   layers:
   - Default
   - TransparentFX
@@ -14,12 +18,12 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Himo
-  - Omori
-  - Move
-  - Bottun
-  - Kinzoku
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
