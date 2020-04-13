@@ -7,6 +7,7 @@ public class ParamBase : MonoBehaviour
     public string Type;
     public string MeshKey="DEFAULT_CUBE";
     public string TexKey="TEST_TX";
+    public List<string> Tags;
 
     // Start is called before the first frame update
     void Start()

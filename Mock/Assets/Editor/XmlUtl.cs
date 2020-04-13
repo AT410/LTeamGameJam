@@ -65,6 +65,8 @@ public class Object
     public string MeshKey;
     [System.Xml.Serialization.XmlAttribute("TexKey")]
     public string TexKey;
+    [System.Xml.Serialization.XmlAttribute("Tags")]
+    public string TagStr;
 }
 
 public class Util
@@ -81,20 +83,8 @@ public class Util
         Stage Stage = new Stage();
         Stage.StageNumber = StageNumber;
         Stage.StageObjects = new List<Object>();
-        
-        foreach(var Obj in GameObject.FindGameObjectsWithTag("Editor"))
-        {
-            var TransComp = Obj.GetComponent<Transform>();
-            var Param = Obj.GetComponent<ParamBase>();
-            Object Ob = new Object();
-            Ob.Type = Param.Type;
-            Ob.Pos = VecToStr(TransComp.position);
-            Ob.Rot = RotToStr(TransComp.rotation);
-            Ob.Scale = VecToStr(TransComp.localScale);
-            Ob.MeshKey = Param.MeshKey;
-            Ob.TexKey = Param.TexKey;
-            Stage.StageObjects.Add(Ob);
-        }
+
+        AddStageData(ref Stage);
 
         area.StageData.Add(Stage);
         result.Areas.Add(area);
@@ -116,19 +106,7 @@ public class Util
             Stage.StageNumber = StageNumber;
             Stage.StageObjects = new List<Object>();
 
-            foreach (var Obj in GameObject.FindGameObjectsWithTag("Editor"))
-            {
-                var TransComp = Obj.GetComponent<Transform>();
-                var Param = Obj.GetComponent<ParamBase>();
-                Object Ob = new Object();
-                Ob.Type = Param.Type;
-                Ob.Pos = VecToStr(TransComp.position);
-                Ob.Rot = RotToStr(TransComp.rotation);
-                Ob.Scale = VecToStr(TransComp.localScale);
-                Ob.MeshKey = Param.MeshKey;
-                Ob.TexKey = Param.TexKey;
-                Stage.StageObjects.Add(Ob);
-            }
+            AddStageData(ref Stage);
 
             areaptr.StageData.Add(Stage);
             data.Areas.Add(areaptr);
@@ -143,43 +121,51 @@ public class Util
                 Stage.StageNumber = StageNumber;
                 Stage.StageObjects = new List<Object>();
 
-                foreach (var Obj in GameObject.FindGameObjectsWithTag("Editor"))
-                {
-                    var TransComp = Obj.GetComponent<Transform>();
-                    var Param = Obj.GetComponent<ParamBase>();
-                    Object Ob = new Object();
-                    Ob.Type = Param.Type;
-                    Ob.Pos = VecToStr(TransComp.position);
-                    Ob.Rot = RotToStr(TransComp.rotation);
-                    Ob.Scale = VecToStr(TransComp.localScale);
-                    Ob.MeshKey = Param.MeshKey;
-                    Ob.TexKey = Param.TexKey;
-                    Stage.StageObjects.Add(Ob);
-                }
+                AddStageData(ref Stage);
+
                 area.StageData.Add(Stage);
                 return;
             }
             else
             {
                 StagePtr.StageObjects.Clear();
-                foreach (var Obj in GameObject.FindGameObjectsWithTag("Editor"))
-                {
-                    var TransComp = Obj.GetComponent<Transform>();
-                    var Param = Obj.GetComponent<ParamBase>();
-                    Object Ob = new Object();
-                    Ob.Type = Param.Type;
-                    Ob.Pos = VecToStr(TransComp.position);
-                    Ob.Rot = RotToStr(TransComp.rotation);
-                    Ob.Scale = VecToStr(TransComp.localScale);
-                    Ob.MeshKey = Param.MeshKey;
-                    Ob.TexKey = Param.TexKey;
-                    StagePtr.StageObjects.Add(Ob);
-                }
+
+                AddStageData(ref StagePtr);
+
                 area.StageData.RemoveAt(StageNumber);
+
                 area.StageData.Add(StagePtr);
                 return;
             }
 
+        }
+
+    }
+
+    private static void AddStageData(ref Stage stage)
+    {
+        foreach (var Obj in GameObject.FindGameObjectsWithTag("Editor"))
+        {
+            var TransComp = Obj.GetComponent<Transform>();
+            var Param = Obj.GetComponent<ParamBase>();
+            if (!Param)
+                return;
+            Object Ob = new Object();
+            Ob.Type = Param.Type;
+            Ob.Pos = VecToStr(TransComp.position);
+            Ob.Rot = RotToStr(TransComp.rotation);
+            Ob.Scale = VecToStr(TransComp.localScale);
+            Ob.MeshKey = Param.MeshKey;
+            Ob.TexKey = Param.TexKey;
+            for(int index=0 ;index<Param.Tags.Count();index++)
+            {
+                Ob.TagStr += Param.Tags[index];
+                if(Param.Tags.Count!=index+1)
+                {
+                    Ob.TagStr += ",";
+                }
+            }
+            stage.StageObjects.Add(Ob);
         }
 
     }
