@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class push : MonoBehaviour
 {
-    bool Buttonactive = false;
+    //bool Buttonactive = false;
     public GameObject fire;
     public GameObject DeletStage;
     bool Onpush = false;
