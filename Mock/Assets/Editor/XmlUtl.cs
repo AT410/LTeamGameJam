@@ -67,6 +67,10 @@ public class Object
     public string TexKey;
     [System.Xml.Serialization.XmlAttribute("Tags")]
     public string TagStr;
+    [System.Xml.Serialization.XmlAttribute("SharedActive")]
+    public string ActiveStr;
+    [System.Xml.Serialization.XmlAttribute("SharedKey")]
+    public string SharedStr;
 }
 
 public class Util
@@ -164,6 +168,13 @@ public class Util
                 {
                     Ob.TagStr += ",";
                 }
+            }
+
+            //共有設定
+            Ob.ActiveStr = Convert.ToInt32(Param.SharedActive).ToString();
+            if(Param.SharedActive)
+            {
+                Ob.SharedStr = Param.SharedKey;
             }
             stage.StageObjects.Add(Ob);
         }
