@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 643870942}
   - component: {fileID: 643870941}
   m_Layer: 0
-  m_Name: Bottun (1)
+  m_Name: Button (1)
   m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 1036058571}
   - component: {fileID: 1036058570}
   m_Layer: 0
-  m_Name: Bottun
+  m_Name: Button
   m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
