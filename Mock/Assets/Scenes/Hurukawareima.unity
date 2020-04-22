@@ -132,9 +132,10 @@ GameObject:
   - component: {fileID: 41042932}
   - component: {fileID: 41042931}
   - component: {fileID: 41042930}
+  - component: {fileID: 41042934}
   m_Layer: 0
   m_Name: gateright
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +212,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &41042934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41042929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &96549206
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,9 +327,10 @@ GameObject:
   - component: {fileID: 169084206}
   - component: {fileID: 169084205}
   - component: {fileID: 169084210}
+  - component: {fileID: 169084211}
   m_Layer: 0
   m_Name: button3
-  m_TagString: Button
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,6 +437,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ice2Prehub: {fileID: 1537282842845129753, guid: d3665e3515f4aeb4e9ee4fb3203818a2,
     type: 3}
+--- !u!114 &169084211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169084204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &420786082
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,9 +465,10 @@ GameObject:
   m_Component:
   - component: {fileID: 420786084}
   - component: {fileID: 420786083}
+  - component: {fileID: 420786085}
   m_Layer: 0
   m_Name: Buttonmanager
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,6 +501,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420786085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420786082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &575408486
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,9 +532,10 @@ GameObject:
   - component: {fileID: 575408488}
   - component: {fileID: 575408487}
   - component: {fileID: 575408491}
+  - component: {fileID: 575408492}
   m_Layer: 0
   m_Name: zyouge
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,6 +625,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button2active: {fileID: 1908466315}
+--- !u!114 &575408492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575408486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &588252313
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,9 +656,10 @@ GameObject:
   - component: {fileID: 588252316}
   - component: {fileID: 588252315}
   - component: {fileID: 588252314}
+  - component: {fileID: 588252319}
   m_Layer: 0
   m_Name: Stage2 (2)
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -675,6 +752,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 90}
+--- !u!114 &588252319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588252313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &719689151
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,9 +784,10 @@ GameObject:
   - component: {fileID: 719689153}
   - component: {fileID: 719689152}
   - component: {fileID: 719689157}
+  - component: {fileID: 719689158}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,6 +897,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &719689158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719689151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &784865692
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,9 +929,10 @@ GameObject:
   - component: {fileID: 784865695}
   - component: {fileID: 784865694}
   - component: {fileID: 784865693}
+  - component: {fileID: 784865699}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Button
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -924,6 +1039,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &784865699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784865692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &874553446
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,9 +1069,10 @@ GameObject:
   - component: {fileID: 874553449}
   - component: {fileID: 874553448}
   - component: {fileID: 874553447}
+  - component: {fileID: 874553451}
   m_Layer: 0
   m_Name: DeletStage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,6 +1149,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874553451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874553446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1013244573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,9 +1180,10 @@ GameObject:
   - component: {fileID: 1013244576}
   - component: {fileID: 1013244575}
   - component: {fileID: 1013244574}
+  - component: {fileID: 1013244579}
   m_Layer: 0
   m_Name: Stage2
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,6 +1277,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1013244579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013244573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1075118529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,9 +1308,10 @@ GameObject:
   - component: {fileID: 1075118532}
   - component: {fileID: 1075118531}
   - component: {fileID: 1075118530}
+  - component: {fileID: 1075118535}
   m_Layer: 0
   m_Name: Stage2 (4)
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,6 +1404,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1075118535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075118529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1087125661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,9 +1543,10 @@ GameObject:
   - component: {fileID: 1248326219}
   - component: {fileID: 1248326218}
   - component: {fileID: 1248326217}
+  - component: {fileID: 1248326222}
   m_Layer: 0
   m_Name: Stage
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1448,6 +1639,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248326222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248326216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1277555487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,9 +1870,10 @@ GameObject:
   - component: {fileID: 1315308024}
   - component: {fileID: 1315308028}
   - component: {fileID: 1315308029}
+  - component: {fileID: 1315308030}
   m_Layer: 0
   m_Name: netudendou
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1771,6 +1981,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1315308030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315308023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1455651368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,9 +2012,10 @@ GameObject:
   - component: {fileID: 1455651371}
   - component: {fileID: 1455651370}
   - component: {fileID: 1455651369}
+  - component: {fileID: 1455651374}
   m_Layer: 0
   m_Name: storn
-  m_TagString: storn
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1879,6 +2108,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455651374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455651368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1460784764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,9 +2140,10 @@ GameObject:
   - component: {fileID: 1460784765}
   - component: {fileID: 1460784769}
   - component: {fileID: 1460784770}
+  - component: {fileID: 1460784771}
   m_Layer: 0
   m_Name: gateopen
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2004,6 +2252,24 @@ MonoBehaviour:
   gateleft: {fileID: 1884059056}
   stone: {fileID: 1455651368}
   openspeed: 5
+--- !u!114 &1460784771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460784764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1547305575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,9 +2374,10 @@ GameObject:
   - component: {fileID: 1669319940}
   - component: {fileID: 1669319939}
   - component: {fileID: 1669319938}
+  - component: {fileID: 1669319943}
   m_Layer: 0
   m_Name: Stage2 (1)
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2203,6 +2470,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669319943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669319937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1831717993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,9 +2501,10 @@ GameObject:
   - component: {fileID: 1831717997}
   - component: {fileID: 1831717996}
   - component: {fileID: 1831717995}
+  - component: {fileID: 1831717999}
   m_Layer: 0
   m_Name: Stage2 (2)
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2311,6 +2597,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831717993}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1831717999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831717993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1849186450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,9 +2629,10 @@ GameObject:
   - component: {fileID: 1849186452}
   - component: {fileID: 1849186451}
   - component: {fileID: 1849186456}
+  - component: {fileID: 1849186457}
   m_Layer: 0
   m_Name: ice
-  m_TagString: storn
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2437,6 +2742,24 @@ MonoBehaviour:
   Netu: {fileID: 1315308028}
   localGravity: {x: 0, y: -30, z: 0}
   flg: 0
+--- !u!114 &1849186457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849186450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1884059056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,9 +2772,10 @@ GameObject:
   - component: {fileID: 1884059059}
   - component: {fileID: 1884059058}
   - component: {fileID: 1884059057}
+  - component: {fileID: 1884059061}
   m_Layer: 0
   m_Name: gateleft
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2528,6 +2852,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1884059061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884059056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1908466309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,9 +2884,10 @@ GameObject:
   - component: {fileID: 1908466311}
   - component: {fileID: 1908466310}
   - component: {fileID: 1908466315}
+  - component: {fileID: 1908466316}
   m_Layer: 0
   m_Name: Button2
-  m_TagString: Button
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2650,6 +2993,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button2active: 0
+--- !u!114 &1908466316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908466309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1957568651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2664,9 +3025,10 @@ GameObject:
   - component: {fileID: 1957568653}
   - component: {fileID: 1957568652}
   - component: {fileID: 1957568657}
+  - component: {fileID: 1957568658}
   m_Layer: 0
   m_Name: goal
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2773,6 +3135,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalfire: {fileID: 1087125661}
+--- !u!114 &1957568658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957568651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
 --- !u!1 &1997709100
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,9 +3166,10 @@ GameObject:
   - component: {fileID: 1997709103}
   - component: {fileID: 1997709102}
   - component: {fileID: 1997709101}
+  - component: {fileID: 1997709106}
   m_Layer: 0
   m_Name: Stage2 (3)
-  m_TagString: stage
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2881,3 +3262,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997709106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997709100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Test
+  MeshKey: DEFAULT_CUBE
+  TexKey: TEST_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
