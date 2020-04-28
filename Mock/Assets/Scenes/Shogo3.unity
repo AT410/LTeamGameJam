@@ -168,12 +168,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &2573787
@@ -283,12 +278,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &28401840
@@ -398,12 +388,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &36210611
@@ -513,12 +498,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &68523463
@@ -628,12 +608,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &128196639
@@ -743,12 +718,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &133780506
@@ -858,12 +828,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &255382659
@@ -1084,12 +1049,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &440138060
@@ -1199,12 +1159,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &490772753
@@ -1314,12 +1269,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &534569845
@@ -1429,12 +1379,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &540339908
@@ -1495,6 +1440,117 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &614848079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 614848084}
+  - component: {fileID: 614848083}
+  - component: {fileID: 614848082}
+  - component: {fileID: 614848081}
+  - component: {fileID: 614848080}
+  m_Layer: 0
+  m_Name: Player (1)
+  m_TagString: Editor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &614848080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614848079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &614848081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614848079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: Goal
+  MeshKey: DEFAULT_CAPSULE
+  TexKey: TEST_TX
+  Tags:
+  - EnabledSwitch
+  SharedActive: 0
+  SharedKey: 
+--- !u!23 &614848082
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614848079}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &614848083
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614848079}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &614848084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614848079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.31, y: 1, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1635,12 +1691,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &746558261
@@ -1750,12 +1801,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &804930122
@@ -1865,12 +1911,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &823137059
@@ -1980,12 +2021,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &936943087
@@ -2178,12 +2214,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &987620713
@@ -2293,12 +2324,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1046633868
@@ -2408,12 +2434,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1315393548
@@ -2523,12 +2544,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1363004881
@@ -2638,12 +2654,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1391407420
@@ -2753,12 +2764,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1409781497
@@ -2868,12 +2874,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1501007376
@@ -2983,12 +2984,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1609572202
@@ -3098,12 +3094,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1672870872
@@ -3213,12 +3204,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1756016549
@@ -3328,12 +3314,7 @@ MonoBehaviour:
   Type: Test
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags:
-  - Test
-  - Test
-  - Test
-  - Test
-  - Test
+  Tags: []
   SharedActive: 0
   SharedKey: 
 --- !u!23 &1926220983

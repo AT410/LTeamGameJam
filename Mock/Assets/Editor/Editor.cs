@@ -8,7 +8,7 @@ using UnityEditor;
 public class MapEditor : EditorWindow
 {
     string[] Area = { "Area1", "Area2" };
-    string[] Stage = { "Stage1", "Stage2", "Stage3", "Stage4" };
+    string[] Stage = { "Stage1", "Stage2", "Stage3", "Stage4","Stage5" };
 
     int AreaNumber = 0;
     int StageNumber = 0;

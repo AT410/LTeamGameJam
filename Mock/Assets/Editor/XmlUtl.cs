@@ -71,6 +71,8 @@ public class Object
     public string ActiveStr;
     [System.Xml.Serialization.XmlAttribute("SharedKey")]
     public string SharedStr;
+    [System.Xml.Serialization.XmlAttribute("Number")]
+    public string Number;
 }
 
 public class Util
@@ -153,7 +155,9 @@ public class Util
             var TransComp = Obj.GetComponent<Transform>();
             var Param = Obj.GetComponent<ParamBase>();
             if (!Param)
+            {
                 return;
+            }
             Object Ob = new Object();
             Ob.Type = Param.Type;
             Ob.Pos = VecToStr(TransComp.position);
@@ -177,6 +181,12 @@ public class Util
                 Ob.SharedStr = Param.SharedKey;
             }
             stage.StageObjects.Add(Ob);
+
+            var Rock = Obj.GetComponent<RockParam>();
+            if(Rock)
+            {
+                Ob.Number = Rock.RockNumber.ToString();
+            }
         }
 
     }
