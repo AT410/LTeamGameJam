@@ -43,6 +43,14 @@ public class Stage
     [XmlAttribute("StageNumber")]
     [DefaultValue(-1)]
     public int StageNumber = -1;
+    [XmlAttribute("CamereEye")]
+    public string EyeStr;
+    [XmlAttribute("CamereAt")]
+    public string AtStr;
+    [XmlAttribute("CamereNear")]
+    public string NearStr;
+    [XmlAttribute("CamereFar")]
+    public string FarStr;
     //配置データ
     [XmlElement("Objects")]
     public List<Object> StageObjects = new List<Object>();
@@ -86,8 +94,21 @@ public class Util
         area.AreaNumber = AreaNumber;
         area.StageData = new List<Stage>();
 
+        var CamObj = GameObject.FindGameObjectWithTag("CameraEye");
+        var Eye = CamObj.GetComponent<Transform>().position;
+        var camera = CamObj.GetComponent<Camera>();
+        var near = camera.nearClipPlane;
+        var far = camera.farClipPlane;
+        
+        var AtObj = GameObject.FindGameObjectWithTag("CameraAt");
+        var At = AtObj.GetComponent<Transform>().position;
+
         Stage Stage = new Stage();
         Stage.StageNumber = StageNumber;
+        Stage.EyeStr = VecToStr(Eye);
+        Stage.AtStr = VecToStr(At);
+        Stage.NearStr = near.ToString();
+        Stage.FarStr = far.ToString();
         Stage.StageObjects = new List<Object>();
 
         AddStageData(ref Stage);
@@ -108,8 +129,21 @@ public class Util
             areaptr.AreaNumber = AreaNumber;
             areaptr.StageData = new List<Stage>();
 
+            var CamObj = GameObject.FindGameObjectWithTag("CameraEye");
+            var Eye = CamObj.GetComponent<Transform>().position;
+            var camera = CamObj.GetComponent<Camera>();
+            var near = camera.nearClipPlane;
+            var far = camera.farClipPlane;
+
+            var AtObj = GameObject.FindGameObjectWithTag("CameraAt");
+            var At = AtObj.GetComponent<Transform>().position;
+
             Stage Stage = new Stage();
             Stage.StageNumber = StageNumber;
+            Stage.EyeStr = VecToStr(Eye);
+            Stage.AtStr = VecToStr(At);
+            Stage.NearStr = near.ToString();
+            Stage.FarStr = far.ToString();
             Stage.StageObjects = new List<Object>();
 
             AddStageData(ref Stage);
