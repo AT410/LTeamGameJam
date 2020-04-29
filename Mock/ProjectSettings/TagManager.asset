@@ -9,6 +9,8 @@ TagManager:
   - stage
   - StageEditor
   - Editor
+  - CameraEye
+  - CameraAt
   layers:
   - Default
   - TransparentFX
