@@ -157,8 +157,22 @@ public class Util
             var StagePtr = area.StageData.Where(x => x.StageNumber == StageNumber).FirstOrDefault();
             if (StagePtr == null)
             {
+                var CamObj = GameObject.FindGameObjectWithTag("CameraEye");
+                var Eye = CamObj.GetComponent<Transform>().position;
+                var camera = CamObj.GetComponent<Camera>();
+                var near = camera.nearClipPlane;
+                var far = camera.farClipPlane;
+
+                var AtObj = GameObject.FindGameObjectWithTag("CameraAt");
+                var At = AtObj.GetComponent<Transform>().position;
+
+
                 Stage Stage = new Stage();
                 Stage.StageNumber = StageNumber;
+                Stage.EyeStr = VecToStr(Eye);
+                Stage.AtStr = VecToStr(At);
+                Stage.NearStr = near.ToString();
+                Stage.FarStr = far.ToString();
                 Stage.StageObjects = new List<Object>();
 
                 AddStageData(ref Stage);
@@ -169,6 +183,19 @@ public class Util
             else
             {
                 StagePtr.StageObjects.Clear();
+
+                var CamObj = GameObject.FindGameObjectWithTag("CameraEye");
+                var Eye = CamObj.GetComponent<Transform>().position;
+                var camera = CamObj.GetComponent<Camera>();
+                var near = camera.nearClipPlane;
+                var far = camera.farClipPlane;
+
+                var AtObj = GameObject.FindGameObjectWithTag("CameraAt");
+                var At = AtObj.GetComponent<Transform>().position;
+                StagePtr.EyeStr = VecToStr(Eye);
+                StagePtr.AtStr = VecToStr(At);
+                StagePtr.NearStr = near.ToString();
+                StagePtr.FarStr = far.ToString();
 
                 AddStageData(ref StagePtr);
 
