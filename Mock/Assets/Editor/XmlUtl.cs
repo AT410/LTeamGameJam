@@ -43,13 +43,13 @@ public class Stage
     [XmlAttribute("StageNumber")]
     [DefaultValue(-1)]
     public int StageNumber = -1;
-    [XmlAttribute("CamereEye")]
+    [XmlAttribute("CameraEye")]
     public string EyeStr;
-    [XmlAttribute("CamereAt")]
+    [XmlAttribute("CameraAt")]
     public string AtStr;
-    [XmlAttribute("CamereNear")]
+    [XmlAttribute("CameraNear")]
     public string NearStr;
-    [XmlAttribute("CamereFar")]
+    [XmlAttribute("CameraFar")]
     public string FarStr;
     //配置データ
     [XmlElement("Objects")]
