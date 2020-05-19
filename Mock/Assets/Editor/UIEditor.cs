@@ -5,35 +5,35 @@ using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
-public class MapEditor : EditorWindow
+public enum UISetType
 {
-    string[] Area = { "Area1", "Area2" };
-    string[] Stage = { "Stage1", "Stage2", "Stage3", "Stage4","Stage5" };
+    Title,
+    AreaSerect,
+    GameMenu
+}
 
-    int AreaNumber = 0;
-    int StageNumber = 0;
+public class UIEditor : EditorWindow
+{
+    string[] UISetNumber = {"Title", "AreaSerect" , "GameMenu" };
+
+    int SetNumber = 0;
+    bool IsNewCreate = false;
 
     string FilePath = "";
     string FileName = "";
-    string[] FileFilter = { "xml" };
 
-    bool IsNewCreate;
-
-    [MenuItem("MakeEditor/MapEditor")]
+    [MenuItem("MakeEditor/UIEditor")]
     private static void CreateWindow()
     {
-        GetWindow<MapEditor>("TEST");
-        
+        GetWindow<UIEditor>();
     }
 
     private void Awake()
     {
-        FilePath = Application.dataPath + "/GenerateMap/";
-        FileName = "DefaultPath";
-        IsNewCreate = true;
+        FilePath = FilePath = Application.dataPath + "/GenerateUISetMap/";
     }
 
-    private void OnGUI()
+    public void OnGUI()
     {
         Color defaultColor = GUI.backgroundColor;
         using (new GUILayout.VerticalScope(EditorStyles.helpBox))
@@ -44,9 +44,9 @@ public class MapEditor : EditorWindow
                 GUILayout.Label("設定");
             }
             GUI.backgroundColor = defaultColor;
-            AreaNumber = EditorGUILayout.Popup("Area", AreaNumber, Area);
-            StageNumber = EditorGUILayout.Popup("Stage", StageNumber, Stage);
+            SetNumber = EditorGUILayout.Popup("UISet", SetNumber, UISetNumber);
             IsNewCreate = EditorGUILayout.Toggle("新規作成", IsNewCreate);
+
         }
 
         using (new GUILayout.VerticalScope(EditorStyles.helpBox))
@@ -63,8 +63,15 @@ public class MapEditor : EditorWindow
             {
                 if (IsNewCreate)
                 {
-                    FilePath = Application.dataPath + "/GenerateMap/";
+                    FilePath = Application.dataPath + "/GenerateUISetMap/";
                     FileName = GUILayout.TextField(FileName);
+
+                    if (GUILayout.Button("..."))
+                    {
+                        string FullPath = EditorUtility.OpenFilePanel("Test", Application.dataPath, "xml");
+                        FilePath= System.IO.Path.GetDirectoryName(FullPath);
+                        FileName = System.IO.Path.GetFileName(FullPath);
+                    }
                 }
                 else
                 {
@@ -80,24 +87,25 @@ public class MapEditor : EditorWindow
                 // 書き込みボタン
                 if (GUILayout.Button("書き込み"))
                 {
-                    Write();
+                    WriteUI();
                 }
                 GUI.backgroundColor = defaultColor;
             }
         }
     }
 
-    private void Write()
+    private void WriteUI()
     {
         //新規作成の場合
         if (IsNewCreate)
         {
             //新規作成
             //保存ファイルパスを作成しシリアライズ化する。
-            root rot = new root();
-            rot = Util.DataSet(AreaNumber, StageNumber);
-            FilePath += FileName+".xml";
-            XmlUtil.Seialize<root>(FilePath,rot,FileMode.Create);
+            UISetType sEnum = (UISetType)System.Enum.ToObject(typeof(UISetType), SetNumber);
+            UIRoot rot = new UIRoot();
+            rot = Util.CreateNewUISet(sEnum);
+            FilePath += FileName + ".xml";
+            XmlUtil.Seialize<UIRoot>(FilePath, rot, FileMode.Create);
 
         }
         else
@@ -110,12 +118,13 @@ public class MapEditor : EditorWindow
                 EditorUtility.DisplayDialog("Warning", "フォルダがありません", "OK");
                 return;
             }
+            UISetType sEnum = (UISetType)System.Enum.ToObject(typeof(UISetType), SetNumber);
             //対応ファイルのマップデータをデシリアライズ
-            root result = new root();
-            result = XmlUtil.Deserialize<root>(FilePath);
+            UIRoot result = new UIRoot();
+            result = XmlUtil.Deserialize<UIRoot>(FilePath);
             //新たなデータを追加してシリアライズ化
-            Util.AddData(AreaNumber, StageNumber, ref result);
-            XmlUtil.Seialize<root>(FilePath, result);
+            Util.AddUISet(sEnum,ref result);
+            XmlUtil.Seialize<UIRoot>(FilePath, result);
         }
         AssetDatabase.Refresh();
     }
