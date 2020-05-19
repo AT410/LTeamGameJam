@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -82,6 +83,38 @@ public class Object
     [System.Xml.Serialization.XmlAttribute("Number")]
     public string Number;
 }
+
+[Serializable]
+public class UIRoot
+{
+    [XmlElement("UISet")]
+    public List<UISet> UISets;
+}
+
+[Serializable]
+public class UISet
+{
+    [System.Xml.Serialization.XmlAttribute("UIType")]
+    public string UIType;
+
+    [XmlElement("UIData")]
+    public List<UIData> UIDatas;
+}
+
+[Serializable]
+public class UIData
+{
+    [System.Xml.Serialization.XmlAttribute("Type")]
+    public string Type;
+    [System.Xml.Serialization.XmlAttribute("Pos")]
+    public string Pos;
+    [System.Xml.Serialization.XmlAttribute("Width")]
+    public string Width;
+    [System.Xml.Serialization.XmlAttribute("Height")]
+    public string Height;
+
+}
+
 
 public class Util
 {
@@ -183,6 +216,9 @@ public class Util
             else
             {
                 StagePtr.StageObjects.Clear();
+                area.StageData.Remove(StagePtr);
+
+                Stage NewStage = new Stage();
 
                 var CamObj = GameObject.FindGameObjectWithTag("CameraEye");
                 var Eye = CamObj.GetComponent<Transform>().position;
@@ -192,16 +228,19 @@ public class Util
 
                 var AtObj = GameObject.FindGameObjectWithTag("CameraAt");
                 var At = AtObj.GetComponent<Transform>().position;
-                StagePtr.EyeStr = VecToStr(Eye);
-                StagePtr.AtStr = VecToStr(At);
-                StagePtr.NearStr = near.ToString();
-                StagePtr.FarStr = far.ToString();
+                NewStage.EyeStr = VecToStr(Eye);
+                NewStage.AtStr = VecToStr(At);
+                NewStage.NearStr = near.ToString();
+                NewStage.FarStr = far.ToString();
+                NewStage.StageNumber = StageNumber;
 
-                AddStageData(ref StagePtr);
+                AddStageData(ref NewStage);
 
-                area.StageData.RemoveAt(StageNumber);
 
-                area.StageData.Add(StagePtr);
+                area.StageData.Add(NewStage);
+
+                //sort
+                area.StageData.Sort((a, b) => a.StageNumber - b.StageNumber);
                 return;
             }
 
@@ -248,6 +287,66 @@ public class Util
             {
                 Ob.Number = Rock.RockNumber.ToString();
             }
+        }
+
+    }
+
+    //UISET
+    public static UIRoot CreateNewUISet(UISetType type)
+    {
+        UIRoot root = new UIRoot();
+        root.UISets = new List<UISet>();
+        UISet iSet = new UISet();
+        iSet.UIType = type.ToString();
+        iSet.UIDatas = new List<UIData>();
+        AddUIData(ref iSet); 
+        root.UISets.Add(iSet);
+        return root;
+    }
+
+    public static void AddUISet(UISetType type,ref UIRoot result)
+    {
+        var UISet = result.UISets.Where(x => x.UIType == type.ToString()).FirstOrDefault();
+        if(UISet ==null)
+        {
+            UISet iSet = new UISet();
+            iSet.UIType = type.ToString();
+            iSet.UIDatas = new List<UIData>();
+            AddUIData(ref iSet);
+            result.UISets.Add(iSet);
+            return;
+        }
+        else
+        {
+            result.UISets.Remove(UISet);
+            UISet iSet = new UISet();
+            iSet.UIType = type.ToString();
+            iSet.UIDatas = new List<UIData>();
+            AddUIData(ref iSet);
+            result.UISets.Add(iSet);
+
+            result.UISets.Sort((a, b) => a.UIType.CompareTo(b.UIType));
+            return;
+        }
+    }
+
+    private static void AddUIData(ref UISet uISet)
+    {
+        foreach (var Test in GameObject.FindGameObjectsWithTag("UI"))
+        {
+            //メッシュの取得
+            UIData data = new UIData();
+            var RectT = Test.GetComponent<RectTransform>();
+            var Pos = RectT.localPosition;
+            var Width = RectT.rect.width;
+            var Heght = RectT.rect.height;
+
+            data.Type = Test.GetComponent<UIParam>().type.ToString();
+            data.Pos = VecToStr(Pos);
+            data.Height = Heght.ToString();
+            data.Width = Width.ToString();
+
+            uISet.UIDatas.Add(data);
         }
 
     }

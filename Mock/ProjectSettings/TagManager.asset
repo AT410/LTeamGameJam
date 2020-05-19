@@ -11,6 +11,7 @@ TagManager:
   - Editor
   - CameraEye
   - CameraAt
+  - UI
   layers:
   - Default
   - TransparentFX
