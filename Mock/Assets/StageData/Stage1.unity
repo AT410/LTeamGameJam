@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -748,9 +748,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Wall
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Goal
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
@@ -1169,9 +1169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1499,9 +1499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1609,9 +1609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1829,9 +1829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Wall
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2055,9 +2055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Wall
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2165,9 +2165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Switch
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []

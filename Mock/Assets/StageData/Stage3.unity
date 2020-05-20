@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -336,10 +336,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.45, y: 3, z: -0.5}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
-  m_Children:
-  - {fileID: 856549433}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328378332
 GameObject:
@@ -557,10 +556,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: -4, z: 0.5}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
-  m_Children:
-  - {fileID: 813150303}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346736553
 GameObject:
@@ -717,9 +715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Wall
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -827,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Goal
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
@@ -890,7 +888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1091,7 +1089,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &722650405 stripped
 GameObject:
@@ -1145,7 +1143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: Test
-  MeshKey: DEFAULT_CUBE
+  MeshKey: DEFAULT_SPHERE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
@@ -1203,11 +1201,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813150298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.68, z: 0}
-  m_LocalScale: {x: 0.25, y: 1.6, z: 0.25}
+  m_LocalPosition: {x: 6, y: -0.16000009, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.8, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 346483561}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856549428
 GameObject:
@@ -1255,7 +1253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: Test
-  MeshKey: DEFAULT_CUBE
+  MeshKey: DEFAULT_SPHERE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
@@ -1313,11 +1311,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856549428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.680001, z: 0}
-  m_LocalScale: {x: 0.25, y: 1.6, z: 0.25}
+  m_LocalPosition: {x: 7.45, y: 6.84, z: -0.5}
+  m_LocalScale: {x: 0.5, y: 0.8, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 284656354}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &929814885
 GameObject:
@@ -1427,7 +1425,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 1.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1218820018
 GameObject:
@@ -1475,7 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: Test
-  MeshKey: DEFAULT_CUBE
+  MeshKey: DEFAULT_SPHERE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
@@ -1533,11 +1531,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218820018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.68, z: 0}
-  m_LocalScale: {x: 0.5, y: 1.6, z: 0.5}
+  m_LocalPosition: {x: -8.5, y: -0.16000009, z: -1.25}
+  m_LocalScale: {x: 0.5, y: 0.8, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1836419578}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1225333402
 PrefabInstance:
@@ -1653,9 +1651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1763,9 +1761,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1874,7 +1872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: Test
-  MeshKey: DEFAULT_CUBE
+  MeshKey: DEFAULT_SPHERE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
@@ -1932,11 +1930,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1308692841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.68, z: 0}
-  m_LocalScale: {x: 0.25, y: 1.6, z: 0.25}
+  m_LocalPosition: {x: -7, y: 6.84, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.8, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1971522814}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1388444232
 PrefabInstance:
@@ -1958,7 +1956,7 @@ PrefabInstance:
     - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
         type: 3}
@@ -2057,9 +2055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2167,9 +2165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2387,9 +2385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Wall
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2446,8 +2444,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522630327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.75, y: 5, z: 0}
-  m_LocalScale: {x: 0.5, y: 20, z: 4}
+  m_LocalPosition: {x: -14.5, y: 5, z: 0}
+  m_LocalScale: {x: 2, y: 20, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2560,7 +2558,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720432487
 GameObject:
@@ -2607,9 +2605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Wall
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2666,8 +2664,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720432487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.75, y: 5, z: 0}
-  m_LocalScale: {x: 0.5, y: 20, z: 4}
+  m_LocalPosition: {x: 14.5, y: 5, z: 0}
+  m_LocalScale: {x: 2, y: 20, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2827,7 +2825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Switch
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
@@ -2998,8 +2996,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.5, y: -4, z: -1.25}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
-  m_Children:
-  - {fileID: 1218820023}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3217,13 +3214,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1971522809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7, y: 3, z: 0.5}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
-  m_Children:
-  - {fileID: 1308692846}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131718541
 GameObject:
@@ -3270,9 +3266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: Test
+  Type: Floor
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
