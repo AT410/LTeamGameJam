@@ -4,6 +4,7 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;      //!< デプロイ時にEditorスクリプトが入るとエラーになるので UNITY_EDITOR で括ってね！
+using UnityEditor.SceneManagement;
 #endif
 
 public enum UIType
@@ -58,6 +59,8 @@ public class UIParam : MonoBehaviour
             // -- クラスタイプ --
             Color defaultColor = GUI.backgroundColor;
             Color defaultContentColor = GUI.contentColor;
+            EditorGUI.BeginChangeCheck();
+
             using (new GUILayout.VerticalScope(EditorStyles.helpBox))
             {
                 GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
@@ -105,6 +108,13 @@ public class UIParam : MonoBehaviour
                     StageEnum temps = StageEnum.Stage1;
                     param.StageNum = (int)(StageEnum)EditorGUILayout.EnumPopup("ステージセレクト", temps);
                 }
+            }
+
+            if(EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(target, "Change Inspector");
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+
             }
         }
     }

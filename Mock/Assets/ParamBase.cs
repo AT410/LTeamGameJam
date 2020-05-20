@@ -4,6 +4,7 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;      //!< デプロイ時にEditorスクリプトが入るとエラーになるので UNITY_EDITOR で括ってね！
+using UnityEditor.SceneManagement;
 #endif
 
 public enum ObjectType
@@ -46,6 +47,7 @@ public class ParamBase : MonoBehaviour
             // -- クラスタイプ --
             Color defaultColor = GUI.backgroundColor;
             Color defaultContentColor = GUI.contentColor;
+            EditorGUI.BeginChangeCheck();
             using (new GUILayout.VerticalScope(EditorStyles.helpBox))
             {
                 GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
@@ -103,6 +105,13 @@ public class ParamBase : MonoBehaviour
                 {
                     param.SharedKey = EditorGUILayout.TextField("共有キー", param.SharedKey);
                 }
+            }
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(target, "Change Inspector");
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+
             }
         }
     }
