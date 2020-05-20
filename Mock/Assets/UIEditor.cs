@@ -14,9 +14,8 @@ public enum UISetType
 
 public class UIEditor : EditorWindow
 {
-    string[] UISetNumber = {"Title", "AreaSerect" , "GameMenu" };
+    UISetType SetType;
 
-    int SetNumber = 0;
     bool IsNewCreate = false;
 
     string FilePath = "";
@@ -44,7 +43,7 @@ public class UIEditor : EditorWindow
                 GUILayout.Label("設定");
             }
             GUI.backgroundColor = defaultColor;
-            SetNumber = EditorGUILayout.Popup("UISet", SetNumber, UISetNumber);
+            SetType = (UISetType)EditorGUILayout.EnumPopup("UISet", SetType);
             IsNewCreate = EditorGUILayout.Toggle("新規作成", IsNewCreate);
 
         }
@@ -66,18 +65,18 @@ public class UIEditor : EditorWindow
                     FilePath = Application.dataPath + "/GenerateUISetMap/";
                     FileName = GUILayout.TextField(FileName);
 
-                    if (GUILayout.Button("..."))
+                    if (GUILayout.Button("...", GUILayout.Width(30.0f)))
                     {
-                        string FullPath = EditorUtility.OpenFilePanel("Test", Application.dataPath, "xml");
+                        string FullPath = EditorUtility.OpenFilePanel("書き出しファイルを指定する", Application.dataPath, "xml");
                         FilePath= System.IO.Path.GetDirectoryName(FullPath);
-                        FileName = System.IO.Path.GetFileName(FullPath);
+                        FileName = System.IO.Path.GetFileNameWithoutExtension(FullPath);
                     }
                 }
                 else
                 {
                     if (GUILayout.Button("..."))
                     {
-                        FilePath = EditorUtility.OpenFilePanel("Test", Application.dataPath, "xml");
+                        FilePath = EditorUtility.OpenFilePanel("書き出しファイルを指定する", Application.dataPath, "xml");
                     }
                 }
             }
@@ -101,9 +100,8 @@ public class UIEditor : EditorWindow
         {
             //新規作成
             //保存ファイルパスを作成しシリアライズ化する。
-            UISetType sEnum = (UISetType)System.Enum.ToObject(typeof(UISetType), SetNumber);
             UIRoot rot = new UIRoot();
-            rot = Util.CreateNewUISet(sEnum);
+            rot = Util.CreateNewUISet(SetType);
             FilePath += FileName + ".xml";
             XmlUtil.Seialize<UIRoot>(FilePath, rot, FileMode.Create);
 
@@ -118,12 +116,11 @@ public class UIEditor : EditorWindow
                 EditorUtility.DisplayDialog("Warning", "フォルダがありません", "OK");
                 return;
             }
-            UISetType sEnum = (UISetType)System.Enum.ToObject(typeof(UISetType), SetNumber);
             //対応ファイルのマップデータをデシリアライズ
             UIRoot result = new UIRoot();
             result = XmlUtil.Deserialize<UIRoot>(FilePath);
             //新たなデータを追加してシリアライズ化
-            Util.AddUISet(sEnum,ref result);
+            Util.AddUISet(SetType, ref result);
             XmlUtil.Seialize<UIRoot>(FilePath, result);
         }
         AssetDatabase.Refresh();

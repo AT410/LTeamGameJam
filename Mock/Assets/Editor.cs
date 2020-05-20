@@ -5,13 +5,24 @@ using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
+public enum AreaEnum
+{
+    Area1 = 0,
+    Area2,
+    Area3
+}
+
+public enum StageEnum
+{
+    Stage1=0,
+    Stage2,
+    Stage3
+}
+
 public class MapEditor : EditorWindow
 {
-    string[] Area = { "Area1", "Area2" };
-    string[] Stage = { "Stage1", "Stage2", "Stage3", "Stage4","Stage5" };
-
-    int AreaNumber = 0;
-    int StageNumber = 0;
+    AreaEnum areaEnum;
+    StageEnum stageEnum;
 
     string FilePath = "";
     string FileName = "";
@@ -44,8 +55,8 @@ public class MapEditor : EditorWindow
                 GUILayout.Label("設定");
             }
             GUI.backgroundColor = defaultColor;
-            AreaNumber = EditorGUILayout.Popup("Area", AreaNumber, Area);
-            StageNumber = EditorGUILayout.Popup("Stage", StageNumber, Stage);
+            areaEnum = (AreaEnum)EditorGUILayout.EnumPopup("Area", areaEnum);
+            stageEnum = (StageEnum)EditorGUILayout.EnumPopup("Stage", stageEnum);
             IsNewCreate = EditorGUILayout.Toggle("新規作成", IsNewCreate);
         }
 
@@ -59,21 +70,34 @@ public class MapEditor : EditorWindow
             GUI.backgroundColor = defaultColor;
 
             GUILayout.TextArea(FilePath);
-            using (new GUILayout.HorizontalScope(GUI.skin.box))
+            if (IsNewCreate)
             {
-                if (IsNewCreate)
+                GUI.backgroundColor = Color.gray;
+                using (new GUILayout.HorizontalScope(EditorStyles.toolbar))
+                {
+                    GUILayout.Label("ファイル名");
+                }
+                GUI.backgroundColor = defaultColor;
+                using (new GUILayout.HorizontalScope(GUI.skin.box))
                 {
                     FilePath = Application.dataPath + "/GenerateMap/";
                     FileName = GUILayout.TextField(FileName);
-                }
-                else
-                {
-                    if (GUILayout.Button("..."))
+                    if (GUILayout.Button("...", GUILayout.Width(30.0f)))
                     {
-                        FilePath = EditorUtility.OpenFilePanel("Test", Application.dataPath, "xml");
+                        FilePath = EditorUtility.OpenFilePanel("書き出しファイルを指定する", Application.dataPath, "xml");
+                        FileName = System.IO.Path.GetFileNameWithoutExtension(FilePath);
+                        FilePath = Path.GetDirectoryName(FilePath);
                     }
                 }
             }
+            else
+            {
+                if (GUILayout.Button("..."))
+                {
+                    FilePath = EditorUtility.OpenFilePanel("書き出しファイルを指定する", Application.dataPath, "xml");
+                }
+            }
+            
             using (new GUILayout.HorizontalScope(GUI.skin.box))
             {
                 GUI.backgroundColor = Color.magenta;
@@ -89,6 +113,9 @@ public class MapEditor : EditorWindow
 
     private void Write()
     {
+        int AreaNumber = (int)areaEnum;
+        int StageNumber = (int)stageEnum;
+
         //新規作成の場合
         if (IsNewCreate)
         {
