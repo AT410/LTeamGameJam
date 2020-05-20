@@ -8,7 +8,12 @@ using UnityEditor;      //!< デプロイ時にEditorスクリプトが入ると
 
 public enum ObjectType
 {
-    TEST
+    Test,
+    Floor,
+    Wall,
+    Goal,
+    Switch,
+    Player
 }
 
 public class ParamBase : MonoBehaviour
