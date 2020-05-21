@@ -80,8 +80,14 @@ public class Object
     public string ActiveStr;
     [System.Xml.Serialization.XmlAttribute("SharedKey")]
     public string SharedStr;
-    [System.Xml.Serialization.XmlAttribute("Number")]
-    public string Number;
+    [System.Xml.Serialization.XmlAttribute("EventActive")] //受信可能
+    public string EventActiveStr;
+    [System.Xml.Serialization.XmlAttribute("EventReceiverKey")]//受信設定キー
+    public string EventReceiverKeyStr;
+    [System.Xml.Serialization.XmlAttribute("EventRecipientKey")]//送信先キー（対象の受信設定キー）
+    public string EventRecipientKeyStr;
+    [System.Xml.Serialization.XmlAttribute("EventMsgStr")]//送信メッセージ
+    public string EventMsgStr;
 }
 
 [Serializable]
@@ -300,13 +306,22 @@ public class Util
             {
                 Ob.SharedStr = Param.SharedKey;
             }
-            stage.StageObjects.Add(Ob);
 
-            var Rock = Obj.GetComponent<RockParam>();
-            if(Rock)
+            //イベント設定
+            Ob.EventActiveStr = Convert.ToInt32(Param.EventActive).ToString();
+            if(Param.EventActive)
             {
-                Ob.Number = Rock.RockNumber.ToString();
+                Ob.EventReceiverKeyStr = Param.EventReceiveKey;
             }
+
+            //スイッチオブジェクトの時追加情報入力
+            if(Param.Type == ObjectType.Switch)
+            {
+                Ob.EventRecipientKeyStr = Param.EventSendKey;
+                Ob.EventMsgStr = Param.EventMsgStr;
+            }
+
+            stage.StageObjects.Add(Ob);
         }
 
     }

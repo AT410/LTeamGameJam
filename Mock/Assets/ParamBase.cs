@@ -34,6 +34,12 @@ public class ParamBase : MonoBehaviour
     public bool SharedActive = false;
     public string SharedKey;
 
+    public bool EventActive = false;
+    public string EventReceiveKey;
+
+    public string EventSendKey;
+    public string EventMsgStr;
+
     /* ---- ここから拡張コード ---- */
 #if UNITY_EDITOR
     /**
@@ -93,7 +99,7 @@ public class ParamBase : MonoBehaviour
                     {
                         if (list.Count != 0)
                         {
-                            list.RemoveAt(0);
+                            list.RemoveAt(list.Count-1);
                         }
                     }
                 }
@@ -112,6 +118,41 @@ public class ParamBase : MonoBehaviour
                 {
                     param.SharedKey = EditorGUILayout.TextField("共有キー", param.SharedKey);
                 }
+
+
+                GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+                using (new GUILayout.HorizontalScope(EditorStyles.toolbar))
+                {
+                    EditorGUILayout.LabelField("イベント設定");
+                    GUI.backgroundColor = defaultColor;
+                }
+                GUI.backgroundColor = defaultColor;
+
+                param.EventActive = EditorGUILayout.ToggleLeft("イベントを受信可能", param.EventActive);
+
+                if (param.EventActive)
+                {
+                    param.EventReceiveKey = EditorGUILayout.TextField("イベント受信キー", param.EventReceiveKey);
+                }
+
+                // --　スイッチオブジェクト時の追加設定 --
+                if (param.Type == ObjectType.Switch)
+                {
+                    using (new GUILayout.VerticalScope(EditorStyles.helpBox))
+                    {
+
+                        GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+                        using (new GUILayout.VerticalScope(EditorStyles.toolbar))
+                        {
+                            EditorGUILayout.LabelField("イベントメッセージ設定");
+                        }
+                        GUI.backgroundColor = defaultColor;
+
+                        param.EventSendKey = EditorGUILayout.TextField("イベント送信キー", param.EventSendKey);
+                        param.EventMsgStr = EditorGUILayout.TextField("イベントメッセージ", param.EventMsgStr);
+                    }
+                }
+
             }
 
             if (EditorGUI.EndChangeCheck())
