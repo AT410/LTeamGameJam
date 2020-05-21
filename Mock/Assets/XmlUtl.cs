@@ -317,8 +317,8 @@ public class Util
             //スイッチオブジェクトの時追加情報入力
             if(Param.Type == ObjectType.Switch)
             {
-                Ob.EventRecipientKeyStr = Param.EventSendKey;
-                Ob.EventMsgStr = Param.EventMsgStr;
+                Ob.EventRecipientKeyStr = Param.EventSendKey!=null ? Param.EventSendKey:"";
+                Ob.EventMsgStr = Param.EventMsgStr != null ? Param.EventMsgStr : "";
             }
 
             stage.StageObjects.Add(Ob);
