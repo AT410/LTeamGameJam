@@ -14,7 +14,14 @@ public enum ObjectType
     Wall,
     Goal,
     Switch,
-    Player
+    Player,
+    FireOn,
+    FireLine,
+    Water,
+    WaterDrop,
+    Ladder,
+    Match,
+    Door
 }
 
 public class ParamBase : MonoBehaviour
