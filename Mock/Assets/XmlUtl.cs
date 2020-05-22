@@ -315,7 +315,7 @@ public class Util
             }
 
             //スイッチオブジェクトの時追加情報入力
-            if(Param.Type == ObjectType.Switch)
+            if(Param.Type == ObjectType.Switch || Param.Type == ObjectType.FireLine)
             {
                 Ob.EventRecipientKeyStr = Param.EventSendKey!=null ? Param.EventSendKey:"";
                 Ob.EventMsgStr = Param.EventMsgStr != null ? Param.EventMsgStr : "";
