@@ -73,13 +73,22 @@ public class UIParam : MonoBehaviour
                 GUI.backgroundColor = defaultColor;
                 param.type = (UIType)EditorGUILayout.EnumPopup("クラスタイプ", param.type);
                 param.TexKey = EditorGUILayout.TextField("テクスチャキー", param.TexKey);
-                param.Event = (GameEvent)EditorGUILayout.EnumPopup("イベント遷移先", param.Event);
+            }
 
-                // 折りたたみ表示
-                folding = EditorGUILayout.Foldout(folding, "インデックス");
-
-                if (folding)
+            // -- 選択可能UI時の追加設定 --
+            if (param.type == UIType.Flashing)
+            {
+                using (new GUILayout.VerticalScope(EditorStyles.helpBox))
                 {
+
+                    GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+                    using (new GUILayout.VerticalScope(EditorStyles.toolbar))
+                    {
+                        EditorGUILayout.LabelField("選択可能UI設定");
+                    }
+                    GUI.backgroundColor = defaultColor;
+
+                    param.Event = (GameEvent)EditorGUILayout.EnumPopup("イベント遷移先", param.Event);
                     // リスト表示
                     param.MyIndexKey = EditorGUILayout.TextField("Myインデックスキー", param.MyIndexKey);
                     param.Upkey = EditorGUILayout.TextField("上方向UIインデックス", param.Upkey);
@@ -87,11 +96,10 @@ public class UIParam : MonoBehaviour
                     param.LeftKey = EditorGUILayout.TextField("左方向UIインデックス", param.LeftKey);
                     param.RightKey = EditorGUILayout.TextField("右方向UIインデックス", param.RightKey);
                 }
-
             }
 
             // -- ゲームイベント時の追加設定 --
-            if (param.Event == GameEvent.ToGameStage)
+            if (param.Event == GameEvent.ToGameStage&&param.type == UIType.Flashing)
             {
                 using (new GUILayout.VerticalScope(EditorStyles.helpBox))
                 {

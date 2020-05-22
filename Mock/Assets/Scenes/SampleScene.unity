@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e9c00413e2374478a96b388466c1a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   TexKey: TEST_TX
   Event: 4
   MyIndexKey: 2
@@ -1724,8 +1724,8 @@ MonoBehaviour:
   DownKey: 1
   LeftKey: 4
   RightKey: 4
-  StageNum: -1
-  AreaNum: -1
+  StageNum: 0
+  AreaNum: 0
 --- !u!114 &1760409183
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -382,16 +382,19 @@ public class Util
             data.Height = Heght.ToString();
             data.Width = Width.ToString();
 
-            data.MyIndexKey = param.MyIndexKey;
-            data.EventKey = param.Event.ToString();
             data.TexKey = param.TexKey;
 
-            data.UpKey = param.Upkey;
-            data.DownKey = param.DownKey;
-            data.LeftKey = param.LeftKey;
-            data.RightKey = param.RightKey;
+            if (param.type == UIType.Flashing)
+            {
+                data.EventKey = param.Event.ToString();
+                data.MyIndexKey = param.MyIndexKey;
+                data.UpKey = param.Upkey;
+                data.DownKey = param.DownKey;
+                data.LeftKey = param.LeftKey;
+                data.RightKey = param.RightKey;
+            }
 
-            if (param.Event == GameEvent.ToGameStage)
+            if (param.Event == GameEvent.ToGameStage &&param.type == UIType.Flashing)
             {
                 data.AreaNumber = param.AreaNum;
                 data.StageNumber = param.StageNum;
