@@ -80,8 +80,14 @@ public class Object
     public string ActiveStr;
     [System.Xml.Serialization.XmlAttribute("SharedKey")]
     public string SharedStr;
-    [System.Xml.Serialization.XmlAttribute("Number")]
-    public string Number;
+    [System.Xml.Serialization.XmlAttribute("EventActive")] //受信可能
+    public string EventActiveStr;
+    [System.Xml.Serialization.XmlAttribute("EventReceiverKey")]//受信設定キー
+    public string EventReceiverKeyStr;
+    [System.Xml.Serialization.XmlAttribute("EventRecipientKey")]//送信先キー（対象の受信設定キー）
+    public string EventRecipientKeyStr;
+    [System.Xml.Serialization.XmlAttribute("EventMsgStr")]//送信メッセージ
+    public string EventMsgStr;
 }
 
 [Serializable]
@@ -112,7 +118,27 @@ public class UIData
     public string Width;
     [System.Xml.Serialization.XmlAttribute("Height")]
     public string Height;
+    [System.Xml.Serialization.XmlAttribute("TexKey")]
+    public string TexKey;
+    [System.Xml.Serialization.XmlAttribute("MyIndexKey")]
+    public string MyIndexKey;
+    [System.Xml.Serialization.XmlAttribute("EventKey")]
+    public string EventKey;
+    [System.Xml.Serialization.XmlAttribute("UpKey")]
+    public string UpKey;
+    [System.Xml.Serialization.XmlAttribute("DownKey")]
+    public string DownKey;
+    [System.Xml.Serialization.XmlAttribute("LeftKey")]
+    public string LeftKey;
+    [System.Xml.Serialization.XmlAttribute("RightKey")]
+    public string RightKey;
 
+    [XmlAttribute("AreaNumber")]
+    [DefaultValue(-1)]
+    public int AreaNumber = -1;
+    [XmlAttribute("StageNumber")]
+    [DefaultValue(-1)]
+    public int StageNumber = -1;
 }
 
 
@@ -259,7 +285,7 @@ public class Util
                 return;
             }
             Object Ob = new Object();
-            Ob.Type = Param.Type;
+            Ob.Type = Param.Type.ToString();
             Ob.Pos = VecToStr(TransComp.position);
             Ob.Rot = RotToStr(TransComp.rotation);
             Ob.Scale = VecToStr(TransComp.localScale);
@@ -280,13 +306,22 @@ public class Util
             {
                 Ob.SharedStr = Param.SharedKey;
             }
-            stage.StageObjects.Add(Ob);
 
-            var Rock = Obj.GetComponent<RockParam>();
-            if(Rock)
+            //イベント設定
+            Ob.EventActiveStr = Convert.ToInt32(Param.EventActive).ToString();
+            if(Param.EventActive)
             {
-                Ob.Number = Rock.RockNumber.ToString();
+                Ob.EventReceiverKeyStr = Param.EventReceiveKey;
             }
+
+            //スイッチオブジェクトの時追加情報入力
+            if(Param.Type == ObjectType.Switch)
+            {
+                Ob.EventRecipientKeyStr = Param.EventSendKey!=null ? Param.EventSendKey:"";
+                Ob.EventMsgStr = Param.EventMsgStr != null ? Param.EventMsgStr : "";
+            }
+
+            stage.StageObjects.Add(Ob);
         }
 
     }
@@ -341,11 +376,29 @@ public class Util
             var Width = RectT.rect.width;
             var Heght = RectT.rect.height;
 
-            data.Type = Test.GetComponent<UIParam>().type.ToString();
+            var param = Test.GetComponent<UIParam>();
+            data.Type = param.type.ToString();
             data.Pos = VecToStr(Pos);
             data.Height = Heght.ToString();
             data.Width = Width.ToString();
 
+            data.TexKey = param.TexKey;
+
+            if (param.type == UIType.Flashing)
+            {
+                data.EventKey = param.Event.ToString();
+                data.MyIndexKey = param.MyIndexKey;
+                data.UpKey = param.Upkey;
+                data.DownKey = param.DownKey;
+                data.LeftKey = param.LeftKey;
+                data.RightKey = param.RightKey;
+            }
+
+            if (param.Event == GameEvent.ToGameStage &&param.type == UIType.Flashing)
+            {
+                data.AreaNumber = param.AreaNum;
+                data.StageNumber = param.StageNum;
+            }
             uISet.UIDatas.Add(data);
         }
 
