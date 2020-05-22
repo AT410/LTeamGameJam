@@ -136,7 +136,7 @@ public class ParamBase : MonoBehaviour
                 }
 
                 // --　スイッチオブジェクト時の追加設定 --
-                if (param.Type == ObjectType.Switch)
+                if (param.Type == ObjectType.Switch||param.Type == ObjectType.FireLine)
                 {
                     using (new GUILayout.VerticalScope(EditorStyles.helpBox))
                     {

@@ -300,10 +300,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
-  EventActive: 0
-  EventReceiveKey: 
-  EventSendKey: 
-  EventMsgStr: 
+  EventActive: 1
+  EventReceiveKey: FireLine
+  EventSendKey: Door2
+  EventMsgStr: ToActive
 --- !u!23 &303472431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -394,14 +394,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 10
+  Type: 12
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
-  EventActive: 0
-  EventReceiveKey: 
+  EventActive: 1
+  EventReceiveKey: Door2
   EventSendKey: 
   EventMsgStr: 
 --- !u!23 &337254852
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 6
+  Type: 8
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 6
+  Type: 4
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
@@ -887,8 +887,8 @@ MonoBehaviour:
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
-  EventSendKey: 
-  EventMsgStr: 
+  EventSendKey: FireLine
+  EventMsgStr: FireSwitch
 --- !u!23 &627489183
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 6
+  Type: 8
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []

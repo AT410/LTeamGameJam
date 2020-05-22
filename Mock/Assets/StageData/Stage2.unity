@@ -168,9 +168,14 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &233924591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -275,12 +280,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 6
+  Type: 8
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 1
+  EventReceiveKey: Water
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &299647255
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -388,9 +397,14 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &328378335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -501,6 +515,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &451454630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -611,6 +629,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &671495324
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -952,9 +974,14 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &1263602836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1062,9 +1089,14 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &1460823060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1175,6 +1207,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &1522630330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1285,6 +1321,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &1720432490
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1392,9 +1432,14 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &1760598755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1505,6 +1550,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: Water
+  EventMsgStr: WaterDown
 --- !u!23 &1767735336
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1622,6 +1671,10 @@ MonoBehaviour:
   - EnabledSwitch
   SharedActive: 1
   SharedKey: Player
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &1891910340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1729,9 +1782,14 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &2083770830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1836,12 +1894,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 8
+  Type: 10
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &2085256255
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1952,6 +2014,10 @@ MonoBehaviour:
   Tags: []
   SharedActive: 0
   SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
 --- !u!23 &2086826666
 MeshRenderer:
   m_ObjectHideFlags: 0
