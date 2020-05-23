@@ -12,6 +12,7 @@ public enum UIType
     Normal,
     Flashing,
     Fade,
+    Switching,
 }
 
 public enum GameEvent
