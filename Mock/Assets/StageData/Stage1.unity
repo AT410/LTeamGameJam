@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 8
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WATER_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 8
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WATER_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 8
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WATER_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 8
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WATER_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
