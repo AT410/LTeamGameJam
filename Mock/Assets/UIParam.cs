@@ -30,6 +30,8 @@ public class UIParam : MonoBehaviour
 
     public string TexKey;
 
+    public int DrawLayer;
+
     public GameEvent Event;
 
     public string MyIndexKey;
@@ -47,7 +49,7 @@ public class UIParam : MonoBehaviour
     [CustomEditor(typeof(UIParam))]               //!< 拡張するときのお決まりとして書いてね
     public class CharacterEditor : Editor           //!< Editorを継承するよ！
     {
-        bool folding = false;
+ 
 
         public override void OnInspectorGUI()
         {
@@ -73,6 +75,7 @@ public class UIParam : MonoBehaviour
                 GUI.backgroundColor = defaultColor;
                 param.type = (UIType)EditorGUILayout.EnumPopup("クラスタイプ", param.type);
                 param.TexKey = EditorGUILayout.TextField("テクスチャキー", param.TexKey);
+                param.DrawLayer = EditorGUILayout.IntSlider("描画レイヤー", param.DrawLayer, 0, 10);
             }
 
             // -- 選択可能UI時の追加設定 --
@@ -111,10 +114,10 @@ public class UIParam : MonoBehaviour
                     }
                     GUI.backgroundColor = defaultColor;
 
-                    AreaEnum temp = AreaEnum.Area1;
-                    param.AreaNum = (int)(AreaEnum)EditorGUILayout.EnumPopup("エリアセレクト", temp);
-                    StageEnum temps = StageEnum.Stage1;
-                    param.StageNum = (int)(StageEnum)EditorGUILayout.EnumPopup("ステージセレクト", temps);
+                    AreaEnum area = (AreaEnum)param.AreaNum;
+                    param.AreaNum = (int)(AreaEnum)EditorGUILayout.EnumPopup("エリアセレクト", area);
+                    StageEnum stage = (StageEnum)param.StageNum;
+                    param.StageNum = (int)(StageEnum)EditorGUILayout.EnumPopup("ステージセレクト", stage);
                 }
             }
 

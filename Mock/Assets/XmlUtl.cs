@@ -120,6 +120,9 @@ public class UIData
     public string Height;
     [System.Xml.Serialization.XmlAttribute("TexKey")]
     public string TexKey;
+    [System.Xml.Serialization.XmlAttribute("Layer")]
+    [DefaultValue(-1)]
+    public int DrawLayer = -1;
     [System.Xml.Serialization.XmlAttribute("MyIndexKey")]
     public string MyIndexKey;
     [System.Xml.Serialization.XmlAttribute("EventKey")]
@@ -378,11 +381,12 @@ public class Util
 
             var param = Test.GetComponent<UIParam>();
             data.Type = param.type.ToString();
-            data.Pos = VecToStr(Pos);
+            data.Pos = VecToStr(new Vector2(Pos.x,Pos.y));
             data.Height = Heght.ToString();
             data.Width = Width.ToString();
 
             data.TexKey = param.TexKey;
+            data.DrawLayer = param.DrawLayer;
 
             if (param.type == UIType.Flashing)
             {
@@ -415,6 +419,13 @@ public class Util
     {
         string result;
         result = vec.x.ToString() + "," + vec.y.ToString() + "," + vec.z.ToString();
+        return result;
+    }
+
+    private static string VecToStr(Vector2 vec)
+    {
+        string result;
+        result = vec.x.ToString() + "," + vec.y.ToString();
         return result;
     }
 }

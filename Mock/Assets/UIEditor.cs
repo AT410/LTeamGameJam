@@ -8,7 +8,7 @@ using UnityEditor;
 public enum UISetType
 {
     Title,
-    AreaSerect,
+    AreaSelect,
     GameMenu
 }
 

@@ -1,12 +1,7 @@
 <?xml version="1.0"?>
 <UIRoot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <UISet UIType="AreaSerect">
-    <UIData Type="Normal" Pos="30,100,0" Width="100" Height="100" />
-  </UISet>
   <UISet UIType="Title">
-    <UIData Type="Normal" Pos="30,100,0" Width="100" Height="100" />
-  </UISet>
-  <UISet UIType="GameMenu">
-    <UIData Type="Normal" Pos="30,100,0" Width="100" Height="100" />
+    <UIData Type="Normal" Pos="0,0" Width="1280" Height="800" TexKey="TEST_TX" Layer="0" />
+    <UIData Type="Normal" Pos="0,0" Width="640" Height="400" TexKey="WAIT_TX" Layer="1" />
   </UISet>
 </UIRoot>

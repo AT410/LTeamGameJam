@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   TexKey: TEST_TX
+  DrawLayer: 0
   Event: 5
   MyIndexKey: 4
   Upkey: 3
@@ -1230,6 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   TexKey: TEST_TX
+  DrawLayer: 0
   Event: 2
   MyIndexKey: 3
   Upkey: 4
@@ -1430,6 +1432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   TexKey: TEST_TX
+  DrawLayer: 0
   Event: 1
   MyIndexKey: 1
   Upkey: 2
@@ -1718,6 +1721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   TexKey: TEST_TX
+  DrawLayer: 0
   Event: 4
   MyIndexKey: 2
   Upkey: 1
