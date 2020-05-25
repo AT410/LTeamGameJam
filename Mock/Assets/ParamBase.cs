@@ -21,7 +21,11 @@ public enum ObjectType
     WaterDrop,
     Ladder,
     Match,
-    Door
+    Door,
+    FloatBox,
+    WaterJet,
+    WaterLV,
+    PullBox
 }
 
 public class ParamBase : MonoBehaviour
