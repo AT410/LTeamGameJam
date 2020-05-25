@@ -25,7 +25,8 @@ public enum ObjectType
     FloatBox,
     WaterJet,
     WaterLV,
-    PullBox
+    PullBox,
+    FrontWall
 }
 
 public class ParamBase : MonoBehaviour
