@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  Type: 17
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
   Tags: []
@@ -3098,8 +3098,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760598752}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -2.55, y: -1.01, z: -1.01}
-  m_LocalScale: {x: 1, y: 14.334922, z: 2}
+  m_LocalPosition: {x: -2.56, y: -1.01, z: -1.01}
+  m_LocalScale: {x: 1, y: 14.072737, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
