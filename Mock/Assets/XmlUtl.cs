@@ -89,6 +89,11 @@ public class Object
     [System.Xml.Serialization.XmlAttribute("EventMsgStr")]//送信メッセージ
     public string EventMsgStr;
 
+    // -- FireLineのみ適用 --
+    [XmlAttribute("FireLineDirection")]
+    [DefaultValue(0)]
+    public int DelDir = 0;
+
     // -- アニメーション設定 --
     [XmlAttribute("StartAnimetionActive")]
     public string StartAnimetionActive;
@@ -185,7 +190,7 @@ public class UIData
 public class Util
 {
     //データ新規
-    public static root DataSet(int AreaNumber,int StageNumber)
+    public static root DataSet(int AreaNumber,int StageNumber,out bool Success)
     {
         root result = new root();
         result.Areas = new List<Area>();
@@ -210,7 +215,7 @@ public class Util
         Stage.FarStr = far.ToString();
         Stage.StageObjects = new List<Object>();
 
-        AddStageData(ref Stage);
+        Success = AddStageData(ref Stage);
 
         area.StageData.Add(Stage);
         result.Areas.Add(area);
@@ -219,8 +224,9 @@ public class Util
     }
 
     //データ追加
-    public static void AddData(int AreaNumber,int StageNumber, ref root data)
+    public static bool AddData(int AreaNumber,int StageNumber, ref root data)
     {
+        bool success = false;
         var area = data.Areas.Where(x => x.AreaNumber == AreaNumber).FirstOrDefault();
         if(area ==null)
         {
@@ -245,11 +251,11 @@ public class Util
             Stage.FarStr = far.ToString();
             Stage.StageObjects = new List<Object>();
 
-            AddStageData(ref Stage);
+            success = AddStageData(ref Stage);
 
             areaptr.StageData.Add(Stage);
             data.Areas.Add(areaptr);
-            return;
+            return success;
         }
         else
         {
@@ -274,10 +280,10 @@ public class Util
                 Stage.FarStr = far.ToString();
                 Stage.StageObjects = new List<Object>();
 
-                AddStageData(ref Stage);
+                success = AddStageData(ref Stage);
 
                 area.StageData.Add(Stage);
-                return;
+                return success;
             }
             else
             {
@@ -300,21 +306,21 @@ public class Util
                 NewStage.FarStr = far.ToString();
                 NewStage.StageNumber = StageNumber;
 
-                AddStageData(ref NewStage);
+                success = AddStageData(ref NewStage);
 
 
                 area.StageData.Add(NewStage);
 
                 //sort
                 area.StageData.Sort((a, b) => a.StageNumber - b.StageNumber);
-                return;
+                return success;
             }
 
         }
 
     }
 
-    private static void AddStageData(ref Stage stage)
+    private static bool AddStageData(ref Stage stage)
     {
         foreach (var Obj in GameObject.FindGameObjectsWithTag("Editor"))
         {
@@ -322,7 +328,7 @@ public class Util
             var Param = Obj.GetComponent<ParamBase>();
             if (!Param)
             {
-                return;
+                return false;
             }
             Object Ob = new Object();
             Ob.Type = Param.Type.ToString();
@@ -359,6 +365,17 @@ public class Util
             {
                 Ob.EventRecipientKeyStr = Param.EventSendKey!=null ? Param.EventSendKey:"";
                 Ob.EventMsgStr = Param.EventMsgStr != null ? Param.EventMsgStr : "";
+                if(Ob.EventRecipientKeyStr==""||Ob.EventMsgStr =="")
+                {
+                    EditorUtility.DisplayDialog("Warning", "イベント設定が不十分です。", "Close");
+                    return false;
+                }
+            }
+
+            // -- FireLineの追加設定 --
+            if(Param.Type ==ObjectType.FireLine)
+            {
+                Ob.DelDir = Convert.ToInt32(Param.configu);
             }
 
             // -- アニメーション設定 --
@@ -386,6 +403,7 @@ public class Util
             stage.StageObjects.Add(Ob);
         }
 
+        return true;
     }
 
     public static void SetAnimetionData(ref Object obj,PlayBackType play ,float MaxFlame,List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)

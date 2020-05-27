@@ -116,16 +116,20 @@ public class MapEditor : EditorWindow
         int AreaNumber = (int)areaEnum;
         int StageNumber = (int)stageEnum;
 
+        bool Success = false;
+
         //新規作成の場合
         if (IsNewCreate)
         {
             //新規作成
             //保存ファイルパスを作成しシリアライズ化する。
             root rot = new root();
-            rot = Util.DataSet(AreaNumber, StageNumber);
-            FilePath += FileName+".xml";
-            XmlUtil.Seialize<root>(FilePath,rot,FileMode.Create);
-
+            rot = Util.DataSet(AreaNumber, StageNumber, out Success);
+            FilePath += FileName + ".xml";
+            if (Success)
+            {
+                XmlUtil.Seialize<root>(FilePath, rot, FileMode.Create);
+            }
         }
         else
         {
@@ -141,11 +145,21 @@ public class MapEditor : EditorWindow
             root result = new root();
             result = XmlUtil.Deserialize<root>(FilePath);
             //新たなデータを追加してシリアライズ化
-            Util.AddData(AreaNumber, StageNumber, ref result);
-            XmlUtil.Seialize<root>(FilePath, result);
+            Success = Util.AddData(AreaNumber, StageNumber, ref result);
+            if (Success)
+            {
+                XmlUtil.Seialize<root>(FilePath, result);
+            }
         }
 
         AssetDatabase.Refresh();
-        EditorUtility.DisplayDialog("通知", "Mapの書き出しに成功しました", "閉じる");
+        if(Success)
+        {
+            EditorUtility.DisplayDialog("通知", "Mapの書き出しに成功しました", "閉じる");
+        }
+        else
+        {
+            EditorUtility.DisplayDialog("Warning", "Mapの書き出しに失敗しました", "閉じる");
+        }
     }
 }

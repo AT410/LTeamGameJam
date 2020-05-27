@@ -43,18 +43,12 @@ public enum AnimetionType
     Scale
 }
 
-public class AnimParam
+public enum FireLineConfigu
 {
-    public float TargetFlame;
-
-    public Vector3 Vec;
-
-    public AnimParam(float Time, Vector3 vec)
-    {
-        TargetFlame = Time;
-        Vec = vec;
-    }
+    LeftToRight = +1,
+    RightToLeft = -1
 }
+
 
 public class ParamBase : MonoBehaviour
 {
@@ -71,6 +65,8 @@ public class ParamBase : MonoBehaviour
 
     public string EventSendKey;
     public string EventMsgStr;
+
+    public FireLineConfigu configu = FireLineConfigu.LeftToRight;
 
     //アニメーション設定
     public bool StartAnimetionActive;
@@ -97,7 +93,7 @@ public class ParamBase : MonoBehaviour
     public float MaxEventAnimCount;
     public float MaxEndAnimCount;
 
-    // -- アニメーションテスト変数 --
+    // -- テスト変数 --
     bool PlayAnimetion;
     int Count = 0;
     public float TotalTime;
@@ -286,6 +282,11 @@ public class ParamBase : MonoBehaviour
             param.Type = (ObjectType)EditorGUILayout.EnumPopup("クラスタイプ", param.Type);
             param.MeshKey = EditorGUILayout.TextField("メッシュキー", param.MeshKey);
             param.TexKey = EditorGUILayout.TextField("テクスチャキー", param.TexKey);
+
+            if(param.Type == ObjectType.FireLine)
+            {
+                param.configu = (FireLineConfigu)EditorGUILayout.EnumPopup("減少方向", param.configu);
+            }
 
             // -- タグ情報 --
             List<string> list = param.Tags;

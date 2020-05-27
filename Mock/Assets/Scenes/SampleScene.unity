@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 7
+  Type: 0
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
@@ -364,14 +364,23 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
-  AnimetionActive: 1
+  configu: 1
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
   m_MixStartFlame: []
   m_MixStartAnimType: 
   m_StartAnimValue: []
   m_MixEventFlame: []
   m_MixEventAnimType: 
   m_EventAnimValue: []
-  MaxAnimCount: 6
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 7
+  MaxEventAnimCount: 1
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &785334666
 MeshRenderer:
   m_ObjectHideFlags: 0
