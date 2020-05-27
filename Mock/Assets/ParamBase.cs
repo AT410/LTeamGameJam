@@ -32,7 +32,7 @@ public enum PlayBackType
 {
     Start,
     OnEvent,
-    Dead
+    End
 }
 
 public enum AnimetionType
@@ -72,8 +72,9 @@ public class ParamBase : MonoBehaviour
     public string EventMsgStr;
 
     //アニメーション設定
-    public bool AnimetionActive;
-    //public List<AnimParam> m_AnimPos = new List<AnimParam>();
+    public bool StartAnimetionActive;
+    public bool EventAnimetionActive;
+    public bool EndAnimetionActive;
 
     // -- 開始時アニメーション --
     public List<float> m_MixStartFlame = new List<float>();
@@ -85,13 +86,20 @@ public class ParamBase : MonoBehaviour
     public List<AnimetionType> m_MixEventAnimType = new List<AnimetionType>();
     public List<Vector4> m_EventAnimValue = new List<Vector4>();
 
+    // -- イベント時アニメーション --
+    public List<float> m_MixEndFlame = new List<float>();
+    public List<AnimetionType> m_MixEndAnimType = new List<AnimetionType>();
+    public List<Vector4> m_EndAnimValue = new List<Vector4>();
+
     // -- フレームカウント最大数 --
-    public float MaxAnimCount;
+    public float MaxStartAnimCount;
+    public float MaxEventAnimCount;
+    public float MaxEndAnimCount;
 
     // -- アニメーションテスト変数 --
     bool PlayAnimetion;
     int Count = 0;
-    float TotalTime;
+    public float TotalTime;
     PlayBackType PlayAnime;
 
 
@@ -115,7 +123,7 @@ public class ParamBase : MonoBehaviour
 
     private void Update()
     {
-        if (AnimetionActive&& PlayAnimetion)
+        if ((StartAnimetionActive||EventAnimetionActive||EndAnimetionActive)&& PlayAnimetion)
         {
             switch(PlayAnime)
             {
@@ -125,7 +133,8 @@ public class ParamBase : MonoBehaviour
                 case PlayBackType.OnEvent:
                     AnimeBehavior(m_MixEventFlame, m_MixEventAnimType, m_EventAnimValue);
                     break;
-                case PlayBackType.Dead:
+                case PlayBackType.End:
+                    AnimeBehavior(m_MixEndFlame, m_MixEndAnimType, m_EndAnimValue);
                     break;
             }
         }
@@ -368,33 +377,37 @@ public class ParamBase : MonoBehaviour
             }
             GUI.backgroundColor = defaultColor;
 
-
-            param.AnimetionActive = EditorGUILayout.ToggleLeft("アニメーションを追加", param.AnimetionActive);
             param.PlayAnime = (PlayBackType)EditorGUILayout.EnumPopup("再生タイミング", param.PlayAnime);
 
-            if (param.AnimetionActive)
+            switch(param.PlayAnime)
             {
-                switch(param.PlayAnime)
-                {
-                    case PlayBackType.Start:
-                        AddAnimetion(param, param.m_MixStartFlame, param.m_MixStartAnimType, param.m_StartAnimValue);
-                        break;
-                    case PlayBackType.OnEvent:
-                        AddAnimetion(param, param.m_MixEventFlame, param.m_MixEventAnimType, param.m_EventAnimValue);
-                        break;
-                    case PlayBackType.Dead:
-                        AddAnimetion(param, param.m_MixStartFlame, param.m_MixStartAnimType, param.m_StartAnimValue);
-                        break;
-                }
+                case PlayBackType.Start:
+                    param.StartAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.StartAnimetionActive);
+                    AddAnimetion(param,ref param.MaxStartAnimCount, param.m_MixStartFlame, param.m_MixStartAnimType, param.m_StartAnimValue);
+                    break;
+                case PlayBackType.OnEvent:
+                    param.EventAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.EventAnimetionActive);
+                    AddAnimetion(param, ref param.MaxEventAnimCount, param.m_MixEventFlame, param.m_MixEventAnimType, param.m_EventAnimValue);
+                    break;
+                case PlayBackType.End:
+                    param.EndAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.EndAnimetionActive);
+                    AddAnimetion(param, ref param.MaxEndAnimCount, param.m_MixEndFlame, param.m_MixEndAnimType, param.m_EndAnimValue);
+                    break;
             }
+
         }
 
-        void AddAnimetion(ParamBase param,List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)
+        void AddAnimetion(ParamBase param,ref float MaxFlameCount,List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)
         {
             using (new GUILayout.VerticalScope(EditorStyles.helpBox))
             {
-                param.MaxAnimCount = param.MaxAnimCount < 1.0f ? 1.0f : param.MaxAnimCount;
-                param.MaxAnimCount = EditorGUILayout.FloatField("フレーム最大値", param.MaxAnimCount);
+                MaxFlameCount = MaxFlameCount < 1.0f ? 1.0f : MaxFlameCount;
+                MaxFlameCount = EditorGUILayout.FloatField("フレーム最大値", MaxFlameCount);
+
+                if (EditorApplication.isPlaying)
+                {
+                    EditorGUILayout.LabelField("現在の再生フレーム数：" + param.TotalTime.ToString());
+                }
 
                 toolSelect = GUILayout.Toolbar(toolSelect, new string[] { "Position", "Rotation", "Scale" });
                 if (EditorApplication.isPlaying)
@@ -456,7 +469,7 @@ public class ParamBase : MonoBehaviour
                     for (j = 0; j < FlameCount; ++j)
                     {
                         EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-                        FlameTimes[j] = EditorGUILayout.Slider("フレーム数", FlameTimes[j], 0.0f, param.MaxAnimCount);
+                        FlameTimes[j] = EditorGUILayout.Slider("フレーム数", FlameTimes[j], 0.0f, MaxFlameCount);
                         Types[j] = (AnimetionType)EditorGUILayout.EnumPopup("Type", Types[j]);
                         if (Types[j] == AnimetionType.Rotation)
                         {
