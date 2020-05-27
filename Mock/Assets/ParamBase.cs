@@ -118,7 +118,7 @@ public class ParamBase : MonoBehaviour
         Debug.Log(Tags.Count);
         StartPos = this.transform.position;
         var rot = this.transform.rotation;
-        StartRot = new Vector4(rot.x,rot.y,rot.x,rot.w);
+        StartRot = ConvertToVec4(rot);
         StartScal = this.transform.localScale;
     }
 

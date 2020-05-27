@@ -176,6 +176,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &263179988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -290,6 +306,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &284656352
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -405,6 +437,28 @@ MonoBehaviour:
   EventReceiveKey: TEST2
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 1
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame:
+  - 0
+  - 0
+  - 0
+  m_MixStartAnimType: 000000000200000001000000
+  m_StartAnimValue:
+  - {x: 9.62, y: 9.5, z: 0.99, w: 0}
+  - {x: 1, y: 1, z: 2, w: 0}
+  - {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 3
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &328378335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -457,13 +511,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328378332}
-  m_LocalRotation: {x: 0.011206865, y: 0.003040116, z: -0.46169254, w: 0.886964}
+  m_LocalRotation: {x: 0, y: 0, z: -0.46174863, w: 0.8870109}
   m_LocalPosition: {x: 4.66, y: 6.03, z: 0.99}
   m_LocalScale: {x: 1, y: 12.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 1.3000001, y: -0.284, z: -55}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -55}
 --- !u!1 &346483556
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +573,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &346483559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -633,6 +703,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &346736556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -747,6 +833,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 1
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &451454630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -825,7 +927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &575087206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -861,6 +963,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 1
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &575087208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -975,6 +1093,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &671495324
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1180,6 +1314,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: TEST1
   EventMsgStr: TestEvent
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &716634143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1300,6 +1450,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &778868217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1414,6 +1580,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &813150301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1528,6 +1710,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &856549431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1642,6 +1840,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: TEST3
   EventMsgStr: ToActive
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &929814888
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1756,6 +1970,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1218820021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1940,6 +2170,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1263602836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2055,6 +2301,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1269663479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2169,6 +2431,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1308692844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2358,6 +2636,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1390350982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2473,6 +2767,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1460823060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2587,6 +2897,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1461462319
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2701,6 +3027,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1522630330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2816,6 +3158,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1603230769
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2930,6 +3288,22 @@ MonoBehaviour:
   EventReceiveKey: TEST3
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1640055834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3044,6 +3418,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1720432490
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3159,6 +3549,28 @@ MonoBehaviour:
   EventReceiveKey: TEST1
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 1
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame:
+  - 1
+  - 2
+  - 3
+  m_MixStartAnimType: 000000000200000001000000
+  m_StartAnimValue:
+  - {x: -6, y: 2.5, z: -1, w: 0}
+  - {x: 1, y: 5, z: 2, w: 0}
+  - {x: 0, y: 0, z: 0.7, w: 0.7}
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 3
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1760598755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3212,7 +3624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760598752}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: -2.56, y: -1.01, z: -1.01}
+  m_LocalPosition: {x: -2.66, y: -0.95, z: -1}
   m_LocalScale: {x: 1, y: 14.072737, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3273,6 +3685,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: TEST2
   EventMsgStr: TestEvent
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1767735336
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3387,6 +3815,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1836419576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3502,6 +3946,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1891910340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3616,6 +4076,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &1971522812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3731,6 +4207,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &2131718544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3846,6 +4338,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!23 &2142592178
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3899,8 +4407,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142592175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 2.5, z: 1.296}
-  m_LocalScale: {x: 5, y: 1, z: 1.408}
+  m_LocalPosition: {x: -6, y: 2.5, z: 1}
+  m_LocalScale: {x: 5, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
