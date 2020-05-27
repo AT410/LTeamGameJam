@@ -365,19 +365,25 @@ MonoBehaviour:
   EventSendKey: 
   EventMsgStr: 
   configu: 1
-  StartAnimetionActive: 0
+  StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
+  m_MixStartFlame:
+  - 1
+  - 0
+  - 3
+  m_MixStartAnimType: 010000000000000002000000
+  m_StartAnimValue:
+  - {x: 0, y: 0, z: 0, w: 2}
+  - {x: -8.37, y: 0.85, z: -6.7, w: 0}
+  - {x: 7.263163, y: 3.803, z: 1, w: 0}
   m_MixEventFlame: []
   m_MixEventAnimType: 
   m_EventAnimValue: []
   m_MixEndFlame: []
   m_MixEndAnimType: 
   m_EndAnimValue: []
-  MaxStartAnimCount: 7
+  MaxStartAnimCount: 3
   MaxEventAnimCount: 1
   MaxEndAnimCount: 0
   TotalTime: 0
@@ -433,13 +439,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785334663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
   m_LocalPosition: {x: -7.79, y: 8.34, z: -6.7}
   m_LocalScale: {x: 7.263163, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
 --- !u!1 &1000573306
 GameObject:
   m_ObjectHideFlags: 0
