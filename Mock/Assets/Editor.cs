@@ -144,6 +144,8 @@ public class MapEditor : EditorWindow
             Util.AddData(AreaNumber, StageNumber, ref result);
             XmlUtil.Seialize<root>(FilePath, result);
         }
+
         AssetDatabase.Refresh();
+        EditorUtility.DisplayDialog("通知", "Mapの書き出しに成功しました", "閉じる");
     }
 }
