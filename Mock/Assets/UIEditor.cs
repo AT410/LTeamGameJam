@@ -124,5 +124,6 @@ public class UIEditor : EditorWindow
             XmlUtil.Seialize<UIRoot>(FilePath, result);
         }
         AssetDatabase.Refresh();
+        EditorUtility.DisplayDialog("通知", "UIMapの書き出しに成功しました", "閉じる");
     }
 }

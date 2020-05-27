@@ -1,26 +1,27 @@
 <?xml version="1.0"?>
 <root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Area AreaNumber="0">
-    <StageData StageNumber="0" CameraEye="0,6,-22" CameraAt="0,1,25" CameraNear="0.5" CameraFar="1000">
-      <Objects Type="Floor" Pos="5,-1.5,0" Scale="3,3,3" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="FLOOR_TX" Tags="PossibleJump" SharedActive="0" EventActive="0" />
-      <Objects Type="FireLine" Pos="-5.5,2.25,1.75" Scale="12,0.5,0.5" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="1" EventReceiverKey="FireLine" EventRecipientKey="Door2" EventMsgStr="ToActive" />
-      <Objects Type="Door" Pos="-11.25,2,0" Scale="0.5,4,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="1" EventReceiverKey="Door2" />
-      <Objects Type="Water" Pos="-5,-3.5,0" Scale="7,3,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Wall" Pos="0,5,2" Scale="28,20,0.5" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="WALL_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Switch" Pos="0,2,1.5" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" EventRecipientKey="FireLine" EventMsgStr="FireSwitch" />
-      <Objects Type="Goal" Pos="12.5,0.5,-1" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Floor" Pos="0,-2.5,0" Scale="3,5,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="FLOOR_TX" Tags="PossibleJump" SharedActive="0" EventActive="0" />
-      <Objects Type="Water" Pos="-5,7,1.25" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Water" Pos="5,-3.5,0" Scale="7,3,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Floor" Pos="-11,-2.5,0" Scale="5,5,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="FLOOR_TX" Tags="PossibleJump" SharedActive="0" EventActive="0" />
-      <Objects Type="Floor" Pos="11,-2.5,0" Scale="5,5,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="FLOOR_TX" Tags="PossibleJump" SharedActive="0" EventActive="0" />
-      <Objects Type="Door" Pos="10.75,2,0" Scale="0.5,4,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="1" EventReceiverKey="Door1" />
-      <Objects Type="Wall" Pos="-13.75,5,0" Scale="0.5,20,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="WALL_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Water" Pos="5,7,1.25" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Wall" Pos="13.75,5,0" Scale="0.5,20,4" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="WALL_TX" SharedActive="0" EventActive="0" />
-      <Objects Type="Floor" Pos="-5,-1.5,0" Scale="3,3,3" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="FLOOR_TX" Tags="PossibleJump" SharedActive="0" EventActive="0" />
-      <Objects Type="Switch" Pos="-12.5,0.25,-1" Scale="1,0.5,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" EventRecipientKey="Door1" EventMsgStr="ToActive" />
-      <Objects Type="Player" Pos="-9.5,1,0" Scale="1,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CAPSULE" TexKey="TEST_TX" Tags="EnabledSwitch" SharedActive="1" SharedKey="Player" EventActive="0" />
+    <StageData StageNumber="0" CameraEye="3,8.18,-26.88" CameraAt="0,0,0" CameraNear="0.5" CameraFar="1000">
+      <Objects Type="Test" Pos="-6.07,4.28,-6.7" Scale="7.263163,1,1" Rot="0,0,0,1" MeshKey="DEFAULT_CUBE" TexKey="TEST_TX" SharedActive="0" EventActive="0" StartAnimetionActive="1" EventAnimetionActive="1" EndAnimetionActive="1">
+        <Animetions CallPoint="Start" MaxFlameCount="10">
+          <AnimetionData FlameCount="0" MotionType="Postion" Value="-6.07,4.28,-6.7,0" />
+          <AnimetionData FlameCount="0" MotionType="Postion" Value="-6.07,4.28,-6.7,0" />
+          <AnimetionData FlameCount="0" MotionType="Postion" Value="-6.07,4.28,-6.7,0" />
+        </Animetions>
+        <Animetions CallPoint="OnEvent" MaxFlameCount="1">
+          <AnimetionData FlameCount="0" MotionType="Rotation" Value="0,0,0,1" />
+          <AnimetionData FlameCount="0" MotionType="Rotation" Value="0,0,0,1" />
+          <AnimetionData FlameCount="0" MotionType="Postion" Value="-6.07,4.28,-6.7,0" />
+          <AnimetionData FlameCount="0" MotionType="Scale" Value="7.263163,1,1,0" />
+        </Animetions>
+        <Animetions CallPoint="End" MaxFlameCount="20">
+          <AnimetionData FlameCount="0" MotionType="Rotation" Value="0,0,0,1" />
+          <AnimetionData FlameCount="20" MotionType="Rotation" Value="0,0,0,1" />
+          <AnimetionData FlameCount="0" MotionType="Scale" Value="7.263163,1,1,0" />
+          <AnimetionData FlameCount="0" MotionType="Scale" Value="7.263163,1,1,0" />
+          <AnimetionData FlameCount="0" MotionType="Rotation" Value="0,0,0,1" />
+        </Animetions>
+      </Objects>
     </StageData>
   </Area>
 </root>
