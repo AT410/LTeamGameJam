@@ -88,6 +88,43 @@ public class Object
     public string EventRecipientKeyStr;
     [System.Xml.Serialization.XmlAttribute("EventMsgStr")]//送信メッセージ
     public string EventMsgStr;
+
+    // -- アニメーション設定 --
+    [XmlAttribute("StartAnimetionActive")]
+    public string StartAnimetionActive;
+    [XmlAttribute("EventAnimetionActive")]
+    public string EventAnimetionActive;
+    [XmlAttribute("EndAnimetionActive")]
+    public string EndAnimetionActive;
+
+    [XmlElement("Animetions")]
+    public List<AnimSetData> animSets;
+}
+
+[Serializable]
+public class AnimSetData
+{
+    [XmlAttribute("CallPoint")]
+    public PlayBackType playBack;
+
+    [XmlAttribute("MaxFlameCount")]//最大フレーム数
+    public string MaxFlameCount;
+
+    [XmlElement("AnimetionData")]
+    public List<AnimetionData> datas;
+}
+
+[Serializable]
+public class AnimetionData
+{
+    [XmlAttribute("FlameCount")]//フレーム数
+    public string FlameCount;
+
+    [XmlAttribute("MotionType")]//Pos・Rot・Scalのどれか
+    public AnimetionType type;
+
+    [XmlAttribute("Value")]//移動量
+    public string Value;
 }
 
 [Serializable]
@@ -324,9 +361,50 @@ public class Util
                 Ob.EventMsgStr = Param.EventMsgStr != null ? Param.EventMsgStr : "";
             }
 
+            // -- アニメーション設定 --
+            Ob.animSets = new List<AnimSetData>();
+
+            Ob.StartAnimetionActive = Convert.ToInt32(Param.StartAnimetionActive).ToString();
+
+            if (Param.StartAnimetionActive)
+            {
+                SetAnimetionData(ref Ob, PlayBackType.Start, Param.MaxStartAnimCount, Param.m_MixStartFlame, Param.m_MixStartAnimType, Param.m_StartAnimValue);
+            }
+
+            Ob.EventAnimetionActive = Convert.ToInt32(Param.EventAnimetionActive).ToString();
+            if (Param.EventAnimetionActive)
+            {
+                SetAnimetionData(ref Ob, PlayBackType.OnEvent, Param.MaxEventAnimCount, Param.m_MixEventFlame, Param.m_MixEventAnimType, Param.m_EventAnimValue);
+            }
+
+            Ob.EndAnimetionActive = Convert.ToInt32(Param.EndAnimetionActive).ToString();
+            if (Param.EndAnimetionActive)
+            {
+                SetAnimetionData(ref Ob, PlayBackType.End, Param.MaxEndAnimCount, Param.m_MixEndFlame, Param.m_MixEndAnimType, Param.m_EndAnimValue);
+            }
+
             stage.StageObjects.Add(Ob);
         }
 
+    }
+
+    public static void SetAnimetionData(ref Object obj,PlayBackType play ,float MaxFlame,List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)
+    {
+        int LoopCont = FlameTimes.Count;
+        AnimSetData setData = new AnimSetData();
+        setData.playBack = play;
+        setData.MaxFlameCount = MaxFlame.ToString();
+        setData.datas = new List<AnimetionData>();
+        for(int i =0;i<LoopCont;i++)
+        {
+            AnimetionData data = new AnimetionData();
+            data.FlameCount = FlameTimes[i].ToString();
+            data.type = Types[i];
+            data.Value = VecToStr(Vec4[i]);
+
+            setData.datas.Add(data);
+        }
+        obj.animSets.Add(setData);
     }
 
     //UISET
@@ -415,6 +493,12 @@ public class Util
         return result;
     }
 
+    private static string VecToStr(Vector4 vec)
+    {
+        string result;
+        result = vec.x.ToString() + "," + vec.y.ToString() + "," + vec.z.ToString()+","+vec.w.ToString() ;
+        return result;
+    }
     private static string VecToStr(Vector3 vec)
     {
         string result;
