@@ -74,19 +74,34 @@ public class ParamBase : MonoBehaviour
     public bool EndAnimetionActive;
 
     // -- 開始時アニメーション --
-    public List<float> m_MixStartFlame = new List<float>();
-    public List<AnimetionType> m_MixStartAnimType = new List<AnimetionType>();
-    public List<Vector4> m_StartAnimValue = new List<Vector4>();
+    public List<float> m_MixStartPosFlame = new List<float>();
+    public List<Vector4> m_StartAnimPos = new List<Vector4>();
+
+    public List<float> m_MixStartRotFlame = new List<float>();
+    public List<Vector4> m_StartAnimRotate = new List<Vector4>();
+
+    public List<float> m_MixStartScalFlame = new List<float>();
+    public List<Vector4> m_StartAnimScale = new List<Vector4>();
 
     // -- イベント時アニメーション --
-    public List<float> m_MixEventFlame = new List<float>();
-    public List<AnimetionType> m_MixEventAnimType = new List<AnimetionType>();
-    public List<Vector4> m_EventAnimValue = new List<Vector4>();
+    public List<float> m_MixEventPosFlame = new List<float>();
+    public List<Vector4> m_EventAnimPos = new List<Vector4>();
+
+    public List<float> m_MixEventRotFlame = new List<float>();
+    public List<Vector4> m_EventAnimRotate = new List<Vector4>();
+
+    public List<float> m_MixEventScalFlame = new List<float>();
+    public List<Vector4> m_EventAnimScale = new List<Vector4>();
 
     // -- イベント時アニメーション --
-    public List<float> m_MixEndFlame = new List<float>();
-    public List<AnimetionType> m_MixEndAnimType = new List<AnimetionType>();
-    public List<Vector4> m_EndAnimValue = new List<Vector4>();
+    public List<float> m_MixEndPosFlame = new List<float>();
+    public List<Vector4> m_EndAnimPos = new List<Vector4>();
+
+    public List<float> m_MixEndRotFlame = new List<float>();
+    public List<Vector4> m_EndAnimRotate = new List<Vector4>();
+
+    public List<float> m_MixEndScalFlame = new List<float>();
+    public List<Vector4> m_EndAnimScale = new List<Vector4>();
 
     // -- フレームカウント最大数 --
     public float MaxStartAnimCount;
@@ -94,8 +109,12 @@ public class ParamBase : MonoBehaviour
     public float MaxEndAnimCount;
 
     // -- テスト変数 --
-    bool PlayAnimetion;
-    int Count = 0;
+    bool PlayPosAnimetion = false;
+    bool PlayRotAnimetion = false;
+    bool PlayScaleAnimetion = false;
+    int PosCount = 0;
+    int RotCount = 0;
+    int ScaleCount = 0;
     public float TotalTime;
     PlayBackType PlayAnime;
 
@@ -105,7 +124,6 @@ public class ParamBase : MonoBehaviour
     Vector3 StartScal;
     private void Awake()
     {
-        return;
     }
 
     private void Start()
@@ -120,26 +138,68 @@ public class ParamBase : MonoBehaviour
 
     private void Update()
     {
-        if ((StartAnimetionActive||EventAnimetionActive||EndAnimetionActive)&& PlayAnimetion)
+        if ((StartAnimetionActive||EventAnimetionActive||EndAnimetionActive)&& (PlayPosAnimetion||PlayRotAnimetion||PlayScaleAnimetion))
         {
             switch(PlayAnime)
             {
                 case PlayBackType.Start:
-                    AnimeBehavior(m_MixStartFlame, m_MixStartAnimType, m_StartAnimValue);
+                    SelectBehavior(m_MixStartPosFlame, m_StartAnimPos,
+                        m_MixStartRotFlame, m_StartAnimRotate,
+                        m_MixStartScalFlame, m_StartAnimScale);
                     break;
                 case PlayBackType.OnEvent:
-                    AnimeBehavior(m_MixEventFlame, m_MixEventAnimType, m_EventAnimValue);
+                    SelectBehavior(m_MixEventPosFlame, m_EventAnimPos,
+                        m_MixEventRotFlame, m_EventAnimRotate,
+                        m_MixEventScalFlame, m_EventAnimScale);
                     break;
                 case PlayBackType.End:
-                    AnimeBehavior(m_MixEndFlame, m_MixEndAnimType, m_EndAnimValue);
+                    SelectBehavior(m_MixEndPosFlame, m_EndAnimPos,
+                        m_MixEndRotFlame, m_EndAnimRotate,
+                        m_MixEndScalFlame, m_EndAnimScale);
                     break;
+            }
+
+            // -- フレーム更新 --
+            TotalTime += Time.fixedDeltaTime;
+        }
+    }
+
+    void SelectBehavior(List<float> FlamePosTimes, List<Vector4> PosVec4,
+            List<float> FlameRotTimes, List<Vector4> RotVec4,
+            List<float> FlameScalTimes, List<Vector4> ScalVec4)
+    {
+        if (PlayPosAnimetion)
+        {
+            if (!AnimeBehavior(FlamePosTimes, AnimetionType.Postion, PosCount, PosVec4))
+            {
+                PlayPosAnimetion = false;
+            }
+        }
+
+        if (PlayRotAnimetion)
+        {
+            if (!AnimeBehavior(FlameRotTimes, AnimetionType.Rotation, RotCount, RotVec4))
+            {
+                PlayRotAnimetion = false;
+            }
+        }
+
+        if (PlayScaleAnimetion)
+        {
+            if (!AnimeBehavior(FlameScalTimes, AnimetionType.Scale, ScaleCount, ScalVec4))
+            {
+                PlayScaleAnimetion = false;
             }
         }
     }
 
-    void AnimeBehavior(List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)
+    bool AnimeBehavior(List<float> FlameTimes, AnimetionType Type,int Count, List<Vector4> Vec4)
     {
-        if (AnimMove(FlameTimes, Types, Vec4))
+        if(FlameTimes.Count == Count)
+        {
+            return false;
+        }
+        if (AnimMove(FlameTimes, Type,Count, Vec4))
         {
             if (FlameTimes.Count - 1 != Count)
             {
@@ -147,25 +207,19 @@ public class ParamBase : MonoBehaviour
             }
             else
             {
-                this.transform.position = StartPos;
-                this.transform.rotation = ConvertToQuat(StartRot);
-                this.transform.localScale = StartScal;
                 Count = 0;
-                PlayAnimetion = false;
+                return false;
             }
         }
-
+        return true;
     }
 
-    bool AnimMove(List<float> FlameTimes,List<AnimetionType> Types,List<Vector4> Vec4)
+    bool AnimMove(List<float> FlameTimes,AnimetionType Type,int Count,List<Vector4> Vec4)
     {
-        TotalTime += Time.deltaTime;
-        if (TotalTime >= FlameTimes[Count])
+        if (TotalTime > FlameTimes[Count])
         {
             return true;
         }
-
-        AnimetionType Type = Types[Count];
 
         switch (Type)
         {
@@ -380,26 +434,51 @@ public class ParamBase : MonoBehaviour
             GUI.backgroundColor = defaultColor;
 
             param.PlayAnime = (PlayBackType)EditorGUILayout.EnumPopup("再生タイミング", param.PlayAnime);
+            toolSelect = GUILayout.Toolbar(toolSelect, new string[] { "Position", "Rotation", "Scale" });
 
-            switch(param.PlayAnime)
+            switch (param.PlayAnime)
             {
                 case PlayBackType.Start:
                     param.StartAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.StartAnimetionActive);
-                    AddAnimetion(param,ref param.MaxStartAnimCount, param.m_MixStartFlame, param.m_MixStartAnimType, param.m_StartAnimValue);
+                    SelectAnimationType(param,ref param.MaxStartAnimCount, param.m_MixStartPosFlame, param.m_StartAnimPos,
+                        param.m_MixStartRotFlame,param.m_StartAnimRotate,
+                        param.m_MixStartScalFlame,param.m_StartAnimScale);
                     break;
                 case PlayBackType.OnEvent:
                     param.EventAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.EventAnimetionActive);
-                    AddAnimetion(param, ref param.MaxEventAnimCount, param.m_MixEventFlame, param.m_MixEventAnimType, param.m_EventAnimValue);
+                    SelectAnimationType(param, ref param.MaxEventAnimCount, param.m_MixEventPosFlame, param.m_EventAnimPos,
+                        param.m_MixEventRotFlame, param.m_EventAnimRotate,
+                        param.m_MixEventScalFlame, param.m_EventAnimScale);
                     break;
                 case PlayBackType.End:
                     param.EndAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.EndAnimetionActive);
-                    AddAnimetion(param, ref param.MaxEndAnimCount, param.m_MixEndFlame, param.m_MixEndAnimType, param.m_EndAnimValue);
+                    SelectAnimationType(param, ref param.MaxEndAnimCount, param.m_MixEndPosFlame, param.m_EndAnimPos,
+                        param.m_MixEndRotFlame, param.m_EndAnimRotate,
+                        param.m_MixEndScalFlame, param.m_EndAnimScale);
                     break;
             }
 
         }
 
-        void AddAnimetion(ParamBase param,ref float MaxFlameCount,List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)
+        void SelectAnimationType(ParamBase param, ref float MaxFlameCount, List<float> FlamePosTimes, List<Vector4> PosVec4, 
+            List<float> FlameRotTimes, List<Vector4> RotVec4, 
+            List<float> FlameScalTimes, List<Vector4> ScalVec4)
+        {
+            switch (toolSelect)
+            {
+                case 0:
+                    AddAnimetion(param, ref MaxFlameCount, FlamePosTimes, PosVec4);
+                    break;
+                case 1:
+                    AddAnimetion(param, ref MaxFlameCount, FlameRotTimes, RotVec4);
+                    break;
+                case 2:
+                    AddAnimetion(param, ref MaxFlameCount, FlameScalTimes, ScalVec4);
+                    break;
+            }
+        }
+
+        void AddAnimetion(ParamBase param,ref float MaxFlameCount,List<float> FlameTimes,List<Vector4> Vec4)
         {
             using (new GUILayout.VerticalScope(EditorStyles.helpBox))
             {
@@ -411,13 +490,53 @@ public class ParamBase : MonoBehaviour
                     EditorGUILayout.LabelField("現在の再生フレーム数：" + param.TotalTime.ToString());
                 }
 
-                toolSelect = GUILayout.Toolbar(toolSelect, new string[] { "Position", "Rotation", "Scale" });
                 if (EditorApplication.isPlaying)
                 {
-                    if (GUILayout.Button("再生"))
+                    using (new GUILayout.HorizontalScope(EditorStyles.toolbar))
+                    {
+                        if (GUILayout.Button("再生"))
+                        {
+                            param.TotalTime = 0.0f;
+                            switch (toolSelect)
+                            {
+                                case 0:
+                                    param.transform.position = param.StartPos;
+                                    param.PlayPosAnimetion = true;
+                                    break;
+                                case 1:
+                                    param.transform.rotation = ConvertToQuat(param.StartRot);
+                                    param.PlayRotAnimetion = true;
+                                    break;
+                                case 2:
+                                    param.transform.localScale = param.StartScal;
+                                    param.PlayScaleAnimetion = true;
+                                    break;
+                            }
+
+                        }
+                        if (GUILayout.Button("全再生"))
+                        {
+                            param.TotalTime = 0.0f;
+                            param.transform.position = param.StartPos;
+                            param.transform.rotation = ConvertToQuat(param.StartRot);
+                            param.transform.localScale = param.StartScal;
+
+                            param.PlayPosAnimetion = true;
+                            param.PlayRotAnimetion = true;
+                            param.PlayScaleAnimetion = true;
+                        }
+                    }
+
+                    if(GUILayout.Button("ReSet"))
                     {
                         param.TotalTime = 0.0f;
-                        param.PlayAnimetion = true;
+                        param.transform.position = param.StartPos;
+                        param.transform.rotation = ConvertToQuat(param.StartRot);
+                        param.transform.localScale = param.StartScal;
+
+                        param.PlayPosAnimetion = false;
+                        param.PlayRotAnimetion = false;
+                        param.PlayScaleAnimetion = false;
                     }
                 }
 
@@ -427,7 +546,6 @@ public class ParamBase : MonoBehaviour
                     {
 
                         FlameTimes.Add(0.0f);
-                        Types.Add((AnimetionType)toolSelect);
                         switch (toolSelect)
                         {
                             case 0:
@@ -447,7 +565,6 @@ public class ParamBase : MonoBehaviour
                         if (FlameTimes.Count != 0)
                         {
                             FlameTimes.RemoveAt(FlameTimes.Count - 1);
-                            Types.RemoveAt(Types.Count - 1);
                             Vec4.RemoveAt(Vec4.Count - 1);
                         }
                     }
@@ -456,34 +573,37 @@ public class ParamBase : MonoBehaviour
                 if (GUILayout.Button("全削除"))
                 {
                     FlameTimes.Clear();
-                    Types.Clear();
                     Vec4.Clear();
                 }
 
-
-                // -- タグ情報 --
-                int j, FlameCount = FlameTimes.Count;
-
-                // 折りたたみ表示
-                if (Animfold = EditorGUILayout.Foldout(Animfold, "Data"))
-                {
-                    // リスト表示
-                    for (j = 0; j < FlameCount; ++j)
-                    {
-                        EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-                        FlameTimes[j] = EditorGUILayout.Slider("フレーム数", FlameTimes[j], 0.0f, MaxFlameCount);
-                        Types[j] = (AnimetionType)EditorGUILayout.EnumPopup("Type", Types[j]);
-                        if (Types[j] == AnimetionType.Rotation)
-                        {
-                            Vec4[j] = EditorGUILayout.Vector4Field("Value", Vec4[j]);
-                        }
-                        else
-                            Vec4[j] = EditorGUILayout.Vector3Field("Value", Vec4[j]);
-                        EditorGUILayout.EndVertical();
-                    }
-                }
+                // -- リスト表示 --
+                ViewAnimeVec(MaxFlameCount,FlameTimes, (AnimetionType)toolSelect, Vec4);
             }
 
+        }
+
+        void ViewAnimeVec(float MaxFlameCount,List<float> FlameTimes, AnimetionType Type, List<Vector4> Vec4)
+        {
+            // -- タグ情報 --
+            int j, FlameCount = FlameTimes.Count;
+
+            // 折りたたみ表示
+            if (Animfold = EditorGUILayout.Foldout(Animfold, "Data"))
+            {
+                // リスト表示
+                for (j = 0; j < FlameCount; ++j)
+                {
+                    EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+                    FlameTimes[j] = EditorGUILayout.Slider("フレーム数", FlameTimes[j], 0.0f, MaxFlameCount);
+                    if (Type == AnimetionType.Rotation)
+                    {
+                        Vec4[j] = EditorGUILayout.Vector4Field("Value", Vec4[j]);
+                    }
+                    else
+                        Vec4[j] = EditorGUILayout.Vector3Field("Value", Vec4[j]);
+                    EditorGUILayout.EndVertical();
+                }
+            }
         }
 
         Vector4 ConvertToVec4(Quaternion Quat)
