@@ -115,8 +115,14 @@ public class AnimSetData
     [XmlAttribute("MaxFlameCount")]//最大フレーム数
     public string MaxFlameCount;
 
-    [XmlElement("AnimetionData")]
-    public List<AnimetionData> datas;
+    [XmlElement("AnimationPosData")]
+    public List<AnimetionData> PosDatas;
+
+    [XmlElement("AnimationRotData")]
+    public List<AnimetionData> RotDatas;
+
+    [XmlElement("AnimationScalData")]
+    public List<AnimetionData> ScalDatas;
 }
 
 [Serializable]
@@ -124,9 +130,6 @@ public class AnimetionData
 {
     [XmlAttribute("FlameCount")]//フレーム数
     public string FlameCount;
-
-    [XmlAttribute("MotionType")]//Pos・Rot・Scalのどれか
-    public AnimetionType type;
 
     [XmlAttribute("Value")]//移動量
     public string Value;
@@ -385,19 +388,25 @@ public class Util
 
             if (Param.StartAnimetionActive)
             {
-                SetAnimetionData(ref Ob, PlayBackType.Start, Param.MaxStartAnimCount, Param.m_MixStartFlame, Param.m_MixStartAnimType, Param.m_StartAnimValue);
+                SetAnimetionData(ref Ob, PlayBackType.Start, Param.MaxStartAnimCount, Param.m_MixStartPosFlame, Param.m_StartAnimPos,
+                    Param.m_MixStartRotFlame, Param.m_StartAnimRotate,
+                    Param.m_MixStartScalFlame, Param.m_StartAnimScale);
             }
 
             Ob.EventAnimetionActive = Convert.ToInt32(Param.EventAnimetionActive).ToString();
             if (Param.EventAnimetionActive)
             {
-                SetAnimetionData(ref Ob, PlayBackType.OnEvent, Param.MaxEventAnimCount, Param.m_MixEventFlame, Param.m_MixEventAnimType, Param.m_EventAnimValue);
+                SetAnimetionData(ref Ob, PlayBackType.OnEvent, Param.MaxEventAnimCount, Param.m_MixEventPosFlame, Param.m_EventAnimPos,
+                    Param.m_MixEventRotFlame, Param.m_EventAnimRotate,
+                    Param.m_MixEventScalFlame, Param.m_EventAnimScale);
             }
 
             Ob.EndAnimetionActive = Convert.ToInt32(Param.EndAnimetionActive).ToString();
             if (Param.EndAnimetionActive)
             {
-                SetAnimetionData(ref Ob, PlayBackType.End, Param.MaxEndAnimCount, Param.m_MixEndFlame, Param.m_MixEndAnimType, Param.m_EndAnimValue);
+                SetAnimetionData(ref Ob, PlayBackType.End, Param.MaxEndAnimCount, Param.m_MixEndPosFlame, Param.m_EndAnimPos,
+                    Param.m_MixEndRotFlame, Param.m_EndAnimRotate,
+                    Param.m_MixEndScalFlame, Param.m_EndAnimScale);
             }
 
             stage.StageObjects.Add(Ob);
@@ -406,23 +415,38 @@ public class Util
         return true;
     }
 
-    public static void SetAnimetionData(ref Object obj,PlayBackType play ,float MaxFlame,List<float> FlameTimes, List<AnimetionType> Types, List<Vector4> Vec4)
+    public static void SetAnimetionData(ref Object obj,PlayBackType play ,float MaxFlame, 
+            List<float> FlamePosTimes, List<Vector4> PosVec4,
+            List<float> FlameRotTimes, List<Vector4> RotVec4,
+            List<float> FlameScalTimes, List<Vector4> ScalVec4)
     {
-        int LoopCont = FlameTimes.Count;
         AnimSetData setData = new AnimSetData();
         setData.playBack = play;
         setData.MaxFlameCount = MaxFlame.ToString();
-        setData.datas = new List<AnimetionData>();
-        for(int i =0;i<LoopCont;i++)
+
+        setData.PosDatas = new List<AnimetionData>();
+        setData.RotDatas = new List<AnimetionData>();
+        setData.ScalDatas = new List<AnimetionData>();
+
+        AddAnimetionData(ref setData.PosDatas, FlamePosTimes, PosVec4);
+        AddAnimetionData(ref setData.RotDatas, FlameRotTimes, RotVec4);
+        AddAnimetionData(ref setData.ScalDatas, FlameScalTimes, ScalVec4);
+
+        obj.animSets.Add(setData);
+    }
+
+    public static void AddAnimetionData(ref List<AnimetionData> animetions, List<float> FlameTimes, List<Vector4> Vec4)
+    {
+        int LoopCont = FlameTimes.Count;
+        for (int i = 0; i < LoopCont; i++)
         {
             AnimetionData data = new AnimetionData();
             data.FlameCount = FlameTimes[i].ToString();
-            data.type = Types[i];
             data.Value = VecToStr(Vec4[i]);
 
-            setData.datas.Add(data);
+            animetions.Add(data);
         }
-        obj.animSets.Add(setData);
+
     }
 
     //UISET

@@ -368,22 +368,33 @@ MonoBehaviour:
   StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame:
-  - 1
+  m_MixStartPosFlame:
   - 0
-  - 3
-  m_MixStartAnimType: 010000000000000002000000
-  m_StartAnimValue:
-  - {x: 0, y: 0, z: 0, w: 2}
-  - {x: -8.37, y: 0.85, z: -6.7, w: 0}
-  - {x: 7.263163, y: 3.803, z: 1, w: 0}
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
-  MaxStartAnimCount: 3
+  - 0
+  m_StartAnimPos:
+  - {x: -7.79, y: 8.34, z: -6.7, w: 0}
+  - {x: -7.79, y: 8.34, z: -6.7, w: 0}
+  m_MixStartRotFlame:
+  - 5
+  m_StartAnimRotate:
+  - {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_MixStartScalFlame:
+  - 2.97
+  m_StartAnimScale:
+  - {x: 7.263163, y: 2.9828384, z: 1, w: 0}
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
+  MaxStartAnimCount: 5
   MaxEventAnimCount: 1
   MaxEndAnimCount: 0
   TotalTime: 0
@@ -439,13 +450,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785334663}
-  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.79, y: 8.34, z: -6.7}
-  m_LocalScale: {x: 7.263163, y: 1, z: 1}
+  m_LocalScale: {x: 7.263163, y: 0.89485157, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000573306
 GameObject:
   m_ObjectHideFlags: 0
