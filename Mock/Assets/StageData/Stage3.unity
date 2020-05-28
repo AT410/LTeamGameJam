@@ -176,6 +176,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -306,6 +307,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -437,16 +439,17 @@ MonoBehaviour:
   EventReceiveKey: TEST2
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
   m_MixStartFlame:
-  - 0
-  - 0
-  - 0
+  - 1
+  - 2
+  - 3
   m_MixStartAnimType: 000000000200000001000000
   m_StartAnimValue:
-  - {x: 9.62, y: 9.5, z: 0.99, w: 0}
+  - {x: 10.1, y: 9.5, z: 0.99, w: 0}
   - {x: 1, y: 1, z: 2, w: 0}
   - {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MixEventFlame: []
@@ -573,6 +576,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -703,6 +707,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -833,6 +838,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -963,6 +969,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1093,6 +1100,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1314,6 +1322,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: TEST1
   EventMsgStr: TestEvent
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1450,6 +1459,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1580,6 +1590,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1710,6 +1721,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1840,6 +1852,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: TEST3
   EventMsgStr: ToActive
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -1970,6 +1983,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2170,6 +2184,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2301,6 +2316,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2431,6 +2447,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2636,6 +2653,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2767,6 +2785,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2897,6 +2916,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3027,6 +3047,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3158,6 +3179,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3288,19 +3310,22 @@ MonoBehaviour:
   EventReceiveKey: TEST3
   EventSendKey: 
   EventMsgStr: 
-  StartAnimetionActive: 0
+  configu: 1
+  StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
+  m_MixStartFlame:
+  - 3
+  m_MixStartAnimType: 00000000
+  m_StartAnimValue:
+  - {x: -1, y: 5, z: 0, w: 0}
   m_MixEventFlame: []
   m_MixEventAnimType: 
   m_EventAnimValue: []
   m_MixEndFlame: []
   m_MixEndAnimType: 
   m_EndAnimValue: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 3
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   TotalTime: 0
@@ -3357,7 +3382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640055831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 5, z: 0}
+  m_LocalPosition: {x: -1, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3418,6 +3443,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3549,6 +3575,7 @@ MonoBehaviour:
   EventReceiveKey: TEST1
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3556,18 +3583,20 @@ MonoBehaviour:
   - 1
   - 2
   - 3
-  m_MixStartAnimType: 000000000200000001000000
+  - 4
+  m_MixStartAnimType: 00000000020000000100000000000000
   m_StartAnimValue:
   - {x: -6, y: 2.5, z: -1, w: 0}
   - {x: 1, y: 5, z: 2, w: 0}
   - {x: 0, y: 0, z: 0.7, w: 0.7}
+  - {x: -6, y: 2.5, z: -1, w: 0}
   m_MixEventFlame: []
   m_MixEventAnimType: 
   m_EventAnimValue: []
   m_MixEndFlame: []
   m_MixEndAnimType: 
   m_EndAnimValue: []
-  MaxStartAnimCount: 3
+  MaxStartAnimCount: 4
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   TotalTime: 0
@@ -3685,6 +3714,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: TEST2
   EventMsgStr: TestEvent
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3815,6 +3845,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3946,6 +3977,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -4076,6 +4108,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -4207,6 +4240,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -4338,6 +4372,7 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  configu: 1
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
