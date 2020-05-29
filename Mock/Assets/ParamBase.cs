@@ -160,7 +160,7 @@ public class ParamBase : MonoBehaviour
             }
 
             // -- フレーム更新 --
-            TotalTime += Time.fixedDeltaTime;
+            TotalTime += Time.deltaTime;
         }
     }
 
