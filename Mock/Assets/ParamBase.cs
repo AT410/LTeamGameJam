@@ -45,8 +45,13 @@ public enum AnimetionType
 
 public enum FireLineConfigu
 {
-    LeftToRight = +1,
-    RightToLeft = -1
+    None =0,
+    LeftToRight,
+    RightToLeft,
+    UpToDown,
+    DownToUp,
+    FrontToBack,
+    BackToFront
 }
 
 
@@ -66,7 +71,7 @@ public class ParamBase : MonoBehaviour
     public string EventSendKey;
     public string EventMsgStr;
 
-    public FireLineConfigu configu = FireLineConfigu.LeftToRight;
+    public FireLineConfigu configu = FireLineConfigu.None;
 
     //アニメーション設定
     public bool StartAnimetionActive;
@@ -109,6 +114,7 @@ public class ParamBase : MonoBehaviour
     public float MaxEndAnimCount;
 
     // -- テスト変数 --
+    bool PlayFireLineActive = false;
     bool PlayPosAnimetion = false;
     bool PlayRotAnimetion = false;
     bool PlayScaleAnimetion = false;
@@ -138,9 +144,79 @@ public class ParamBase : MonoBehaviour
 
     private void Update()
     {
-        if ((StartAnimetionActive||EventAnimetionActive||EndAnimetionActive)&& (PlayPosAnimetion||PlayRotAnimetion||PlayScaleAnimetion))
+        // -- アニメーションの再生 --
+        PlayAnimation();
+
+        // -- 導火線のテスト --
+        PlayFireLine();
+    }
+
+    void PlayFireLine()
+    {
+        if(PlayFireLineActive)
         {
-            switch(PlayAnime)
+            var Postion = this.transform.position;
+            var Scale = this.transform.localScale;
+
+            switch (configu)
+            {
+                case FireLineConfigu.None:
+                    break;
+                case FireLineConfigu.LeftToRight:
+                    Postion.x = FireLineBehaviorPos(-1, Postion.x);
+                    Scale.x = FireLineBehaviorScale(Scale.x);
+                    break;
+                case FireLineConfigu.RightToLeft:
+                    Postion.x = FireLineBehaviorPos(+1, Postion.x);
+                    Scale.x = FireLineBehaviorScale(Scale.x);
+                    break;
+                case FireLineConfigu.UpToDown:
+                    Postion.y = FireLineBehaviorPos(-1, Postion.y);
+                    Scale.y = FireLineBehaviorScale(Scale.y);
+                    break;
+                case FireLineConfigu.DownToUp:
+                    Postion.y = FireLineBehaviorPos(+1, Postion.y);
+                    Scale.y = FireLineBehaviorScale(Scale.y);
+                    break;
+                case FireLineConfigu.FrontToBack:
+                    Postion.z = FireLineBehaviorPos(+1, Postion.z);
+                    Scale.z = FireLineBehaviorScale(Scale.z);
+                    break;
+                case FireLineConfigu.BackToFront:
+                    Postion.z = FireLineBehaviorPos(-1, Postion.z);
+                    Scale.z = FireLineBehaviorScale(Scale.z);
+                    break;
+                default:
+                    break;
+            }
+
+            // -- 座標系更新 --
+            this.transform.position = Postion;
+            this.transform.localScale = Scale;
+
+            if(this.transform.localScale.x <= 0||this.transform.localScale.y <=0||this.transform.localScale.z <=0)
+            {
+                this.gameObject.SetActive(false);
+                PlayFireLineActive = false;
+            }
+        }
+    }
+
+    float FireLineBehaviorPos(float Key,float Pos)
+    {
+        return Pos += Key * 0.025f;
+    }
+
+    float FireLineBehaviorScale(float Scale)
+    {
+        return Scale += -0.05f;
+    }
+
+    void PlayAnimation()
+    {
+        if ((StartAnimetionActive || EventAnimetionActive || EndAnimetionActive) && (PlayPosAnimetion || PlayRotAnimetion || PlayScaleAnimetion))
+        {
+            switch (PlayAnime)
             {
                 case PlayBackType.Start:
                     SelectBehavior(m_MixStartPosFlame, m_StartAnimPos,
@@ -340,6 +416,18 @@ public class ParamBase : MonoBehaviour
             if(param.Type == ObjectType.FireLine)
             {
                 param.configu = (FireLineConfigu)EditorGUILayout.EnumPopup("減少方向", param.configu);
+                if(EditorApplication.isPlaying)
+                {
+                    if(GUILayout.Button("テスト"))
+                    {
+                        param.transform.position = param.StartPos;
+                        param.transform.rotation = ConvertToQuat(param.StartRot);
+                        param.transform.localScale = param.StartScal;
+
+                        param.gameObject.SetActive(true);
+                        param.PlayFireLineActive = true;
+                    }
+                }
             }
 
             // -- タグ情報 --

@@ -180,15 +180,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -325,15 +334,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -442,15 +460,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -647,15 +674,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -847,15 +883,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -974,19 +1019,28 @@ MonoBehaviour:
   EventReceiveKey: FireLine3
   EventSendKey: Door1
   EventMsgStr: ToActive
-  configu: 1
+  configu: 2
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1109,15 +1163,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1240,15 +1303,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1463,15 +1535,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1594,15 +1675,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1726,15 +1816,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1858,15 +1957,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -1989,15 +2097,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2120,15 +2237,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2251,15 +2377,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2388,15 +2523,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2520,15 +2664,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2651,15 +2804,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2778,19 +2940,28 @@ MonoBehaviour:
   EventReceiveKey: FireLine2
   EventSendKey: FireLine3
   EventMsgStr: FireSwitch
-  configu: 1
+  configu: 4
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -2914,15 +3085,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -3041,19 +3221,28 @@ MonoBehaviour:
   EventReceiveKey: FireLine1
   EventSendKey: FireLine2
   EventMsgStr: FireSwitch
-  configu: 1
+  configu: 5
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
@@ -3176,15 +3365,24 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartFlame: []
-  m_MixStartAnimType: 
-  m_StartAnimValue: []
-  m_MixEventFlame: []
-  m_MixEventAnimType: 
-  m_EventAnimValue: []
-  m_MixEndFlame: []
-  m_MixEndAnimType: 
-  m_EndAnimValue: []
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
