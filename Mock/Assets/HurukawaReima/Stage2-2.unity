@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &80022144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3515119194962195794, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 621116999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &105403485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,7 +176,7 @@ PrefabInstance:
     - target: {fileID: 3286204064468471831, guid: fb05a1fcd7a55e342b27be39d2df7d68,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3286204064468471831, guid: fb05a1fcd7a55e342b27be39d2df7d68,
         type: 3}
@@ -186,6 +192,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286204064468471826, guid: fb05a1fcd7a55e342b27be39d2df7d68,
+        type: 3}
+      propertyPath: Tags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286204064468471826, guid: fb05a1fcd7a55e342b27be39d2df7d68,
+        type: 3}
+      propertyPath: MaxStartAnimCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286204064468471826, guid: fb05a1fcd7a55e342b27be39d2df7d68,
+        type: 3}
+      propertyPath: EventActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286204064468471826, guid: fb05a1fcd7a55e342b27be39d2df7d68,
+        type: 3}
+      propertyPath: Tags.Array.data[0]
+      value: EnabledSwitch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb05a1fcd7a55e342b27be39d2df7d68, type: 3}
@@ -204,7 +230,7 @@ GameObject:
   - component: {fileID: 262110807}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,10 +302,10 @@ Transform:
   m_GameObject: {fileID: 262110802}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.4, y: 4.15, z: 2.488}
-  m_LocalScale: {x: 4, y: 5, z: 0.5}
+  m_LocalScale: {x: 4, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &262110807
 MonoBehaviour:
@@ -293,16 +319,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  TexKey: FLOOR_TX
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &330433930
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +361,7 @@ GameObject:
   - component: {fileID: 330433935}
   m_Layer: 0
   m_Name: sita2
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,10 +433,10 @@ Transform:
   m_GameObject: {fileID: 330433930}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.44, y: 0, z: 2.71}
-  m_LocalScale: {x: 15.01606, y: 5, z: 0.5}
+  m_LocalScale: {x: 15.01606, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &330433935
 MonoBehaviour:
@@ -407,16 +450,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  TexKey: FLOOR_TX
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &526933275
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +492,7 @@ GameObject:
   - component: {fileID: 526933280}
   m_Layer: 0
   m_Name: button
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +567,7 @@ Transform:
   m_LocalScale: {x: 1.3151326, y: 1.3074527, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &526933280
 MonoBehaviour:
@@ -521,16 +581,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 4
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
-  EventActive: 0
+  EventActive: 1
   EventReceiveKey: 
-  EventSendKey: 
-  EventMsgStr: 
+  EventSendKey: open
+  EventMsgStr: openwall
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &577545660
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +622,7 @@ GameObject:
   - component: {fileID: 577545665}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,7 +697,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5.432635, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &577545665
 MonoBehaviour:
@@ -635,16 +711,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
-  SharedActive: 0
+  SharedActive: 1
   SharedKey: 
-  EventActive: 0
-  EventReceiveKey: 
+  EventActive: 1
+  EventReceiveKey: open
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &599521310
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +752,7 @@ GameObject:
   - component: {fileID: 599521315}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -731,11 +823,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599521310}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.66, y: 4.026, z: 2.908}
-  m_LocalScale: {x: 5, y: 7.613991, z: 0.5}
+  m_LocalPosition: {x: -5.52, y: 4.026, z: 2.908}
+  m_LocalScale: {x: 5, y: 7.613991, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &599521315
 MonoBehaviour:
@@ -749,9 +841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -759,6 +851,91 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
+--- !u!1001 &621116999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3515119194962195794, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_Name
+      value: AtPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451481045633577392, guid: 5ce02495e2b462a4984d0dc1c26169e0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ce02495e2b462a4984d0dc1c26169e0, type: 3}
 --- !u!1 &639789880
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +951,7 @@ GameObject:
   - component: {fileID: 639789885}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -845,11 +1022,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639789880}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8.989, y: 7.69, z: 2.471}
-  m_LocalScale: {x: 9.029741, y: 5, z: 0.5}
+  m_LocalPosition: {x: -8.989, y: 6.87, z: 2.471}
+  m_LocalScale: {x: 9.029741, y: 5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &639789885
 MonoBehaviour:
@@ -863,16 +1040,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  TexKey: FLOOR_TX
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
+--- !u!1001 &651666650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8711826019646903502, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_Name
+      value: Main Camera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711826019646903499, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743971980172501634, guid: 7373599f069928b48a8ffd050e7f45bd,
+        type: 3}
+      propertyPath: AtObj
+      value: 
+      objectReference: {fileID: 80022144}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7373599f069928b48a8ffd050e7f45bd, type: 3}
 --- !u!1 &656368132
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +1156,7 @@ GameObject:
   - component: {fileID: 656368137}
   m_Layer: 0
   m_Name: sita3
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,10 +1228,10 @@ Transform:
   m_GameObject: {fileID: 656368132}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -10.512, y: 0, z: 2.71}
-  m_LocalScale: {x: 6.972, y: 5, z: 0.5}
+  m_LocalScale: {x: 6.972, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &656368137
 MonoBehaviour:
@@ -977,9 +1245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -987,6 +1255,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &715216721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +1286,7 @@ GameObject:
   - component: {fileID: 715216726}
   m_Layer: 0
   m_Name: hidari
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1019,7 +1303,7 @@ Transform:
   m_LocalScale: {x: 10, y: 20, z: 0.5000003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &715216723
 BoxCollider:
@@ -1093,7 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1101,89 +1385,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
---- !u!1 &847935144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 847935147}
-  - component: {fileID: 847935146}
-  - component: {fileID: 847935145}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &847935145
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847935144}
-  m_Enabled: 1
---- !u!20 &847935146
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847935144}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &847935147
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847935144}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.56, y: 17.91, z: -79.97}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &884431106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,7 +1416,7 @@ GameObject:
   - component: {fileID: 884431111}
   m_Layer: 0
   m_Name: migi
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1212,11 +1429,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884431106}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 14.4, y: 10.08, z: -0.32}
+  m_LocalPosition: {x: 14.4, y: 10.08, z: -0.09}
   m_LocalScale: {x: 10, y: 20, z: 0.5000003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &884431108
 BoxCollider:
@@ -1290,7 +1507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1298,6 +1515,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &1302444521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1546,7 @@ GameObject:
   - component: {fileID: 1302444526}
   m_Layer: 0
   m_Name: block
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1388,7 +1621,7 @@ Transform:
   m_LocalScale: {x: 3.0561543, y: 4.0544, z: 5.605}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1302444526
 MonoBehaviour:
@@ -1402,16 +1635,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 16
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
-  Tags: []
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &1324592653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1677,7 @@ GameObject:
   - component: {fileID: 1324592658}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1498,11 +1748,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324592653}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.962, y: 6.72, z: 2.471}
-  m_LocalScale: {x: 10.0553, y: 5, z: 0.5}
+  m_LocalPosition: {x: 8.962, y: 5.95, z: 2.471}
+  m_LocalScale: {x: 10.0553, y: 5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1324592658
 MonoBehaviour:
@@ -1516,16 +1766,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  TexKey: FLOOR_TX
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &1570691968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1808,7 @@ GameObject:
   - component: {fileID: 1570691973}
   m_Layer: 0
   m_Name: sita1
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1613,10 +1880,10 @@ Transform:
   m_GameObject: {fileID: 1570691968}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 10.997, y: 0, z: 2.63}
-  m_LocalScale: {x: 6.198108, y: 5, z: 0.5}
+  m_LocalScale: {x: 6.198108, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1570691973
 MonoBehaviour:
@@ -1630,9 +1897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1640,6 +1907,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &1648046489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,7 +1938,7 @@ GameObject:
   - component: {fileID: 1648046494}
   m_Layer: 0
   m_Name: oku
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1730,7 +2013,7 @@ Transform:
   m_LocalScale: {x: 28, y: 20, z: 0.5000003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1648046494
 MonoBehaviour:
@@ -1746,7 +2029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1754,6 +2037,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 1
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &1699051638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +2068,7 @@ GameObject:
   - component: {fileID: 1699051643}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1840,11 +2139,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699051638}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.1, y: 3.587, z: 2.908}
-  m_LocalScale: {x: 5, y: 6.7363005, z: 0.5}
+  m_LocalPosition: {x: 4.98, y: 3.587, z: 2.908}
+  m_LocalScale: {x: 5, y: 6.7363005, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1699051643
 MonoBehaviour:
@@ -1858,9 +2157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -1868,6 +2167,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &1728976033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +2198,7 @@ GameObject:
   - component: {fileID: 1728976038}
   m_Layer: 0
   m_Name: ue
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1896,11 +2211,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728976033}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6, y: 20.39, z: 0.095}
+  m_LocalPosition: {x: 0.43, y: 20.07, z: 0.095}
   m_LocalScale: {x: 28, y: 10.18, z: 0.50000024}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!65 &1728976035
 BoxCollider:
@@ -1974,6 +2289,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   MeshKey: DEFAULT_CUBE
+  TexKey: WALL_TX
+  Tags: []
+  SharedActive: 0
+  SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
+--- !u!1 &1944266318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1944266323}
+  - component: {fileID: 1944266322}
+  - component: {fileID: 1944266321}
+  - component: {fileID: 1944266320}
+  - component: {fileID: 1944266319}
+  m_Layer: 0
+  m_Name: goal
+  m_TagString: Editor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1944266319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944266318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
+  MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
   SharedActive: 0
@@ -1982,6 +2355,94 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 1
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
+--- !u!65 &1944266320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944266318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1944266321
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944266318}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f6b5d87074d4c4042afd3b20ca412419, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1944266322
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944266318}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1944266323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944266318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.1, y: 7.53, z: 2.264137}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017705580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2458,7 @@ GameObject:
   - component: {fileID: 2017705585}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2068,11 +2529,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017705580}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.6, y: 2.33, z: 2.488}
-  m_LocalScale: {x: 3.9198222, y: 5, z: 0.5}
+  m_LocalPosition: {x: -1.44, y: 2.33, z: 2.488}
+  m_LocalScale: {x: 3.9198222, y: 5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!114 &2017705585
 MonoBehaviour:
@@ -2086,9 +2547,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FLOOR_TX
   Tags: []
   SharedActive: 0
   SharedKey: 
@@ -2096,6 +2557,22 @@ MonoBehaviour:
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
 --- !u!1 &2029826857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,13 +2657,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029826857}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.010439936, y: -0.008780433, z: -0.283434, w: 0.9588948}
+  m_LocalPosition: {x: 12.1, y: 18.96, z: -49.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0.86200005, y: -1.304, z: -32.944}
 --- !u!1 &2070469371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,7 +2679,7 @@ GameObject:
   - component: {fileID: 2070469376}
   m_Layer: 0
   m_Name: stage
-  m_TagString: Untagged
+  m_TagString: Editor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,11 +2750,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070469371}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.9, y: 12.2, z: 2.471}
-  m_LocalScale: {x: 11.473098, y: 5, z: 0.5}
+  m_LocalPosition: {x: 8.9, y: 11.55, z: 2.471}
+  m_LocalScale: {x: 11.473098, y: 5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2070469376
 MonoBehaviour:
@@ -2291,13 +2768,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  TexKey: FLOOR_TX
+  Tags:
+  - PossibleJump
   SharedActive: 0
   SharedKey: 
   EventActive: 0
   EventReceiveKey: 
   EventSendKey: 
   EventMsgStr: 
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartFlame: []
+  m_MixStartAnimType: 
+  m_StartAnimValue: []
+  m_MixEventFlame: []
+  m_MixEventAnimType: 
+  m_EventAnimValue: []
+  m_MixEndFlame: []
+  m_MixEndAnimType: 
+  m_EndAnimValue: []
+  MaxStartAnimCount: 0
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  TotalTime: 0
