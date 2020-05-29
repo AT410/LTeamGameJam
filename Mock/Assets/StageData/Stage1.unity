@@ -1019,7 +1019,7 @@ MonoBehaviour:
   EventReceiveKey: FireLine3
   EventSendKey: Door1
   EventMsgStr: ToActive
-  configu: 1
+  configu: 2
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   EventReceiveKey: FireLine2
   EventSendKey: FireLine3
   EventMsgStr: FireSwitch
-  configu: 1
+  configu: 4
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
@@ -3221,7 +3221,7 @@ MonoBehaviour:
   EventReceiveKey: FireLine1
   EventSendKey: FireLine2
   EventMsgStr: FireSwitch
-  configu: 1
+  configu: 5
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
