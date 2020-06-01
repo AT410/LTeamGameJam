@@ -27,7 +27,8 @@ public enum ObjectType
     WaterLV,
     PullBox,
     FrontWall,
-    MoveFloor
+    MoveFloor,
+    Slope
 }
 
 public enum PlayBackType
