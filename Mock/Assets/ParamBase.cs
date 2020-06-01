@@ -26,7 +26,8 @@ public enum ObjectType
     WaterJet,
     WaterLV,
     PullBox,
-    FrontWall
+    FrontWall,
+    MoveFloor
 }
 
 public enum PlayBackType
