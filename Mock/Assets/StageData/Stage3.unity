@@ -170,6 +170,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -201,7 +203,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &147526080
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -311,6 +315,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -342,7 +348,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &263179988
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -451,6 +459,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -482,7 +492,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &284656352
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -591,6 +603,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -622,7 +636,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &326117069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -732,6 +748,8 @@ MonoBehaviour:
   TexKey: TEST_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -769,7 +787,9 @@ MonoBehaviour:
   MaxStartAnimCount: 3
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &328378335
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -878,6 +898,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -909,7 +931,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &346483559
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1018,6 +1042,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1049,7 +1075,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &346736556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1158,6 +1186,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1189,7 +1219,9 @@ MonoBehaviour:
   MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &451454630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1298,6 +1330,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1329,7 +1363,9 @@ MonoBehaviour:
   MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &575087208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1438,6 +1474,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1469,7 +1507,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &671495324
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1579,6 +1619,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1610,7 +1652,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &683317861
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1810,6 +1854,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1841,7 +1887,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &716634143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1956,6 +2004,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1987,7 +2037,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &778868217
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2096,6 +2148,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_SPHERE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2127,7 +2181,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &813150301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2236,6 +2292,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_SPHERE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2267,7 +2325,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &856549431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2376,6 +2436,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2407,7 +2469,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &929814888
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2516,6 +2580,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_SPHERE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2547,7 +2613,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1218820021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2726,6 +2794,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2757,7 +2827,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1263602836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2867,6 +2939,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2898,7 +2972,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1269663479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3007,6 +3083,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_SPHERE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3038,7 +3116,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1308692844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3222,6 +3302,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3253,7 +3335,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1390350982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3363,6 +3447,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3394,7 +3480,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1460823060
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3503,6 +3591,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3534,7 +3624,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1461462319
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3643,6 +3735,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3674,7 +3768,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1522630330
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3784,6 +3880,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3815,7 +3913,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1603230769
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3924,6 +4024,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -3957,7 +4059,9 @@ MonoBehaviour:
   MaxStartAnimCount: 3
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1640055834
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4066,6 +4170,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4097,7 +4203,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1720432490
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4207,6 +4315,8 @@ MonoBehaviour:
   TexKey: TEST_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -4244,7 +4354,9 @@ MonoBehaviour:
   MaxStartAnimCount: 8
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1760598755
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4353,6 +4465,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4384,7 +4498,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1767735336
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4493,6 +4609,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4524,7 +4642,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1836419576
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4634,6 +4754,8 @@ MonoBehaviour:
   TexKey: TEST_TX
   Tags:
   - EnabledSwitch
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 1
   SharedKey: Player
   EventActive: 0
@@ -4665,7 +4787,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1891910340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4774,6 +4898,8 @@ MonoBehaviour:
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
   Tags: []
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4805,7 +4931,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &1971522812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4915,6 +5043,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4946,7 +5076,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &2131718544
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5056,6 +5188,8 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  CollisionActive: 1
+  SetFixed: 0
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -5087,7 +5221,9 @@ MonoBehaviour:
   MaxStartAnimCount: 0
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
-  TotalTime: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
 --- !u!23 &2142592178
 MeshRenderer:
   m_ObjectHideFlags: 0

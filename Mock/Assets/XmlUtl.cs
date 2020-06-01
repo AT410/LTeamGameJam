@@ -122,14 +122,8 @@ public class AnimSetData
     [XmlAttribute("MaxFlameCount")]//最大フレーム数
     public string MaxFlameCount;
 
-    [XmlElement("AnimationPosData")]
-    public List<AnimetionData> PosDatas;
-
-    [XmlElement("AnimationRotData")]
-    public List<AnimetionData> RotDatas;
-
-    [XmlElement("AnimationScalData")]
-    public List<AnimetionData> ScalDatas;
+    [XmlElement("AnimationData")]
+    public List<AnimetionData> Datas;
 }
 
 [Serializable]
@@ -137,6 +131,9 @@ public class AnimetionData
 {
     [XmlAttribute("FlameCount")]//フレーム数
     public string FlameCount;
+
+    [XmlAttribute("Type")]
+    public AnimetionType Type;
 
     [XmlAttribute("Value")]//移動量
     public string Value;
@@ -437,24 +434,23 @@ public class Util
         setData.playBack = play;
         setData.MaxFlameCount = MaxFlame.ToString();
 
-        setData.PosDatas = new List<AnimetionData>();
-        setData.RotDatas = new List<AnimetionData>();
-        setData.ScalDatas = new List<AnimetionData>();
+        setData.Datas = new List<AnimetionData>();
 
-        AddAnimetionData(ref setData.PosDatas, FlamePosTimes, PosVec4);
-        AddAnimetionData(ref setData.RotDatas, FlameRotTimes, RotVec4);
-        AddAnimetionData(ref setData.ScalDatas, FlameScalTimes, ScalVec4);
+        AddAnimetionData(AnimetionType.Postion,ref setData.Datas, FlamePosTimes, PosVec4);
+        AddAnimetionData(AnimetionType.Rotation,ref setData.Datas, FlameRotTimes, RotVec4);
+        AddAnimetionData(AnimetionType.Scale,ref setData.Datas, FlameScalTimes, ScalVec4);
 
         obj.animSets.Add(setData);
     }
 
-    public static void AddAnimetionData(ref List<AnimetionData> animetions, List<float> FlameTimes, List<Vector4> Vec4)
+    public static void AddAnimetionData(AnimetionType Type,ref List<AnimetionData> animetions, List<float> FlameTimes, List<Vector4> Vec4)
     {
         int LoopCont = FlameTimes.Count;
         for (int i = 0; i < LoopCont; i++)
         {
             AnimetionData data = new AnimetionData();
             data.FlameCount = FlameTimes[i].ToString();
+            data.Type = Type;
             data.Value = VecToStr(Vec4[i]);
 
             animetions.Add(data);
