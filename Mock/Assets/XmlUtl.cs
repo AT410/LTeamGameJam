@@ -76,10 +76,17 @@ public class Object
     public string TexKey;
     [System.Xml.Serialization.XmlAttribute("Tags")]
     public string TagStr;
+
+    [System.Xml.Serialization.XmlAttribute("CollisionActive")]
+    public string CollActiveStr;
+    [System.Xml.Serialization.XmlAttribute("CollisionFixedActive")]
+    public string CollFixedStr;
+
     [System.Xml.Serialization.XmlAttribute("SharedActive")]
     public string ActiveStr;
     [System.Xml.Serialization.XmlAttribute("SharedKey")]
     public string SharedStr;
+
     [System.Xml.Serialization.XmlAttribute("EventActive")] //受信可能
     public string EventActiveStr;
     [System.Xml.Serialization.XmlAttribute("EventReceiverKey")]//受信設定キー
@@ -347,6 +354,12 @@ public class Util
                 {
                     Ob.TagStr += ",";
                 }
+            }
+
+            Ob.CollActiveStr = Convert.ToInt32(Param.CollisionActive).ToString();
+            if(Param.CollisionActive)
+            {
+                Ob.CollFixedStr = Convert.ToInt32(Param.SetFixed).ToString();
             }
 
             //共有設定
