@@ -62,6 +62,9 @@ public class ParamBase : MonoBehaviour
     public string TexKey="TEST_TX";
     public List<string> Tags;
 
+    public bool CollisionActive = true;
+    public bool SetFixed = false;
+
     public bool SharedActive = false;
     public string SharedKey;
 
@@ -121,7 +124,9 @@ public class ParamBase : MonoBehaviour
     int PosCount = 0;
     int RotCount = 0;
     int ScaleCount = 0;
-    public float TotalTime;
+    public float PosTotalTime;
+    public float RotTotalTime;
+    public float ScaleTotalTime;
     PlayBackType PlayAnime;
 
 
@@ -236,7 +241,9 @@ public class ParamBase : MonoBehaviour
             }
 
             // -- フレーム更新 --
-            TotalTime += Time.deltaTime;
+            PosTotalTime += Time.deltaTime;
+            RotTotalTime += Time.deltaTime;
+            ScaleTotalTime += Time.deltaTime;
         }
     }
 
@@ -246,7 +253,7 @@ public class ParamBase : MonoBehaviour
     {
         if (PlayPosAnimetion)
         {
-            if (!AnimeBehavior(FlamePosTimes, AnimetionType.Postion, PosCount, PosVec4))
+            if (!AnimeBehavior(ref PosTotalTime,FlamePosTimes, AnimetionType.Postion, ref PosCount, PosVec4))
             {
                 PlayPosAnimetion = false;
             }
@@ -254,7 +261,7 @@ public class ParamBase : MonoBehaviour
 
         if (PlayRotAnimetion)
         {
-            if (!AnimeBehavior(FlameRotTimes, AnimetionType.Rotation, RotCount, RotVec4))
+            if (!AnimeBehavior(ref RotTotalTime,FlameRotTimes, AnimetionType.Rotation, ref RotCount, RotVec4))
             {
                 PlayRotAnimetion = false;
             }
@@ -262,24 +269,25 @@ public class ParamBase : MonoBehaviour
 
         if (PlayScaleAnimetion)
         {
-            if (!AnimeBehavior(FlameScalTimes, AnimetionType.Scale, ScaleCount, ScalVec4))
+            if (!AnimeBehavior(ref ScaleTotalTime,FlameScalTimes, AnimetionType.Scale, ref ScaleCount, ScalVec4))
             {
                 PlayScaleAnimetion = false;
             }
         }
     }
 
-    bool AnimeBehavior(List<float> FlameTimes, AnimetionType Type,int Count, List<Vector4> Vec4)
+    bool AnimeBehavior(ref float TotalTime,List<float> FlameTimes, AnimetionType Type,ref int Count, List<Vector4> Vec4)
     {
         if(FlameTimes.Count == Count)
         {
             return false;
         }
-        if (AnimMove(FlameTimes, Type,Count, Vec4))
+        if (AnimMove(ref TotalTime, FlameTimes, Type,Count, Vec4))
         {
             if (FlameTimes.Count - 1 != Count)
             {
                 Count++;
+                TotalTime = 0;
             }
             else
             {
@@ -290,7 +298,7 @@ public class ParamBase : MonoBehaviour
         return true;
     }
 
-    bool AnimMove(List<float> FlameTimes,AnimetionType Type,int Count,List<Vector4> Vec4)
+    bool AnimMove(ref float TotalTime,List<float> FlameTimes,AnimetionType Type,int Count,List<Vector4> Vec4)
     {
         if (TotalTime > FlameTimes[Count])
         {
@@ -356,7 +364,7 @@ public class ParamBase : MonoBehaviour
 
         int toolSelect = 0;
 
-        private readonly string[] TabToggles = { "MainTab", "AnimetionTab"};
+        private readonly string[] TabToggles = { "MainTab", "ActionTab"};
 
         int TabSelect = 0;
 
@@ -457,6 +465,21 @@ public class ParamBase : MonoBehaviour
                         list.RemoveAt(list.Count - 1);
                     }
                 }
+            }
+
+            GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+            using (new GUILayout.HorizontalScope(EditorStyles.toolbar))
+            {
+                EditorGUILayout.LabelField("物理設定");
+                GUI.backgroundColor = defaultColor;
+            }
+            GUI.backgroundColor = defaultColor;
+
+            param.CollisionActive = EditorGUILayout.ToggleLeft("物理判定を有効にする", param.CollisionActive);
+
+            if (param.CollisionActive)
+            {
+                param.SetFixed = EditorGUILayout.ToggleLeft("固定オブジェクト化", param.SetFixed);
             }
 
             GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
@@ -575,7 +598,18 @@ public class ParamBase : MonoBehaviour
 
                 if (EditorApplication.isPlaying)
                 {
-                    EditorGUILayout.LabelField("現在の再生フレーム数：" + param.TotalTime.ToString());
+                    switch (toolSelect)
+                    {
+                        case 0:
+                            EditorGUILayout.LabelField("現在の再生フレーム数：" + param.PosTotalTime.ToString());
+                            break;
+                        case 1:
+                            EditorGUILayout.LabelField("現在の再生フレーム数：" + param.RotTotalTime.ToString());
+                            break;
+                        case 2:
+                            EditorGUILayout.LabelField("現在の再生フレーム数：" + param.ScaleTotalTime.ToString());
+                            break;
+                    }
                 }
 
                 if (EditorApplication.isPlaying)
@@ -584,27 +618,32 @@ public class ParamBase : MonoBehaviour
                     {
                         if (GUILayout.Button("再生"))
                         {
-                            param.TotalTime = 0.0f;
                             switch (toolSelect)
                             {
                                 case 0:
                                     param.transform.position = param.StartPos;
                                     param.PlayPosAnimetion = true;
+                                    param.PosTotalTime = 0.0f;
                                     break;
                                 case 1:
                                     param.transform.rotation = ConvertToQuat(param.StartRot);
                                     param.PlayRotAnimetion = true;
+                                    param.RotTotalTime = 0.0f;
                                     break;
                                 case 2:
                                     param.transform.localScale = param.StartScal;
                                     param.PlayScaleAnimetion = true;
+                                    param.ScaleTotalTime = 0.0f;
                                     break;
                             }
 
                         }
                         if (GUILayout.Button("全再生"))
                         {
-                            param.TotalTime = 0.0f;
+                            param.PosTotalTime = 0.0f;
+                            param.RotTotalTime = 0.0f;
+                            param.ScaleTotalTime = 0.0f;
+
                             param.transform.position = param.StartPos;
                             param.transform.rotation = ConvertToQuat(param.StartRot);
                             param.transform.localScale = param.StartScal;
@@ -617,7 +656,10 @@ public class ParamBase : MonoBehaviour
 
                     if(GUILayout.Button("ReSet"))
                     {
-                        param.TotalTime = 0.0f;
+                        param.PosTotalTime = 0.0f;
+                        param.RotTotalTime = 0.0f;
+                        param.ScaleTotalTime = 0.0f;
+
                         param.transform.position = param.StartPos;
                         param.transform.rotation = ConvertToQuat(param.StartRot);
                         param.transform.localScale = param.StartScal;
