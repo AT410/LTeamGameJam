@@ -8,8 +8,11 @@ using UnityEditor;
 public enum UISetType
 {
     Title,
+    Load,
+    DataSelect,
     AreaSelect,
-    GameMenu
+    GameStage,
+    Ending
 }
 
 public class UIEditor : EditorWindow

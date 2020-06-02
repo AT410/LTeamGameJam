@@ -7,6 +7,7 @@ using UnityEditor;
 
 public enum AreaEnum
 {
+    None =-1,
     Area1 = 0,
     Area2,
     Area3
@@ -14,6 +15,7 @@ public enum AreaEnum
 
 public enum StageEnum
 {
+    None = -1,
     Stage1=0,
     Stage2,
     Stage3
