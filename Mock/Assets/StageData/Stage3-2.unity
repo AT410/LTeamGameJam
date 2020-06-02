@@ -330,7 +330,7 @@ MonoBehaviour:
   m_MixStartPosFlame:
   - 1
   m_StartAnimPos:
-  - {x: 2.5, y: -5.5, z: 0, w: 0}
+  - {x: 2.5, y: -7.5, z: 0, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
@@ -2963,7 +2963,7 @@ MonoBehaviour:
   m_MixStartPosFlame:
   - 1
   m_StartAnimPos:
-  - {x: 6.5, y: -5.5, z: 0, w: 0}
+  - {x: 6.5, y: -7.5, z: 0, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
