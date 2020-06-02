@@ -758,34 +758,40 @@ MonoBehaviour:
   EventMsgStr: 
   configu: 1
   StartAnimetionActive: 1
-  EventAnimetionActive: 0
+  EventAnimetionActive: 1
   EndAnimetionActive: 0
   m_MixStartPosFlame:
-  - 3
+  - 5
   m_StartAnimPos:
   - {x: 10, y: 9.5, z: 0.99, w: 0}
   m_MixStartRotFlame:
-  - 3
+  - 5
   m_StartAnimRotate:
   - {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_MixStartScalFlame:
-  - 3
+  - 5
   m_StartAnimScale:
   - {x: 1, y: 1, z: 2, w: 0}
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
-  m_MixEventRotFlame: []
-  m_EventAnimRotate: []
-  m_MixEventScalFlame: []
-  m_EventAnimScale: []
+  m_MixEventPosFlame:
+  - 5
+  m_EventAnimPos:
+  - {x: 4.66, y: 6.03, z: 0.99, w: 0}
+  m_MixEventRotFlame:
+  - 5
+  m_EventAnimRotate:
+  - {x: 0, y: 0, z: -0.46174863, w: 0.8870109}
+  m_MixEventScalFlame:
+  - 5
+  m_EventAnimScale:
+  - {x: 1, y: 12.5, z: 2, w: 0}
   m_MixEndPosFlame: []
   m_EndAnimPos: []
   m_MixEndRotFlame: []
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 3
-  MaxEventAnimCount: 0
+  MaxStartAnimCount: 5
+  MaxEventAnimCount: 5
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0
@@ -4204,7 +4210,7 @@ MonoBehaviour:
   m_MixEndScalFlame: []
   m_EndAnimScale: []
   MaxStartAnimCount: 3
-  MaxEventAnimCount: 0
+  MaxEventAnimCount: 3
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0
@@ -4472,34 +4478,40 @@ MonoBehaviour:
   EventMsgStr: 
   configu: 1
   StartAnimetionActive: 1
-  EventAnimetionActive: 0
+  EventAnimetionActive: 1
   EndAnimetionActive: 0
   m_MixStartPosFlame:
   - 5
   m_StartAnimPos:
   - {x: -6, y: 2.5, z: -1, w: 0}
   m_MixStartRotFlame:
-  - 8
+  - 5
   m_StartAnimRotate:
   - {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MixStartScalFlame:
   - 5
   m_StartAnimScale:
   - {x: 1, y: 5, z: 2, w: 0}
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
-  m_MixEventRotFlame: []
-  m_EventAnimRotate: []
-  m_MixEventScalFlame: []
-  m_EventAnimScale: []
+  m_MixEventPosFlame:
+  - 5
+  m_EventAnimPos:
+  - {x: -2.66, y: -0.95, z: -1, w: 0}
+  m_MixEventRotFlame:
+  - 5
+  m_EventAnimRotate:
+  - {x: 0, y: 0, z: 0.5, w: 0.8660254}
+  m_MixEventScalFlame:
+  - 5
+  m_EventAnimScale:
+  - {x: 1, y: 14.072737, z: 2, w: 0}
   m_MixEndPosFlame: []
   m_EndAnimPos: []
   m_MixEndRotFlame: []
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 8
-  MaxEventAnimCount: 0
+  MaxStartAnimCount: 5
+  MaxEventAnimCount: 5
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0

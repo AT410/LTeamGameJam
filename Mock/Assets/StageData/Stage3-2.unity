@@ -171,7 +171,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -310,13 +310,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 19
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -325,7 +325,7 @@ MonoBehaviour:
   EventMsgStr: 
   configu: 1
   StartAnimetionActive: 1
-  EventAnimetionActive: 0
+  EventAnimetionActive: 1
   EndAnimetionActive: 0
   m_MixStartPosFlame:
   - 1
@@ -335,8 +335,10 @@ MonoBehaviour:
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
   m_StartAnimScale: []
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
+  m_MixEventPosFlame:
+  - 2
+  m_EventAnimPos:
+  - {x: 2.5, y: -4.5, z: 0, w: 0}
   m_MixEventRotFlame: []
   m_EventAnimRotate: []
   m_MixEventScalFlame: []
@@ -348,7 +350,7 @@ MonoBehaviour:
   m_MixEndScalFlame: []
   m_EndAnimScale: []
   MaxStartAnimCount: 2
-  MaxEventAnimCount: 0
+  MaxEventAnimCount: 2
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0
@@ -406,7 +408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263179985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: -4.85, z: 0}
+  m_LocalPosition: {x: 2.5, y: -4.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -457,13 +459,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 19
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -472,32 +474,36 @@ MonoBehaviour:
   EventMsgStr: 
   configu: 1
   StartAnimetionActive: 1
-  EventAnimetionActive: 0
+  EventAnimetionActive: 1
   EndAnimetionActive: 0
   m_MixStartPosFlame:
-  - 10
+  - 5
   m_StartAnimPos:
   - {x: 10, y: 2.4, z: 0.75, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame:
-  - 10
+  - 5
   m_StartAnimScale:
   - {x: 1, y: 1, z: 2, w: 0}
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
+  m_MixEventPosFlame:
+  - 5
+  m_EventAnimPos:
+  - {x: 1.5, y: 2.4, z: 0.75, w: 0}
   m_MixEventRotFlame: []
   m_EventAnimRotate: []
-  m_MixEventScalFlame: []
-  m_EventAnimScale: []
+  m_MixEventScalFlame:
+  - 5
+  m_EventAnimScale:
+  - {x: 16, y: 1, z: 2, w: 0}
   m_MixEndPosFlame: []
   m_EndAnimPos: []
   m_MixEndRotFlame: []
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 10
-  MaxEventAnimCount: 0
+  MaxStartAnimCount: 5
+  MaxEventAnimCount: 5
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0
@@ -611,7 +617,7 @@ MonoBehaviour:
   TexKey: WATER_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -756,7 +762,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -900,7 +906,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1044,7 +1050,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1189,7 +1195,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1718,7 +1724,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2006,7 +2012,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2440,7 +2446,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2798,7 +2804,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2937,13 +2943,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 19
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -2952,7 +2958,7 @@ MonoBehaviour:
   EventMsgStr: 
   configu: 1
   StartAnimetionActive: 1
-  EventAnimetionActive: 0
+  EventAnimetionActive: 1
   EndAnimetionActive: 0
   m_MixStartPosFlame:
   - 1
@@ -2962,8 +2968,10 @@ MonoBehaviour:
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
   m_StartAnimScale: []
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
+  m_MixEventPosFlame:
+  - 2
+  m_EventAnimPos:
+  - {x: 6.5, y: -4.5, z: 0, w: 0}
   m_MixEventRotFlame: []
   m_EventAnimRotate: []
   m_MixEventScalFlame: []
@@ -2975,7 +2983,7 @@ MonoBehaviour:
   m_MixEndScalFlame: []
   m_EndAnimScale: []
   MaxStartAnimCount: 2
-  MaxEventAnimCount: 0
+  MaxEventAnimCount: 2
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0
@@ -3033,7 +3041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269663476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: -4.85, z: 0}
+  m_LocalPosition: {x: 6.5, y: -4.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3164,7 +3172,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3309,7 +3317,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3453,7 +3461,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3742,7 +3750,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -3881,13 +3889,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 19
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 1
@@ -3896,34 +3904,40 @@ MonoBehaviour:
   EventMsgStr: 
   configu: 1
   StartAnimetionActive: 1
-  EventAnimetionActive: 0
+  EventAnimetionActive: 1
   EndAnimetionActive: 0
   m_MixStartPosFlame:
   - 5
   m_StartAnimPos:
   - {x: -5, y: 9.5, z: -1, w: 0}
   m_MixStartRotFlame:
-  - 10
+  - 5
   m_StartAnimRotate:
   - {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_MixStartScalFlame:
   - 5
   m_StartAnimScale:
   - {x: 1, y: 1, z: 2, w: 0}
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
-  m_MixEventRotFlame: []
-  m_EventAnimRotate: []
-  m_MixEventScalFlame: []
-  m_EventAnimScale: []
+  m_MixEventPosFlame:
+  - 5
+  m_EventAnimPos:
+  - {x: 2.61, y: 5.98, z: -1, w: 0}
+  m_MixEventRotFlame:
+  - 5
+  m_EventAnimRotate:
+  - {x: 0, y: 0, z: 0.5299192, w: 0.8480481}
+  m_MixEventScalFlame:
+  - 5
+  m_EventAnimScale:
+  - {x: 1, y: 16.227612, z: 2, w: 0}
   m_MixEndPosFlame: []
   m_EndAnimPos: []
   m_MixEndRotFlame: []
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 10
-  MaxEventAnimCount: 0
+  MaxStartAnimCount: 5
+  MaxEventAnimCount: 5
   MaxEndAnimCount: 0
   PosTotalTime: 0
   RotTotalTime: 0
@@ -4037,7 +4051,7 @@ MonoBehaviour:
   TexKey: TEST_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4182,7 +4196,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4326,7 +4340,7 @@ MonoBehaviour:
   TexKey: WATER_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4615,7 +4629,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4760,7 +4774,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -4905,7 +4919,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
