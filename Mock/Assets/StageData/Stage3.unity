@@ -2008,7 +2008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: Wall_TX
+  TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 1
