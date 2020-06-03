@@ -20,6 +20,7 @@ public enum GameEvent
     ToTitleStage,
     ToDataSelectStage,
     ToAreaSelectStage,
+    ToStageSelectStage,
     ToLoadStage,
     ToGameStage,
     ToEndingStage
@@ -103,7 +104,7 @@ public class UIParam : MonoBehaviour
             }
 
             // -- ゲームイベント時の追加設定 --
-            if (param.Event == GameEvent.ToGameStage&&param.type == UIType.Flashing)
+            if ((param.Event == GameEvent.ToGameStage||param.Event ==GameEvent.ToStageSelectStage)&&param.type == UIType.Flashing)
             {
                 using (new GUILayout.VerticalScope(EditorStyles.helpBox))
                 {

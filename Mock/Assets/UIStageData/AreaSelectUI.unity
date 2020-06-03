@@ -305,14 +305,14 @@ MonoBehaviour:
   type: 1
   TexKey: Two_TX
   DrawLayer: 1
-  Event: 5
+  Event: 3
   MyIndexKey: 2
   Upkey: 
   DownKey: 
   LeftKey: 1
   RightKey: 3
-  StageNum: 1
-  AreaNum: -1
+  StageNum: -1
+  AreaNum: 1
 --- !u!222 &440635746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -403,14 +403,14 @@ MonoBehaviour:
   type: 1
   TexKey: One_TX
   DrawLayer: 1
-  Event: 5
+  Event: 3
   MyIndexKey: 1
   Upkey: 
   DownKey: 
   LeftKey: 3
   RightKey: 2
-  StageNum: 0
-  AreaNum: -1
+  StageNum: -1
+  AreaNum: 0
 --- !u!222 &850774931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -592,14 +592,14 @@ MonoBehaviour:
   type: 1
   TexKey: Three_TX
   DrawLayer: 1
-  Event: 5
+  Event: 3
   MyIndexKey: 3
   Upkey: 
   DownKey: 
   LeftKey: 2
   RightKey: 1
-  StageNum: 2
-  AreaNum: -1
+  StageNum: -1
+  AreaNum: 2
 --- !u!222 &959229879
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  TexKey: StageSelect_TX
+  TexKey: StageSelcet_TX
   DrawLayer: 1
   Event: 0
   MyIndexKey: 

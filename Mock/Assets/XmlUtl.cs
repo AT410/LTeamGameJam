@@ -541,7 +541,7 @@ public class Util
                 data.RightKey = param.RightKey;
             }
 
-            if (param.Event == GameEvent.ToGameStage &&param.type == UIType.Flashing)
+            if ((param.Event == GameEvent.ToGameStage || param.Event == GameEvent.ToStageSelectStage) && param.type == UIType.Flashing)
             {
                 data.AreaNumber = param.AreaNum;
                 data.StageNumber = param.StageNum;
