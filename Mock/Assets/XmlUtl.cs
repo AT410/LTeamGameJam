@@ -16,6 +16,9 @@ public class root
     //エリア
     [XmlElement("Area")]
     public List<Area> Areas;
+
+    [XmlAttribute("AreaCount")]
+    public int AreaCount = 0;
 }
 
 [Serializable]
@@ -35,6 +38,9 @@ public class Area
     //ステージデータ
     [XmlElement("StageData")]
     public List<Stage> StageData;
+
+    [XmlAttribute("StageCount")]
+    public int StageCount = 0;
 }
 
 [Serializable]
@@ -201,9 +207,11 @@ public class Util
     {
         root result = new root();
         result.Areas = new List<Area>();
+        result.AreaCount = 1;
         Area area = new Area();
         area.AreaNumber = AreaNumber;
         area.StageData = new List<Stage>();
+        area.StageCount = 1;
 
         var CamObj = GameObject.FindGameObjectWithTag("CameraEye");
         var Eye = CamObj.GetComponent<Transform>().position;
@@ -261,7 +269,9 @@ public class Util
             success = AddStageData(ref Stage);
 
             areaptr.StageData.Add(Stage);
+            areaptr.StageCount = areaptr.StageData.Count;
             data.Areas.Add(areaptr);
+            data.AreaCount = data.Areas.Count;
             return success;
         }
         else
@@ -290,6 +300,8 @@ public class Util
                 success = AddStageData(ref Stage);
 
                 area.StageData.Add(Stage);
+                area.StageCount = area.StageData.Count;
+                data.AreaCount = data.Areas.Count;
                 return success;
             }
             else
@@ -320,6 +332,8 @@ public class Util
 
                 //sort
                 area.StageData.Sort((a, b) => a.StageNumber - b.StageNumber);
+                area.StageCount = area.StageData.Count;
+                data.AreaCount = data.Areas.Count;
                 return success;
             }
 
