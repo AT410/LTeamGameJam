@@ -186,11 +186,11 @@ public class UIData
     public string RightKey;
 
     [XmlAttribute("AreaNumber")]
-    [DefaultValue(-1)]
-    public int AreaNumber = -1;
+    [DefaultValue(-2)]
+    public int AreaNumber = -2;
     [XmlAttribute("StageNumber")]
-    [DefaultValue(-1)]
-    public int StageNumber = -1;
+    [DefaultValue(-2)]
+    public int StageNumber = -2;
 }
 
 
