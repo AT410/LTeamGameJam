@@ -11,6 +11,7 @@ public enum UISetType
     Load,
     DataSelect,
     AreaSelect,
+    StageSelect,
     GameStage,
     Ending
 }
