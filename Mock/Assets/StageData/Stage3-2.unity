@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2296,7 +2296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
-  MeshKey: DEFAULT_CUBE
+  MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
