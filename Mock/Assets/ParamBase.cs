@@ -56,9 +56,17 @@ public enum FireLineConfigu
     BackToFront
 }
 
+public enum CreateOrder
+{
+    Early,
+    Default,
+    Late
+}
+
 
 public class ParamBase : MonoBehaviour
 {
+    public CreateOrder order = CreateOrder.Default;
     public ObjectType Type;
     public string MeshKey="DEFAULT_CUBE";
     public string TexKey="TEST_TX";
@@ -419,6 +427,7 @@ public class ParamBase : MonoBehaviour
                 //GUI.contentColor = defaultContentColor;
             }
             GUI.backgroundColor = defaultColor;
+            param.order = (CreateOrder)EditorGUILayout.EnumPopup("生成順序", param.order);
             param.Type = (ObjectType)EditorGUILayout.EnumPopup("クラスタイプ", param.Type);
             param.MeshKey = EditorGUILayout.TextField("メッシュキー", param.MeshKey);
             param.TexKey = EditorGUILayout.TextField("テクスチャキー", param.TexKey);

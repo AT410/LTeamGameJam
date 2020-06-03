@@ -66,6 +66,8 @@ public class Stage
 [Serializable]
 public class Object
 {
+    [System.Xml.Serialization.XmlAttribute("Order")]
+    public string Order;
     [System.Xml.Serialization.XmlAttribute("Type")]
     public string Type;
     [System.Xml.Serialization.XmlAttribute("Tag")]
@@ -352,6 +354,7 @@ public class Util
                 return false;
             }
             Object Ob = new Object();
+            Ob.Order = Convert.ToInt32(Param.order).ToString();
             Ob.Type = Param.Type.ToString();
             Ob.Pos = VecToStr(TransComp.position);
             Ob.Rot = RotToStr(TransComp.rotation);
