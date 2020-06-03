@@ -302,7 +302,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -880,7 +880,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   TexKey: TEST_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2145,7 +2145,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2723,7 +2723,7 @@ MonoBehaviour:
   Tags:
   - 
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2868,7 +2868,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0

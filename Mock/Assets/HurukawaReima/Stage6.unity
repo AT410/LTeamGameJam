@@ -591,7 +591,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1859,7 +1859,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1998,13 +1998,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 18
-  MeshKey: DEFAULT_CUBE
+  Type: 1
+  MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2148,7 +2148,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   TexKey: WALL_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags: []
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
