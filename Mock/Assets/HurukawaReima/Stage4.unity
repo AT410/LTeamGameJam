@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -296,6 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 18
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
@@ -441,10 +443,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 0
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - WaterJetEnd
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -585,6 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -729,11 +734,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 0
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - WaterJetEnd
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -874,6 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 3
   MeshKey: DEFAULT_CUBE
   TexKey: TEST_TX
@@ -1018,6 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -1237,6 +1246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 16
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
@@ -1395,6 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 14
   MeshKey: DEFAULT_CYLINDER
   TexKey: WATER_TX
@@ -1526,6 +1537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 16
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
@@ -1684,6 +1696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 14
   MeshKey: DEFAULT_CYLINDER
   TexKey: WATER_TX
@@ -1815,6 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -1959,10 +1973,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 0
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - WaterJetEnd
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2103,6 +2119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
@@ -2261,6 +2278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 14
   MeshKey: DEFAULT_CYLINDER
   TexKey: WATER_TX
@@ -2447,6 +2465,11 @@ PrefabInstance:
       propertyPath: Tags.Array.data[0]
       value: EnabledSwitch
       objectReference: {fileID: 0}
+    - target: {fileID: 3286204064468471826, guid: fb05a1fcd7a55e342b27be39d2df7d68,
+        type: 3}
+      propertyPath: order
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb05a1fcd7a55e342b27be39d2df7d68, type: 3}
 --- !u!1 &1598747870
@@ -2481,6 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
@@ -2713,6 +2737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 14
   MeshKey: DEFAULT_CYLINDER
   TexKey: WATER_TX
@@ -2844,6 +2869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 16
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
