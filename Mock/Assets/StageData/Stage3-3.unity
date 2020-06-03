@@ -4162,7 +4162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: WALL_TX
+  TexKey: WALLl_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
