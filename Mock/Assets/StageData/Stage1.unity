@@ -329,7 +329,7 @@ MonoBehaviour:
   order: 1
   Type: 7
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FireLine_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   order: 1
   Type: 12
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: DOOR_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 1
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   order: 1
   Type: 7
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FireLine_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   order: 1
   Type: 4
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FireOn_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -1327,9 +1327,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   Type: 3
-  MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  MeshKey: GOAL_MD
+  TexKey: GOAL_TX
+  Tags:
+  - Goal
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2147,7 +2148,7 @@ MonoBehaviour:
   order: 1
   Type: 12
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: DOOR_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 1
@@ -2469,7 +2470,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2879,7 +2880,7 @@ MonoBehaviour:
   order: 1
   Type: 4
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: Switch_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -3024,7 +3025,7 @@ MonoBehaviour:
   order: 1
   Type: 7
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FireLine_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -3168,7 +3169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 0
   Type: 5
-  MeshKey: DEFAULT_CAPSULE
+  MeshKey: PLAYER_MD
   TexKey: TEST_TX
   Tags:
   - EnabledSwitch
@@ -3315,7 +3316,7 @@ MonoBehaviour:
   order: 1
   Type: 7
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: FireLine_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0

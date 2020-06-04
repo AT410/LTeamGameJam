@@ -261,11 +261,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233924588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.95, y: 1.4, z: 0.75}
+  m_LocalPosition: {x: 0.95, y: 1.4, z: 1}
   m_LocalScale: {x: 3, y: 3.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &299647252
 GameObject:
@@ -407,10 +407,10 @@ Transform:
   m_GameObject: {fileID: 299647252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.1, z: 0}
-  m_LocalScale: {x: 17, y: 4, z: 3.9}
+  m_LocalScale: {x: 17, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &328378332
 GameObject:
@@ -553,11 +553,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328378332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.65, y: 1.4, z: 0.75}
+  m_LocalPosition: {x: -2.65, y: 1.4, z: 1}
   m_LocalScale: {x: 3, y: 3.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341799014
 GameObject:
@@ -702,7 +702,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400528728
 GameObject:
@@ -847,7 +847,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &451454627
 GameObject:
@@ -988,7 +988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451454627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5, z: 2}
+  m_LocalPosition: {x: 0, y: 5, z: 2.25}
   m_LocalScale: {x: 38, y: 20, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1331,9 +1331,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   Type: 3
-  MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
-  Tags: []
+  MeshKey: GOAL_MD
+  TexKey: GOAL_TX
+  Tags:
+  - Goal
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -1427,7 +1428,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2290,7 +2291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 0
   Type: 5
-  MeshKey: DEFAULT_CAPSULE
+  MeshKey: PLAYER_MD
   TexKey: TEST_TX
   Tags:
   - EnabledSwitch
@@ -2387,7 +2388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760598752
 GameObject:
@@ -2530,11 +2531,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760598752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.32, y: 1.4, z: 0.75}
+  m_LocalPosition: {x: -6.32, y: 1.4, z: 1}
   m_LocalScale: {x: 3, y: 3.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767735333
 GameObject:
@@ -2584,7 +2585,7 @@ MonoBehaviour:
   order: 1
   Type: 4
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: Switch_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -2679,7 +2680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083770827
 GameObject:
@@ -2878,6 +2879,7 @@ MonoBehaviour:
   TexKey: TEST_TX
   Tags:
   - PossibleJump
+  - Ladder
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2971,7 +2973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086826663
 GameObject:
@@ -2988,11 +2990,11 @@ GameObject:
   - component: {fileID: 2086826664}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Editor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2086826664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3021,7 +3023,7 @@ MonoBehaviour:
   order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  TexKey: WALL2_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 1
