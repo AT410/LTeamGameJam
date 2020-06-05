@@ -91,6 +91,10 @@ public class ParamBase : MonoBehaviour
     public bool EventAnimetionActive;
     public bool EndAnimetionActive;
 
+    public bool StartAnimetionLoop = false;
+    public bool EventAnimetionLoop = false;
+    public bool EndAnimetionLoop = false;
+
     // -- 開始時アニメーション --
     public List<float> m_MixStartPosFlame = new List<float>();
     public List<Vector4> m_StartAnimPos = new List<Vector4>();
@@ -265,7 +269,15 @@ public class ParamBase : MonoBehaviour
         {
             if (!AnimeBehavior(ref PosTotalTime,FlamePosTimes, AnimetionType.Postion, ref PosCount, PosVec4))
             {
-                PlayPosAnimetion = false;
+                if (!StartAnimetionLoop)
+                {
+                    PlayPosAnimetion = false;
+                }
+                else
+                {
+                    PosCount = 0;
+                    PosTotalTime = 0;
+                }
             }
         }
 
@@ -273,7 +285,15 @@ public class ParamBase : MonoBehaviour
         {
             if (!AnimeBehavior(ref RotTotalTime,FlameRotTimes, AnimetionType.Rotation, ref RotCount, RotVec4))
             {
-                PlayRotAnimetion = false;
+                if (!EventAnimetionLoop)
+                {
+                    PlayRotAnimetion = false;
+                }
+                else
+                {
+                    RotCount = 0;
+                    RotTotalTime = 0;
+                }
             }
         }
 
@@ -281,7 +301,15 @@ public class ParamBase : MonoBehaviour
         {
             if (!AnimeBehavior(ref ScaleTotalTime,FlameScalTimes, AnimetionType.Scale, ref ScaleCount, ScalVec4))
             {
-                PlayScaleAnimetion = false;
+                if (!EndAnimetionLoop)
+                {
+                    PlayScaleAnimetion = false;
+                }
+                else
+                {
+                    ScaleCount = 0;
+                    ScaleTotalTime = 0;
+                }
             }
         }
     }
@@ -562,18 +590,21 @@ public class ParamBase : MonoBehaviour
             {
                 case PlayBackType.Start:
                     param.StartAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.StartAnimetionActive);
+                    param.StartAnimetionLoop = EditorGUILayout.ToggleLeft("ループ設定を有効にする", param.StartAnimetionLoop);
                     SelectAnimationType(param,ref param.MaxStartAnimCount, param.m_MixStartPosFlame, param.m_StartAnimPos,
                         param.m_MixStartRotFlame,param.m_StartAnimRotate,
                         param.m_MixStartScalFlame,param.m_StartAnimScale);
                     break;
                 case PlayBackType.OnEvent:
                     param.EventAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.EventAnimetionActive);
+                    param.EventAnimetionLoop = EditorGUILayout.ToggleLeft("ループ設定を有効にする", param.EventAnimetionLoop);
                     SelectAnimationType(param, ref param.MaxEventAnimCount, param.m_MixEventPosFlame, param.m_EventAnimPos,
                         param.m_MixEventRotFlame, param.m_EventAnimRotate,
                         param.m_MixEventScalFlame, param.m_EventAnimScale);
                     break;
                 case PlayBackType.End:
                     param.EndAnimetionActive = EditorGUILayout.ToggleLeft("書き出し対象に追加する", param.EndAnimetionActive);
+                    param.EndAnimetionLoop = EditorGUILayout.ToggleLeft("ループ設定を有効にする", param.EndAnimetionLoop);
                     SelectAnimationType(param, ref param.MaxEndAnimCount, param.m_MixEndPosFlame, param.m_EndAnimPos,
                         param.m_MixEndRotFlame, param.m_EndAnimRotate,
                         param.m_MixEndScalFlame, param.m_EndAnimScale);

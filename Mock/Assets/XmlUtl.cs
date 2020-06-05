@@ -130,6 +130,9 @@ public class AnimSetData
     [XmlAttribute("MaxFlameCount")]//最大フレーム数
     public string MaxFlameCount;
 
+    [XmlAttribute("LoopActive")]
+    public string LoopActive;
+
     [XmlElement("AnimationData")]
     public List<AnimetionData> Datas;
 }
@@ -415,7 +418,8 @@ public class Util
 
             if (Param.StartAnimetionActive)
             {
-                SetAnimetionData(ref Ob, PlayBackType.Start, Param.MaxStartAnimCount, Param.m_MixStartPosFlame, Param.m_StartAnimPos,
+                SetAnimetionData(ref Ob, PlayBackType.Start, Param.MaxStartAnimCount,Param.StartAnimetionLoop, 
+                    Param.m_MixStartPosFlame, Param.m_StartAnimPos,
                     Param.m_MixStartRotFlame, Param.m_StartAnimRotate,
                     Param.m_MixStartScalFlame, Param.m_StartAnimScale);
             }
@@ -423,7 +427,8 @@ public class Util
             Ob.EventAnimetionActive = Convert.ToInt32(Param.EventAnimetionActive).ToString();
             if (Param.EventAnimetionActive)
             {
-                SetAnimetionData(ref Ob, PlayBackType.OnEvent, Param.MaxEventAnimCount, Param.m_MixEventPosFlame, Param.m_EventAnimPos,
+                SetAnimetionData(ref Ob, PlayBackType.OnEvent, Param.MaxEventAnimCount,Param.EventAnimetionLoop, 
+                    Param.m_MixEventPosFlame, Param.m_EventAnimPos,
                     Param.m_MixEventRotFlame, Param.m_EventAnimRotate,
                     Param.m_MixEventScalFlame, Param.m_EventAnimScale);
             }
@@ -431,7 +436,8 @@ public class Util
             Ob.EndAnimetionActive = Convert.ToInt32(Param.EndAnimetionActive).ToString();
             if (Param.EndAnimetionActive)
             {
-                SetAnimetionData(ref Ob, PlayBackType.End, Param.MaxEndAnimCount, Param.m_MixEndPosFlame, Param.m_EndAnimPos,
+                SetAnimetionData(ref Ob, PlayBackType.End, Param.MaxEndAnimCount,Param.EndAnimetionLoop, 
+                    Param.m_MixEndPosFlame, Param.m_EndAnimPos,
                     Param.m_MixEndRotFlame, Param.m_EndAnimRotate,
                     Param.m_MixEndScalFlame, Param.m_EndAnimScale);
             }
@@ -442,7 +448,7 @@ public class Util
         return true;
     }
 
-    public static void SetAnimetionData(ref Object obj,PlayBackType play ,float MaxFlame, 
+    public static void SetAnimetionData(ref Object obj,PlayBackType play ,float MaxFlame,bool loopActive, 
             List<float> FlamePosTimes, List<Vector4> PosVec4,
             List<float> FlameRotTimes, List<Vector4> RotVec4,
             List<float> FlameScalTimes, List<Vector4> ScalVec4)
@@ -450,7 +456,7 @@ public class Util
         AnimSetData setData = new AnimSetData();
         setData.playBack = play;
         setData.MaxFlameCount = MaxFlame.ToString();
-
+        setData.LoopActive = Convert.ToInt32(loopActive).ToString();
         setData.Datas = new List<AnimetionData>();
 
         AddAnimetionData(AnimetionType.Postion,ref setData.Datas, FlamePosTimes, PosVec4);
