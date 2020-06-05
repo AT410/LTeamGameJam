@@ -1580,7 +1580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671495321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.5, y: 10.5, z: -1}
+  m_LocalPosition: {x: 12.5, y: 10, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   order: 1
   Type: 4
   MeshKey: DEFAULT_CUBE
-  TexKey: MATCH_TX
+  TexKey: Match_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   order: 1
   Type: 4
   MeshKey: DEFAULT_CUBE
-  TexKey: MATCH_TX
+  TexKey: Match_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 0
@@ -4201,7 +4201,7 @@ MonoBehaviour:
   order: 1
   Type: 12
   MeshKey: DEFAULT_CUBE
-  TexKey: DOOR_TX
+  TexKey: Door_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 1
@@ -4942,7 +4942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 0
   Type: 5
-  MeshKey: PLAYER_MD
+  MeshKey: Player_MD
   TexKey: TEST_TX
   Tags:
   - EnabledSwitch
