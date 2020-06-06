@@ -184,6 +184,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -343,6 +346,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -474,6 +480,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -693,6 +702,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -907,6 +919,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1052,6 +1067,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1197,6 +1215,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1343,6 +1364,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1580,6 +1604,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1725,6 +1752,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1871,6 +1901,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -1889,7 +1922,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2017,6 +2050,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -2162,6 +2198,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -2307,6 +2346,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -2452,6 +2494,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -2603,6 +2648,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -2749,6 +2797,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -2894,6 +2945,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -3039,6 +3093,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -3185,6 +3242,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -3330,6 +3390,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -3475,6 +3538,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
@@ -3621,6 +3687,9 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
+  StartAnimetionLoop: 0
+  EventAnimetionLoop: 0
+  EndAnimetionLoop: 0
   m_MixStartPosFlame: []
   m_StartAnimPos: []
   m_MixStartRotFlame: []
