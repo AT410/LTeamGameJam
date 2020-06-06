@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &77343216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,13 +785,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666977652}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.14, y: 8.06, z: 2.5}
-  m_LocalScale: {x: 2.6027145, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14, y: 9.622, z: 1.789}
+  m_LocalScale: {x: 2.6027145, y: 1.875, z: 3.422}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681180325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,8 +1296,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136725496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.382, y: 2.029, z: 1.786}
-  m_LocalScale: {x: 27.340359, y: 3.3062425, z: 5.648}
+  m_LocalPosition: {x: 0.382, y: 2.029, z: 1.578}
+  m_LocalScale: {x: 27.340359, y: 3.3062425, z: 6.065952}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1586,13 +1586,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191633109}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5.92, y: 8.57, z: 2.5}
-  m_LocalScale: {x: 3.866699, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.92, y: 8.434, z: 1.969}
+  m_LocalScale: {x: 3.866699, y: 2.728, z: 3.062}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197248208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1878,13 +1878,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279623777}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12.114, y: 9.87, z: 2.5}
-  m_LocalScale: {x: 3.866699, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.11, y: 9.922, z: 1.413}
+  m_LocalScale: {x: 3.866699, y: 2.1733882, z: 4.174}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403605724
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,8 +2226,10 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartPosFlame: []
-  m_StartAnimPos: []
+  m_MixStartPosFlame:
+  - 1
+  m_StartAnimPos:
+  - {x: -5.776, y: 8.681, z: 1.237, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
@@ -2244,7 +2246,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 5
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2315,13 +2317,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559115903}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -5.51, y: 6.99, z: 2.5}
-  m_LocalScale: {x: 7.139904, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.776, y: 8.681, z: 1.237}
+  m_LocalScale: {x: 2.0871367, y: 8.38, z: 4.526}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1693349177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2465,7 +2467,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2536,13 +2538,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695728167}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.05, y: 14.9, z: 2.5}
-  m_LocalScale: {x: 3.866699, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.05, y: 14.856, z: 1.868}
+  m_LocalScale: {x: 3.866699, y: 1.9516699, z: 3.264}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872537328
 GameObject:
   m_ObjectHideFlags: 0
