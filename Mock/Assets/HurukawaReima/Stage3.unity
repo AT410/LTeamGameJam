@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -264,6 +265,151 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &77343215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 77343220}
+  - component: {fileID: 77343219}
+  - component: {fileID: 77343218}
+  - component: {fileID: 77343217}
+  - component: {fileID: 77343216}
+  m_Layer: 0
+  m_Name: Frontwall
+  m_TagString: Editor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &77343216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77343215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 1
+  Type: 17
+  MeshKey: DEFAULT_CUBE
+  TexKey: WALL_TX
+  Tags: []
+  CollisionActive: 1
+  SetFixed: 1
+  SharedActive: 0
+  SharedKey: 
+  EventActive: 0
+  EventReceiveKey: 
+  EventSendKey: 
+  EventMsgStr: 
+  configu: 1
+  StartAnimetionActive: 0
+  EventAnimetionActive: 0
+  EndAnimetionActive: 0
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
+  m_MixStartRotFlame: []
+  m_StartAnimRotate: []
+  m_MixStartScalFlame: []
+  m_StartAnimScale: []
+  m_MixEventPosFlame: []
+  m_EventAnimPos: []
+  m_MixEventRotFlame: []
+  m_EventAnimRotate: []
+  m_MixEventScalFlame: []
+  m_EventAnimScale: []
+  m_MixEndPosFlame: []
+  m_EndAnimPos: []
+  m_MixEndRotFlame: []
+  m_EndAnimRotate: []
+  m_MixEndScalFlame: []
+  m_EndAnimScale: []
+  MaxStartAnimCount: 1
+  MaxEventAnimCount: 0
+  MaxEndAnimCount: 0
+  PosTotalTime: 0
+  RotTotalTime: 0
+  ScaleTotalTime: 0
+--- !u!65 &77343217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77343215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &77343218
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77343215}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &77343219
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77343215}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &77343220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77343215}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 9.961, z: -0.9}
+  m_LocalScale: {x: 28, y: 20.480001, z: 0.5000003}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &125447001
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -531,6 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 18
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
@@ -637,13 +785,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666977652}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.14, y: 8.06, z: 2.5}
-  m_LocalScale: {x: 2.6027145, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14, y: 9.622, z: 1.789}
+  m_LocalScale: {x: 2.6027145, y: 1.875, z: 3.422}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681180325
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
@@ -820,6 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -1051,10 +1201,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 8
   MeshKey: DEFAULT_CUBE
   TexKey: WATER_TX
-  Tags: []
+  Tags:
+  - 
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1144,8 +1296,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136725496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.382, y: 2.029, z: 1.786}
-  m_LocalScale: {x: 27.340359, y: 3.3062425, z: 5.648}
+  m_LocalPosition: {x: 0.382, y: 2.029, z: 1.578}
+  m_LocalScale: {x: 27.340359, y: 3.3062425, z: 6.065952}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -1182,6 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
@@ -1326,13 +1479,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1432,13 +1586,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191633109}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 5.92, y: 8.57, z: 2.5}
-  m_LocalScale: {x: 3.866699, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.92, y: 8.434, z: 1.969}
+  m_LocalScale: {x: 3.866699, y: 2.728, z: 3.062}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197248208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,13 +1625,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1616,6 +1771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
@@ -1722,13 +1878,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279623777}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12.114, y: 9.87, z: 2.5}
-  m_LocalScale: {x: 3.866699, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.11, y: 9.922, z: 1.413}
+  m_LocalScale: {x: 3.866699, y: 2.1733882, z: 4.174}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403605724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 14
   MeshKey: DEFAULT_CYLINDER
   TexKey: WATER_TX
@@ -1905,6 +2062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
@@ -2049,6 +2207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 18
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
@@ -2067,8 +2226,10 @@ MonoBehaviour:
   StartAnimetionActive: 0
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  m_MixStartPosFlame: []
-  m_StartAnimPos: []
+  m_MixStartPosFlame:
+  - 1
+  m_StartAnimPos:
+  - {x: -5.776, y: 8.681, z: 1.237, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
@@ -2085,7 +2246,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 5
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2156,13 +2317,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559115903}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -5.51, y: 6.99, z: 2.5}
-  m_LocalScale: {x: 7.139904, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.776, y: 8.681, z: 1.237}
+  m_LocalScale: {x: 2.0871367, y: 8.38, z: 4.526}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1693349177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2270,6 +2431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 18
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
@@ -2305,7 +2467,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2376,13 +2538,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695728167}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.05, y: 14.9, z: 2.5}
-  m_LocalScale: {x: 3.866699, y: 5, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.05, y: 14.856, z: 1.868}
+  m_LocalScale: {x: 3.866699, y: 1.9516699, z: 3.264}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872537328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,6 +2577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
@@ -2560,9 +2723,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  order: 1
   Type: 3
-  MeshKey: DEFAULT_CUBE
-  TexKey: TEST_TX
+  MeshKey: GOAL_MD
+  TexKey: GOAL_TX
   Tags: []
   CollisionActive: 1
   SetFixed: 1
@@ -2758,6 +2922,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Tags.Array.data[0]
       value: EnabledSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286204064468471826, guid: fb05a1fcd7a55e342b27be39d2df7d68,
+        type: 3}
+      propertyPath: MeshKey
+      value: Player_MD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb05a1fcd7a55e342b27be39d2df7d68, type: 3}
