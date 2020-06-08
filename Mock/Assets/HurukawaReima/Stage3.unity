@@ -414,7 +414,7 @@ Transform:
   m_LocalScale: {x: 28, y: 20.480001, z: 0.5000003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &125447001
 GameObject:
@@ -702,14 +702,18 @@ MonoBehaviour:
   EventSendKey: 
   EventMsgStr: 
   configu: 1
-  StartAnimetionActive: 0
+  StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  StartAnimetionLoop: 0
+  StartAnimetionLoop: 1
   EventAnimetionLoop: 0
   EndAnimetionLoop: 0
-  m_MixStartPosFlame: []
-  m_StartAnimPos: []
+  m_MixStartPosFlame:
+  - 2.5
+  - 2.5
+  m_StartAnimPos:
+  - {x: -10.11, y: 4.37, z: 2.43, w: 0}
+  - {x: 6.54, y: 4.37, z: 2.43, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
@@ -726,7 +730,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 1
+  MaxStartAnimCount: 5
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -798,8 +802,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666977652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 9.622, z: 2.433}
-  m_LocalScale: {x: 2.6027145, y: 1.875, z: 4.708672}
+  m_LocalPosition: {x: -5.7, y: 4.37, z: 2.43}
+  m_LocalScale: {x: 5.2213836, y: 1.0916625, z: 4.708672}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -1471,155 +1475,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &1191633109
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1191633114}
-  - component: {fileID: 1191633113}
-  - component: {fileID: 1191633112}
-  - component: {fileID: 1191633111}
-  - component: {fileID: 1191633110}
-  m_Layer: 0
-  m_Name: stage (5)
-  m_TagString: Editor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1191633110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191633109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d0e7659ed9a0a244be652f813dbc8bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  order: 1
-  Type: 1
-  MeshKey: DEFAULTLOOP_CUBE
-  TexKey: FLOOR_TX
-  Tags:
-  - PossibleJump
-  CollisionActive: 1
-  SetFixed: 1
-  SharedActive: 0
-  SharedKey: 
-  EventActive: 0
-  EventReceiveKey: 
-  EventSendKey: 
-  EventMsgStr: 
-  configu: 1
-  StartAnimetionActive: 0
-  EventAnimetionActive: 0
-  EndAnimetionActive: 0
-  StartAnimetionLoop: 0
-  EventAnimetionLoop: 0
-  EndAnimetionLoop: 0
-  m_MixStartPosFlame: []
-  m_StartAnimPos: []
-  m_MixStartRotFlame: []
-  m_StartAnimRotate: []
-  m_MixStartScalFlame: []
-  m_StartAnimScale: []
-  m_MixEventPosFlame: []
-  m_EventAnimPos: []
-  m_MixEventRotFlame: []
-  m_EventAnimRotate: []
-  m_MixEventScalFlame: []
-  m_EventAnimScale: []
-  m_MixEndPosFlame: []
-  m_EndAnimPos: []
-  m_MixEndRotFlame: []
-  m_EndAnimRotate: []
-  m_MixEndScalFlame: []
-  m_EndAnimScale: []
-  MaxStartAnimCount: 1
-  MaxEventAnimCount: 0
-  MaxEndAnimCount: 0
-  PosTotalTime: 0
-  RotTotalTime: 0
-  ScaleTotalTime: 0
---- !u!65 &1191633111
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191633109}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1191633112
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191633109}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1191633113
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191633109}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1191633114
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1191633109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.92, y: 8.434, z: 2.435}
-  m_LocalScale: {x: 3.866699, y: 2.728, z: 3.99591}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197248208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,8 +1618,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197248208}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -11.015, y: 15.66, z: 2.688}
-  m_LocalScale: {x: 4.932014, y: 5.375, z: 2}
+  m_LocalPosition: {x: -11.041, y: 15.66, z: 1.814}
+  m_LocalScale: {x: 4.981334, y: 3.628125, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1912,8 +1767,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279623777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.11, y: 9.922, z: 2.086}
-  m_LocalScale: {x: 3.866699, y: 2.1733882, z: 5.5222015}
+  m_LocalPosition: {x: 11.68, y: 4.705, z: 2.086}
+  m_LocalScale: {x: 3.866699, y: 2.5037432, z: 5.5222015}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -2001,7 +1856,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2060,7 +1915,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403605724}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.33, y: 17.87, z: 2.1}
+  m_LocalPosition: {x: -7.91, y: 8.23, z: 2.1}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2247,11 +2102,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Type: 18
+  Type: 1
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - 
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2261,16 +2117,14 @@ MonoBehaviour:
   EventSendKey: 
   EventMsgStr: 
   configu: 1
-  StartAnimetionActive: 0
+  StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  StartAnimetionLoop: 0
+  StartAnimetionLoop: 1
   EventAnimetionLoop: 0
   EndAnimetionLoop: 0
-  m_MixStartPosFlame:
-  - 1
-  m_StartAnimPos:
-  - {x: -5.776, y: 8.681, z: 1.237, w: 0}
+  m_MixStartPosFlame: []
+  m_StartAnimPos: []
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
@@ -2359,8 +2213,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559115903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.776, y: 8.681, z: 1.821}
-  m_LocalScale: {x: 2.0871367, y: 8.38, z: 5.693708}
+  m_LocalPosition: {x: -7.596, y: 11.588, z: 1.821}
+  m_LocalScale: {x: 12.3605175, y: 1.32404, z: 5.693708}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -2473,7 +2327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 1
-  Type: 18
+  Type: 16
   MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
@@ -2488,14 +2342,18 @@ MonoBehaviour:
   EventSendKey: 
   EventMsgStr: 
   configu: 1
-  StartAnimetionActive: 0
+  StartAnimetionActive: 1
   EventAnimetionActive: 0
   EndAnimetionActive: 0
-  StartAnimetionLoop: 0
+  StartAnimetionLoop: 1
   EventAnimetionLoop: 0
   EndAnimetionLoop: 0
-  m_MixStartPosFlame: []
-  m_StartAnimPos: []
+  m_MixStartPosFlame:
+  - 5
+  - 5
+  m_StartAnimPos:
+  - {x: 11.66, y: 14.856, z: 2.405, w: 0}
+  - {x: 6.02, y: 14.856, z: 2.405, w: 0}
   m_MixStartRotFlame: []
   m_StartAnimRotate: []
   m_MixStartScalFlame: []
@@ -2512,7 +2370,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 1
+  MaxStartAnimCount: 5
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2584,8 +2442,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695728167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.05, y: 14.856, z: 2.405}
-  m_LocalScale: {x: 3.866699, y: 1.9516699, z: 4.337856}
+  m_LocalPosition: {x: -6.942, y: 15.221, z: 1.86}
+  m_LocalScale: {x: 2.9711483, y: 6.2839293, z: 5.444009}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -2881,11 +2739,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051221455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.45, y: 11.29, z: 2.264137}
+  m_LocalPosition: {x: 12.5, y: 6.55, z: 2.264137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2071874633
 PrefabInstance:
