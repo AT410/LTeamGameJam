@@ -916,7 +916,7 @@ MonoBehaviour:
   - PossibleJump
   - Ladder
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
@@ -1833,7 +1833,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -6.3457376e+23, z: 6.17e-43, w: -6.3457376e+23}
+  m_BoundingSphereOverride: {x: 7.7e-44, y: 1e-45, z: 0, w: -3.7125647e-37}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2942,7 +2942,7 @@ MonoBehaviour:
   - PossibleJump
   - Ladder
   CollisionActive: 1
-  SetFixed: 0
+  SetFixed: 1
   SharedActive: 0
   SharedKey: 
   EventActive: 0
