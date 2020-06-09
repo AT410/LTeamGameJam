@@ -4594,7 +4594,7 @@ MonoBehaviour:
   StartAnimetionActive: 1
   EventAnimetionActive: 1
   EndAnimetionActive: 0
-  StartAnimetionLoop: 1
+  StartAnimetionLoop: 0
   EventAnimetionLoop: 0
   EndAnimetionLoop: 0
   m_MixStartPosFlame:

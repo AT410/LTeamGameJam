@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   Type: 16
-  MeshKey: DEFAULTLOOP_CUBE
+  MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   Type: 16
-  MeshKey: DEFAULTLOOP_CUBE
+  MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   Type: 16
-  MeshKey: DEFAULTLOOP_CUBE
+  MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump

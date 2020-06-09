@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 0
   Type: 13
-  MeshKey: DEFAULTLOOP_CUBE
+  MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
@@ -2781,7 +2781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   Type: 13
-  MeshKey: DEFAULTLOOP_CUBE
+  MeshKey: DEFAULT_CUBE
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
@@ -2818,7 +2818,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
