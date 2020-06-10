@@ -465,7 +465,8 @@ MonoBehaviour:
   Type: 9
   MeshKey: DEFAULT_SPHERE
   TexKey: WATER_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -1052,7 +1053,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1738,6 +1740,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1885,7 +1888,8 @@ MonoBehaviour:
   Type: 12
   MeshKey: DEFAULT_CUBE
   TexKey: Door_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2184,6 +2188,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2331,7 +2336,8 @@ MonoBehaviour:
   Type: 17
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2481,6 +2487,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2779,6 +2786,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2926,7 +2934,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -3228,7 +3237,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -3379,6 +3389,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - WaterJetEnd
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -3823,7 +3834,8 @@ MonoBehaviour:
   Type: 17
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
