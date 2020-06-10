@@ -172,6 +172,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - WaterJetEnd
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -906,7 +907,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1592,6 +1594,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1889,6 +1892,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2038,6 +2042,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2333,7 +2338,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2635,7 +2641,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2785,6 +2792,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -3525,7 +3533,8 @@ MonoBehaviour:
   Type: 17
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
