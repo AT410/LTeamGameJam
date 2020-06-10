@@ -58,6 +58,8 @@ public class Stage
     public string NearStr;
     [XmlAttribute("CameraFar")]
     public string FarStr;
+    [XmlAttribute("StageReloadActive")]
+    public int ReloadActive;
     //配置データ
     [XmlElement("Objects")]
     public List<Object> StageObjects = new List<Object>();
@@ -208,7 +210,7 @@ public class UIData
 public class Util
 {
     //データ新規
-    public static root DataSet(int AreaNumber,int StageNumber,out bool Success)
+    public static root DataSet(int AreaNumber,int StageNumber,bool StageReloadActive,out bool Success)
     {
         root result = new root();
         result.Areas = new List<Area>();
@@ -233,6 +235,7 @@ public class Util
         Stage.AtStr = VecToStr(At);
         Stage.NearStr = near.ToString();
         Stage.FarStr = far.ToString();
+        Stage.ReloadActive = Convert.ToInt32(StageReloadActive);
         Stage.StageObjects = new List<Object>();
 
         Success = AddStageData(ref Stage);
@@ -244,7 +247,7 @@ public class Util
     }
 
     //データ追加
-    public static bool AddData(int AreaNumber,int StageNumber, ref root data)
+    public static bool AddData(int AreaNumber,int StageNumber,bool StageReloadActive, ref root data)
     {
         bool success = false;
         var area = data.Areas.Where(x => x.AreaNumber == AreaNumber).FirstOrDefault();
@@ -269,6 +272,7 @@ public class Util
             Stage.AtStr = VecToStr(At);
             Stage.NearStr = near.ToString();
             Stage.FarStr = far.ToString();
+            Stage.ReloadActive = Convert.ToInt32(StageReloadActive);
             Stage.StageObjects = new List<Object>();
 
             success = AddStageData(ref Stage);
@@ -300,6 +304,7 @@ public class Util
                 Stage.AtStr = VecToStr(At);
                 Stage.NearStr = near.ToString();
                 Stage.FarStr = far.ToString();
+                Stage.ReloadActive = Convert.ToInt32(StageReloadActive);
                 Stage.StageObjects = new List<Object>();
 
                 success = AddStageData(ref Stage);
@@ -328,6 +333,7 @@ public class Util
                 NewStage.AtStr = VecToStr(At);
                 NewStage.NearStr = near.ToString();
                 NewStage.FarStr = far.ToString();
+                NewStage.ReloadActive = Convert.ToInt32(StageReloadActive);
                 NewStage.StageNumber = StageNumber;
 
                 success = AddStageData(ref NewStage);
