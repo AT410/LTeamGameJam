@@ -31,6 +31,7 @@ public class MapEditor : EditorWindow
     string[] FileFilter = { "xml" };
 
     bool IsNewCreate;
+    bool StageReloadActive = false;
 
     [MenuItem("MakeEditor/MapEditor")]
     private static void CreateWindow()
@@ -60,6 +61,7 @@ public class MapEditor : EditorWindow
             areaEnum = (AreaEnum)EditorGUILayout.EnumPopup("Area", areaEnum);
             stageEnum = (StageEnum)EditorGUILayout.EnumPopup("Stage", stageEnum);
             IsNewCreate = EditorGUILayout.Toggle("新規作成", IsNewCreate);
+            StageReloadActive = EditorGUILayout.Toggle("ステージリロードを有効", StageReloadActive);
         }
 
         using (new GUILayout.VerticalScope(EditorStyles.helpBox))
@@ -126,7 +128,7 @@ public class MapEditor : EditorWindow
             //新規作成
             //保存ファイルパスを作成しシリアライズ化する。
             root rot = new root();
-            rot = Util.DataSet(AreaNumber, StageNumber, out Success);
+            rot = Util.DataSet(AreaNumber, StageNumber,StageReloadActive, out Success);
             FilePath += FileName + ".xml";
             if (Success)
             {
@@ -147,7 +149,7 @@ public class MapEditor : EditorWindow
             root result = new root();
             result = XmlUtil.Deserialize<root>(FilePath);
             //新たなデータを追加してシリアライズ化
-            Success = Util.AddData(AreaNumber, StageNumber, ref result);
+            Success = Util.AddData(AreaNumber, StageNumber, StageReloadActive, ref result);
             if (Success)
             {
                 XmlUtil.Seialize<root>(FilePath, result);
