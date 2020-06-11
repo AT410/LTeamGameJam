@@ -1665,6 +1665,7 @@ MonoBehaviour:
   TexKey: GOAL_TX
   Tags:
   - Goal
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0

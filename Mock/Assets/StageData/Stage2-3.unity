@@ -159,6 +159,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - PushPullObj
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -419,6 +420,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - PushPullObj
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -549,7 +551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &418827966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +568,8 @@ MonoBehaviour:
   Type: 17
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgone
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1228,6 +1231,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - FireIgone
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1375,7 +1379,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgone
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1672,7 +1677,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgone
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1972,6 +1978,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - PushPullObj
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2119,7 +2126,8 @@ MonoBehaviour:
   Type: 2
   MeshKey: DEFAULT_CUBE
   TexKey: WALL_TX
-  Tags: []
+  Tags:
+  - FireIgone
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2494,6 +2502,7 @@ MonoBehaviour:
   TexKey: GOAL_TX
   Tags:
   - Goal
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2644,6 +2653,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - PushPullObj
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0

@@ -1522,6 +1522,7 @@ MonoBehaviour:
   TexKey: GOAL_TX
   Tags:
   - Goal
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2509,7 +2510,8 @@ MonoBehaviour:
   Type: 4
   MeshKey: DEFAULT_CUBE
   TexKey: Match_TX
-  Tags: []
+  Tags:
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -4755,7 +4757,8 @@ MonoBehaviour:
   Type: 4
   MeshKey: DEFAULT_CUBE
   TexKey: Switch_TX
-  Tags: []
+  Tags:
+  - FireIgone
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
