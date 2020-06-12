@@ -468,7 +468,7 @@ MonoBehaviour:
   MeshKey: DEFAULT_SPHERE
   TexKey: WATER_TX
   Tags:
-  - FireIgnorev
+  - FireIgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
