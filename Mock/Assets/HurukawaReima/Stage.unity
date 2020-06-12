@@ -164,6 +164,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1332,7 +1333,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -1894,6 +1895,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -1927,7 +1929,7 @@ MonoBehaviour:
   m_EndAnimRotate: []
   m_MixEndScalFlame: []
   m_EndAnimScale: []
-  MaxStartAnimCount: 0
+  MaxStartAnimCount: 1
   MaxEventAnimCount: 0
   MaxEndAnimCount: 0
   PosTotalTime: 0
@@ -2265,6 +2267,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - PushPullObj
+  - 
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
