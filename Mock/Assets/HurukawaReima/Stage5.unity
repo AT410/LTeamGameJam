@@ -159,6 +159,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - WaterJetEnd
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -456,6 +457,7 @@ MonoBehaviour:
   TexKey: FLOOR_TX
   Tags:
   - PossibleJump
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2049,7 +2051,8 @@ MonoBehaviour:
   Type: 1
   MeshKey: DEFAULTLOOP_CUBE
   TexKey: FLOOR_TX
-  Tags: []
+  Tags:
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 1
   SharedActive: 0
@@ -2349,6 +2352,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - WaterJetEnd
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
@@ -2499,6 +2503,7 @@ MonoBehaviour:
   Tags:
   - PossibleJump
   - WaterJetEnd
+  - Firelgnore
   CollisionActive: 1
   SetFixed: 0
   SharedActive: 0
