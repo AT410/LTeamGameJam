@@ -305,7 +305,7 @@ MonoBehaviour:
   type: 1
   TexKey: Two_TX
   DrawLayer: 1
-  Event: 5
+  Event: 2
   MyIndexKey: 2
   Upkey: 
   DownKey: 
@@ -313,6 +313,8 @@ MonoBehaviour:
   RightKey: 3
   StageNum: 1
   AreaNum: -1
+  AreaStageFromData: 1
+  FileName: Test
 --- !u!222 &440635746
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -411,6 +413,8 @@ MonoBehaviour:
   RightKey: 2
   StageNum: 0
   AreaNum: -1
+  AreaStageFromData: 0
+  FileName: 
 --- !u!222 &850774931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -600,6 +604,8 @@ MonoBehaviour:
   RightKey: 1
   StageNum: 2
   AreaNum: -1
+  AreaStageFromData: 0
+  FileName: 
 --- !u!222 &959229879
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -781,6 +787,8 @@ MonoBehaviour:
   RightKey: 
   StageNum: -1
   AreaNum: -1
+  AreaStageFromData: 0
+  FileName: 
 --- !u!222 &1855459939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -879,6 +887,8 @@ MonoBehaviour:
   RightKey: 
   StageNum: -1
   AreaNum: -1
+  AreaStageFromData: 0
+  FileName: 
 --- !u!222 &1981387263
 CanvasRenderer:
   m_ObjectHideFlags: 0

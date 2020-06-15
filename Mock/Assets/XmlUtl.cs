@@ -204,6 +204,12 @@ public class UIData
     [XmlAttribute("StageNumber")]
     [DefaultValue(-2)]
     public int StageNumber = -2;
+
+    [XmlAttribute("ToAreaFromData")]
+    [DefaultValue(-1)]
+    public int FileActive = -1;
+    [XmlAttribute("SaveFile")]
+    public string FileName;
 }
 
 
@@ -556,10 +562,19 @@ public class Util
                 data.RightKey = param.RightKey;
             }
 
-            if ((param.Event == GameEvent.ToGameStage || param.Event == GameEvent.ToStageSelectStage) && param.type == UIType.Flashing)
+            if ((param.Event == GameEvent.ToGameStage || param.Event == GameEvent.ToStageSelectStage || param.Event == GameEvent.ToAreaSelectStage)
+                && param.type == UIType.Flashing)
             {
-                data.AreaNumber = param.AreaNum;
-                data.StageNumber = param.StageNum;
+                if (param.AreaStageFromData&& param.Event == GameEvent.ToAreaSelectStage)
+                {
+                    data.FileActive = Convert.ToInt32(param.AreaStageFromData);
+                    data.FileName = param.FileName;
+                }
+                else if(param.Event == GameEvent.ToGameStage || param.Event == GameEvent.ToStageSelectStage)
+                {
+                    data.AreaNumber = param.AreaNum;
+                    data.StageNumber = param.StageNum;
+                }
             }
             uISet.UIDatas.Add(data);
         }

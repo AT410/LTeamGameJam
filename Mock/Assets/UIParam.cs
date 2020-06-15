@@ -42,6 +42,8 @@ public class UIParam : MonoBehaviour
 
     //追加
     public int StageNum = -1, AreaNum = -1;
+    public bool AreaStageFromData;
+    public string FileName;
 
     /* ---- ここから拡張コード ---- */
 #if UNITY_EDITOR
@@ -104,7 +106,8 @@ public class UIParam : MonoBehaviour
             }
 
             // -- ゲームイベント時の追加設定 --
-            if ((param.Event == GameEvent.ToGameStage||param.Event ==GameEvent.ToStageSelectStage)&&param.type == UIType.Flashing)
+            if ((param.Event == GameEvent.ToGameStage||param.Event ==GameEvent.ToStageSelectStage||param.Event == GameEvent.ToAreaSelectStage)
+                &&param.type == UIType.Flashing)
             {
                 using (new GUILayout.VerticalScope(EditorStyles.helpBox))
                 {
@@ -116,10 +119,21 @@ public class UIParam : MonoBehaviour
                     }
                     GUI.backgroundColor = defaultColor;
 
-                    AreaEnum area = (AreaEnum)param.AreaNum;
-                    param.AreaNum = (int)(AreaEnum)EditorGUILayout.EnumPopup("エリアセレクト", area);
-                    StageEnum stage = (StageEnum)param.StageNum;
-                    param.StageNum = (int)(StageEnum)EditorGUILayout.EnumPopup("ステージセレクト", stage);
+                    if (param.Event == GameEvent.ToAreaSelectStage)
+                    {
+                        param.AreaStageFromData = EditorGUILayout.ToggleLeft("移動元がデータステージ", param.AreaStageFromData);
+                        if(param.AreaStageFromData)
+                        {
+                            param.FileName = EditorGUILayout.TextField("読込データ名", param.FileName);
+                        }
+                    }
+                    else
+                    {
+                        AreaEnum area = (AreaEnum)param.AreaNum;
+                        param.AreaNum = (int)(AreaEnum)EditorGUILayout.EnumPopup("エリアセレクト", area);
+                        StageEnum stage = (StageEnum)param.StageNum;
+                        param.StageNum = (int)(StageEnum)EditorGUILayout.EnumPopup("ステージセレクト", stage);
+                    }
                 }
             }
 
