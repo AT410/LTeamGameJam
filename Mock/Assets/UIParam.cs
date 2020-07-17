@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 #if UNITY_EDITOR
-using UnityEditor;      //!< デプロイ時にEditorスクリプトが入るとエラーになるので UNITY_EDITOR で括ってね！
+using UnityEditor;      //!< デプロイ時にEditorスクリプトが入るとエラー
 using UnityEditor.SceneManagement;
 #endif
 
@@ -50,14 +50,13 @@ public class UIParam : MonoBehaviour
     /**
      * Inspector拡張クラス
      */
-    [CustomEditor(typeof(UIParam))]               //!< 拡張するときのお決まりとして書いてね
-    public class CharacterEditor : Editor           //!< Editorを継承するよ！
+    [CustomEditor(typeof(UIParam))]               
+    public class UIParamEditor : Editor        
     {
  
 
         public override void OnInspectorGUI()
         {
-            // target は処理コードのインスタンスだよ！ 処理コードの型でキャストして使ってね！
             UIParam param = target as UIParam;
 
             /* -- カスタム表示 -- */

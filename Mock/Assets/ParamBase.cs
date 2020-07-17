@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 #if UNITY_EDITOR
-using UnityEditor;      //!< デプロイ時にEditorスクリプトが入るとエラーになるので UNITY_EDITOR で括ってね！
+using UnityEditor;      //!< デプロイ時にEditorスクリプトが入るとエラー
 using UnityEditor.SceneManagement;
 #endif
 
@@ -393,8 +393,8 @@ public class ParamBase : MonoBehaviour
     /**
      * Inspector拡張クラス
      */
-    [CustomEditor(typeof(ParamBase))]               //!< 拡張するときのお決まりとして書いてね
-    public class ParamEditor : Editor           //!< Editorを継承するよ！
+    [CustomEditor(typeof(ParamBase))]             
+    public class ParamEditor : Editor          
     {
         bool folding = true;
 
@@ -408,7 +408,6 @@ public class ParamBase : MonoBehaviour
 
         public override void OnInspectorGUI()
         {
-            // target は処理コードのインスタンスだよ！ 処理コードの型でキャストして使ってね！
             ParamBase param = target as ParamBase;
 
             /* -- カスタム表示 -- */
