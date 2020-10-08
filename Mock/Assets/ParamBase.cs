@@ -416,7 +416,7 @@ public class ParamBase : MonoBehaviour
 
             using (new GUILayout.VerticalScope(EditorStyles.helpBox))
             {
-                GUI.backgroundColor = new Color(1.0f, 0.75f, 0.75f, 1.0f);
+                GUI.backgroundColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
                 using (new EditorGUILayout.HorizontalScope(EditorStyles.toolbar))
                 {
                     TabSelect = GUILayout.Toolbar(TabSelect, TabToggles, new GUIStyle(EditorStyles.toolbarButton), GUI.ToolbarButtonSize.Fixed);
